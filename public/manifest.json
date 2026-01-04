@@ -1,0 +1,29 @@
+{
+    "name": "Groove - Agencia Digital",
+    "short_name": "Groove",
+    "description": "Agencia digital experta en diseño web, branding y fotografía con IA",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#030213",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "categories": [
+        "business",
+        "design",
+        "productivity"
+    ],
+    "screenshots": []
+}
