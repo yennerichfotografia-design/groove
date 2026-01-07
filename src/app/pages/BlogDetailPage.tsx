@@ -4,6 +4,7 @@ import { Clock, Calendar, ArrowLeft, Share2 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
+import { motion } from 'motion/react';
 import { getPostBySlug, getAllPosts } from '../data/blogPosts';
 import { RevealAnimation } from '../components/RevealAnimation';
 import { SEO } from '../hooks/useSEO';
@@ -180,32 +181,118 @@ export function BlogDetailPage() {
                 </section>
 
                 {/* Content */}
-                <article className="py-16 lg:py-24">
+                <article className="py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50">
                     <div className="max-w-4xl mx-auto px-4 sm:px-8">
+                        {/* Prose content with enhanced styling */}
                         <div className="prose prose-lg max-w-none
-            prose-headings:font-normal prose-headings:tracking-tight
-            prose-h1:text-4xl prose-h1:mb-8
-            prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
-            prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
-            prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6
-            prose-a:text-black prose-a:underline hover:prose-a:text-gray-600
-            prose-strong:text-black prose-strong:font-semibold
-            prose-ul:my-6 prose-ol:my-6
-            prose-li:text-gray-700 prose-li:my-2
-            prose-blockquote:border-l-4 prose-blockquote:border-gray-300 prose-blockquote:pl-6 prose-blockquote:italic
-            prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
-            prose-pre:bg-gray-900 prose-pre:text-gray-100
-            prose-table:border-collapse prose-table:w-full
-            prose-th:border prose-th:border-gray-300 prose-th:p-3 prose-th:bg-gray-50
-            prose-td:border prose-td:border-gray-300 prose-td:p-3
-          ">
+                            prose-headings:font-normal prose-headings:tracking-tight prose-headings:scroll-mt-20
+                            prose-h1:text-4xl prose-h1:mb-8 prose-h1:mt-16
+                            prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-8 prose-h2:pb-4 prose-h2:border-b prose-h2:border-gray-200
+                            prose-h3:text-2xl prose-h3:mt-12 prose-h3:mb-6 prose-h3:text-gray-900
+                            prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6 prose-p:text-lg
+                            prose-a:text-black prose-a:underline prose-a:decoration-2 prose-a:underline-offset-4 hover:prose-a:text-gray-600 prose-a:transition-colors
+                            prose-strong:text-black prose-strong:font-semibold
+                            prose-ul:my-8 prose-ol:my-8 prose-ul:space-y-3 prose-ol:space-y-3
+                            prose-li:text-gray-700 prose-li:text-lg prose-li:leading-relaxed
+                            prose-blockquote:border-l-4 prose-blockquote:border-black prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:my-8 prose-blockquote:text-xl prose-blockquote:font-light prose-blockquote:text-gray-900
+                            prose-code:bg-gray-100 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:text-gray-900 prose-code:before:content-[''] prose-code:after:content-['']
+                            prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-lg prose-pre:p-6 prose-pre:my-8
+                            prose-table:border-collapse prose-table:w-full prose-table:my-8 prose-table:shadow-sm
+                            prose-th:border prose-th:border-gray-300 prose-th:p-4 prose-th:bg-gray-50 prose-th:font-semibold prose-th:text-left
+                            prose-td:border prose-td:border-gray-300 prose-td:p-4 prose-td:text-gray-700
+                            
+                            /* Drop cap for first paragraph */
+                            [&>p:first-of-type]:first-letter:text-6xl
+                            [&>p:first-of-type]:first-letter:font-bold
+                            [&>p:first-of-type]:first-letter:float-left
+                            [&>p:first-of-type]:first-letter:mr-3
+                            [&>p:first-of-type]:first-letter:mt-1
+                            [&>p:first-of-type]:first-letter:leading-none
+                        ">
                             <ReactMarkdown
                                 remarkPlugins={[remarkGfm]}
                                 rehypePlugins={[rehypeRaw]}
+                                components={{
+                                    // Custom rendering for better visual hierarchy
+                                    h2: ({ node, ...props }) => (
+                                        <motion.h2
+                                            initial={{ opacity: 0, y: 20 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            viewport={{ once: true, margin: "-100px" }}
+                                            transition={{ duration: 0.6 }}
+                                            {...props}
+                                        />
+                                    ),
+                                    h3: ({ node, ...props }) => (
+                                        <motion.h3
+                                            initial={{ opacity: 0, x: -20 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true, margin: "-50px" }}
+                                            transition={{ duration: 0.5 }}
+                                            {...props}
+                                        />
+                                    ),
+                                    p: ({ node, ...props }) => (
+                                        <motion.p
+                                            initial={{ opacity: 0 }}
+                                            whileInView={{ opacity: 1 }}
+                                            viewport={{ once: true, margin: "-50px" }}
+                                            transition={{ duration: 0.4 }}
+                                            {...props}
+                                        />
+                                    ),
+                                    ul: ({ node, ...props }) => (
+                                        <motion.ul
+                                            initial={{ opacity: 0, x: -10 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.5 }}
+                                            {...props}
+                                        />
+                                    ),
+                                    ol: ({ node, ...props }) => (
+                                        <motion.ol
+                                            initial={{ opacity: 0, x: -10 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.5 }}
+                                            {...props}
+                                        />
+                                    ),
+                                    table: ({ node, ...props }) => (
+                                        <motion.div
+                                            initial={{ opacity: 0, scale: 0.95 }}
+                                            whileInView={{ opacity: 1, scale: 1 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.5 }}
+                                            className="overflow-x-auto"
+                                        >
+                                            <table {...props} />
+                                        </motion.div>
+                                    ),
+                                    blockquote: ({ node, ...props }) => (
+                                        <motion.blockquote
+                                            initial={{ opacity: 0, x: -30 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true }}
+                                            transition={{ duration: 0.6 }}
+                                            {...props}
+                                        />
+                                    ),
+                                }}
                             >
                                 {post.content.trim()}
                             </ReactMarkdown>
                         </div>
+
+                        {/* Visual break / decorative element */}
+                        <motion.div
+                            initial={{ opacity: 0, scaleX: 0 }}
+                            whileInView={{ opacity: 1, scaleX: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                            className="w-24 h-1 bg-gradient-to-r from-black to-gray-400 mx-auto my-16"
+                        />
                     </div>
                 </article>
 
