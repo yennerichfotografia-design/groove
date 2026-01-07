@@ -11,7 +11,7 @@ export function Header() {
 
   const handleNavClick = (sectionId: string) => {
     setIsMenuOpen(false);
-    
+
     if (location.pathname !== '/') {
       // Si no estamos en home, navegar primero a home y luego scroll
       window.location.href = '/';
@@ -44,7 +44,7 @@ export function Header() {
   };
 
   return (
-    <header 
+    <header
       className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -54,9 +54,9 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center" onClick={handleLogoClick}>
-              <img 
-                src={logoImage} 
-                alt="Logo" 
+              <img
+                src={logoImage}
+                alt="Logo"
                 className="h-8 sm:h-10 w-auto"
                 style={{ filter: 'brightness(0)' }}
               />
@@ -86,7 +86,10 @@ export function Header() {
             <button onClick={() => handleNavClick('contact')} className="text-sm hover:text-gray-600 transition-colors">
               {t('header.contact')}
             </button>
-            <button 
+            <Link to="/blog" className="text-sm hover:text-gray-600 transition-colors">
+              {t('header.blog')}
+            </Link>
+            <button
               onClick={toggleLanguage}
               className="flex items-center gap-2 text-sm hover:text-gray-600 transition-colors border border-gray-200 px-3 py-1.5 rounded"
             >
@@ -96,7 +99,7 @@ export function Header() {
           </nav>
 
           {/* Mobile menu button */}
-          <button 
+          <button
             className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -128,7 +131,10 @@ export function Header() {
             <button onClick={() => handleNavClick('contact')} className="block w-full text-left text-sm hover:text-gray-600 transition-colors">
               {t('header.contact')}
             </button>
-            <button 
+            <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="block w-full text-left text-sm hover:text-gray-600 transition-colors">
+              {t('header.blog')}
+            </Link>
+            <button
               onClick={toggleLanguage}
               className="flex items-center gap-2 text-sm hover:text-gray-600 transition-colors border border-gray-200 px-3 py-1.5 rounded w-fit"
             >

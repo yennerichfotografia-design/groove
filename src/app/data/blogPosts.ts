@@ -78,7 +78,7 @@ Este ciclo de **describir → generar → revisar → refinar** se repite hasta 
 
 ## Beneficios del Vibe Coding para Proyectos Web
 
-### ✅ Velocidad sin precedentes
+### <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Velocidad sin precedentes
 
 Lo que antes tomaba **3-6 meses** ahora se completa en **3-4 semanas**. Componentes que requerían horas de desarrollo ahora toman minutos.
 
@@ -86,7 +86,7 @@ Lo que antes tomaba **3-6 meses** ahora se completa en **3-4 semanas**. Componen
 - Antes: 2-3 horas
 - Con Vibe Coding: 20-30 minutos
 
-### ✅ Calidad profesional
+### <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Calidad profesional
 
 El código generado sigue **estándares modernos** y best practices automáticamente:
 - Componentes reutilizables
@@ -95,19 +95,19 @@ El código generado sigue **estándares modernos** y best practices automáticam
 - Accesibilidad integrada
 - SEO-friendly desde el inicio
 
-### ✅ Flexibilidad total
+### <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Flexibilidad total
 
 ¿Necesitás cambiar algo? No hay problema. Los cambios que antes requerían reescribir secciones completas ahora se hacen con simples ajustes de prompts.
 
 Esto te permite **iterar basándote en feedback real** de usuarios sin costos prohibitivos.
 
-### ✅ Costo-efectividad
+### <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Costo-efectividad
 
 Menos horas de desarrollo = menor inversión. Pero no sacrificás calidad, al contrario, la mejorás.
 
 **ROI mejorado:** Lanzás más rápido, aprendés más rápido, iterás más rápido.
 
-### ✅ Enfoque en lo estratégico
+### <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Enfoque en lo estratégico
 
 Como desarrollador, ya no gasto tiempo en tareas repetitivas. Me concentro en:
 - Arquitectura y experiencia de usuario
@@ -117,7 +117,7 @@ Como desarrollador, ya no gasto tiempo en tareas repetitivas. Me concentro en:
 
 ## Mitos y Realidades del Vibe Coding
 
-### ❌ Mito 1: "La IA hace todo sola"
+### <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><path d="M18 6 6 18"/><path d="M6 6 18 18"/></svg> Mito 1: "La IA hace todo sola"
 
 **Realidad:** La IA es una **herramienta poderosa**, pero necesita guía experta. Un prompt mal formulado genera código mediocre. La experiencia del desarrollador es crucial para:
 - Formular prompts efectivos
@@ -125,14 +125,14 @@ Como desarrollador, ya no gasto tiempo en tareas repetitivas. Me concentro en:
 - Detectar problemas potenciales
 - Optimizar para casos específicos
 
-### ❌ Mito 2: "El código generado es de baja calidad"
+### <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><path d="M18 6 6 18"/><path d="M6 6 18 18"/></svg> Mito 2: "El código generado es de baja calidad"
 
 **Realidad:** El código generado por IA moderna sigue **estándares de la industria** y a menudo es más consistente que el escrito manualmente. Además:
 - Se actualiza con las mejores prácticas
 - Evita errores comunes de sintaxis
 - Incluye optimizaciones automáticas
 
-### ❌ Mito 3: "Vibe Coding reemplaza a los desarrolladores"
+### <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><path d="M18 6 6 18"/><path d="M6 6 18 18"/></svg> Mito 3: "Vibe Coding reemplaza a los desarrolladores"
 
 **Realidad:** Vibe Coding **potencia** a los desarrolladores, no los reemplaza. Es como pasar de una bicicleta a un auto: seguís necesitando saber conducir (programar), pero llegás mucho más rápido.
 
@@ -146,10 +146,10 @@ El desarrollador sigue siendo esencial para:
 
 Vibe Coding es ideal si:
 
-✅ Necesitás un sitio web profesional **rápido**  
-✅ Querés **calidad** sin comprometer tu presupuesto  
-✅ Valorás la **flexibilidad** para iterar  
-✅ Buscás tecnología **moderna** y escalable  
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Necesitás un sitio web profesional **rápido**  
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Querés **calidad** sin comprometer tu presupuesto  
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Valorás la **flexibilidad** para iterar  
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Buscás tecnología **moderna** y escalable  
 
 ## Conclusión
 
@@ -193,7 +193,7 @@ Hoy te voy a contar **exactamente** cómo trabajo. Sin vueltas. Con transparenci
 
 Antes de entrar en el proceso, déjame presentarte las herramientas que uso:
 
-### 🎨 **Figma: La base del diseño**
+### <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.087 0-.833.684-1.487 1.487-1.487 2.853 0 5.225-1.852 5.225-4.596 0-3.352-3.187-5.908-6.196-5.908-4.646-.046-8.281 3.24-8.281 8.281"/></svg> **Figma: La base del diseño**
 
 Figma es mi herramienta principal de diseño. Acá se definen:
 - La estructura visual completa
@@ -203,15 +203,15 @@ Figma es mi herramienta principal de diseño. Acá se definen:
 
 **¿Por qué Figma?** Porque permite colaboración en tiempo real, versionado claro, y es el estándar de la industria.
 
-### 🤖 **IA: Mi asistente de desarrollo**
+### <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><rect width="18" height="10" x="3" y="11" rx="2" /><circle cx="12" cy="5" r="2" /><path d="M12 7v4" /><line x1="8" x2="8" y1="16" y2="16" /><line x1="16" x2="16" y1="16" y2="16" /></svg> **IA: Mi asistente de desarrollo**
 
 Uso asistentes de IA como Claude, GPT-4 y otros para acelerar el desarrollo. No reemplazan mi trabajo, lo potencian.
 
-### ⚡ **Vibe Coding: La metodología**
+### <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> **Vibe Coding: La metodología**
 
 Como vimos en [mi artículo anterior sobre Vibe Coding](/blog/vibe-coding-futuro-desarrollo-web), esta metodología me permite desarrollar componentes y funcionalidades en una fracción del tiempo tradicional.
 
-### 🔄 **Figma Make** (plugins y automatización)
+### <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg> **Figma Make** (plugins y automatización)
 
 Uso plugins y herramientas que conectan Figma con el código, acelerando la transición de diseño a desarrollo.
 
@@ -244,7 +244,7 @@ Investigo:
 - Tendencias de diseño relevantes
 - Best practices de UX para tu nicho
 
-#### 📦 **Entregable:**
+#### <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> **Entregable:**
 
 Un **documento de estrategia** con:
 - Objetivos claros del proyecto
@@ -295,13 +295,13 @@ Creo un prototipo clickeable donde podés:
 
 Te comparto el diseño y prototipo. Hacemos ajustes basados en tu feedback. Generalmente hay 2 rondas de revisión incluidas.
 
-#### 📦 **Entregables:**
+#### <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> **Entregables:**
 
 - Archivos Figma completos
 - Prototipo clickeable
 - Guía de estilo visual
 
-**⏱️ Tiempo estimado:** 1-2 semanas dependiendo de la complejidad
+**<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Tiempo estimado:** 1-2 semanas dependiendo de la complejidad
 
 ### Fase 3: Desarrollo con Vibe Coding (1-2 semanas)
 
@@ -363,11 +363,11 @@ Testeo el sitio en:
 - Performance (carga rápida)
 - Accesibilidad (WCAG 2.1)
 
-#### 📦 **Entregable:**
+#### <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> **Entregable:**
 
 Sitio web **100% funcional** listo para deploy
 
-**⏱️ Tiempo estimado:** 1-2 semanas
+**<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Tiempo estimado:** 1-2 semanas
 
 ### Fase 4: Deploy y Entrega (3-5 días)
 
@@ -414,21 +414,21 @@ Te entrego:
 - **Guía de uso** (cómo actualizar contenido)
 - Código fuente (si lo solicitaste)
 
-#### 📦 **Entregables:**
+#### <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> **Entregables:**
 
 - Sitio web en producción
 - Accesos y documentación
 - Guía de mantenimiento básico
 
-**⏱️ Tiempo estimado:** 3-5 días
+**<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Tiempo estimado:** 3-5 días
 
 ## Post-Lanzamiento: Soporte
 
 Una vez que el sitio está en línea:
 
-✅ **Soporte incluido** para ajustes menores (primeras 2 semanas)  
-✅ Monitoreo básico de performance  
-✅ Disponibilidad para preguntas  
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> **Soporte incluido** para ajustes menores (primeras 2 semanas)  
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Monitoreo básico de performance  
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Disponibilidad para preguntas  
 
 Si necesitás mantenimiento continuo o nuevas funcionalidades, ofrezco planes de **soporte mensual**.
 
@@ -507,10 +507,10 @@ Si tenés un proyecto en mente y querés trabajar con esta metodología, [comple
 Seamos honestos: los proyectos web tradicionales son **lentos**. Y caros.
 
 Contratar un sitio web profesional suele significar:
-- ⏰ Esperar 3-6 meses (o más)
-- 💰 Invertir presupuestos elevados
-- 🔄 Dificultad para hacer cambios
-- 📉 Retrasos constantes
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Esperar 3-6 meses (o más)
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><line x1="12" x2="12" y1="2" y2="22" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg> Invertir presupuestos elevados
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg> Dificultad para hacer cambios
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg> Retrasos constantes
 
 Pero, ¿qué pasaría si te dijera que existe una forma de reducir esos tiempos a **3-4 semanas**, manteniendo (o incluso mejorando) la calidad?
 
@@ -596,10 +596,10 @@ Escribo un prompt:
 **Aceleración:** 5-7x más rápido
 
 Y no es solo velocidad. El código generado:
-- ✅ Sigue best practices modernas
-- ✅ Es accesible (WCAG 2.1)
-- ✅ Está optimizado para SEO
-- ✅ Funciona en todos los navegadores
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Sigue best practices modernas
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Es accesible (WCAG 2.1)
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Está optimizado para SEO
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Funciona en todos los navegadores
 
 ### 3. Funcionalidades Complejas: Soluciones Instantáneas
 
@@ -658,7 +658,7 @@ La IA me ayuda a:
 
 Toda esta eficiencia se traduce en beneficios tangibles para vos:
 
-### 1. Velocidad 🚀
+### 1. Velocidad <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block ml-2 align-text-bottom"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" /><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" /><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /></svg>
 
 **Proyectos en 3-4 semanas** vs. 3-4 meses tradicionales.
 
@@ -667,7 +667,7 @@ Toda esta eficiencia se traduce en beneficios tangibles para vos:
 - Empezás a generar leads/ventas antes
 - Ventaja competitiva
 
-### 2. Costo-Efectividad 💰
+### 2. Costo-Efectividad <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block ml-2 align-text-bottom"><line x1="12" x2="12" y1="2" y2="22" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
 
 Menos horas de trabajo = menor inversión.
 
@@ -678,7 +678,7 @@ Pero no sacrificás nada:
 
 **Mejor ROI** porque invertís menos y lanzás más rápido.
 
-### 3. Flexibilidad 🔄
+### 3. Flexibilidad <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block ml-2 align-text-bottom"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg>
 
 Los cambios son baratos y rápidos.
 
@@ -687,7 +687,7 @@ No hay problema. Con IA, los cambios son mucho más ágiles.
 
 Esto permite **iterar basándote en feedback real** de usuarios, no solo suposiciones.
 
-### 4. Calidad 🌟
+### 4. Calidad <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block ml-2 align-text-bottom"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
 
 El código generado por IA moderna:
 - Sigue estándares de la industria
@@ -711,11 +711,11 @@ Déjame compartirte ejemplos concretos (sin mencionar clientes por privacidad):
 **Solución:** Diseño en Figma + desarrollo con Vibe Coding
 
 **Resultado:**
-- ⏱️ 4 semanas desde brief hasta deploy
-- 🛍️ Catálogo de 100+ productos
-- 💳 Integración con MercadoPago
-- 📱 100% responsive
-- 🚀 Lanzamiento exitoso
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 4 semanas desde brief hasta deploy
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" /><path d="M3 6h18" /><path d="M16 10a4 4 0 0 1-8 0" /></svg> Catálogo de 100+ productos
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" /></svg> Integración con MercadoPago
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg> 100% responsive
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" /><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" /><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /></svg> Lanzamiento exitoso
 
 ### Caso 2: Portfolio Interactivo para Fotógrafo
 
@@ -724,10 +724,10 @@ Déjame compartirte ejemplos concretos (sin mencionar clientes por privacidad):
 **Solución:** Diseño visual único + desarrollo con animaciones complejas
 
 **Resultado:**
-- ⏱️ 3 semanas de desarrollo total
-- 🎨 Galería con efectos visuales sofisticados
-- 📸 Carga optimizada de imágenes (lazy loading)
-- ⚡ Performance 95+ en Google PageSpeed
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 3 semanas de desarrollo total
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.087 0-.833.684-1.487 1.487-1.487 2.853 0 5.225-1.852 5.225-4.596 0-3.352-3.187-5.908-6.196-5.908-4.646-.046-8.281 3.24-8.281 8.281"/></svg> Galería con efectos visuales sofisticados
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg> Carga optimizada de imágenes (lazy loading)
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Performance 95+ en Google PageSpeed
 
 ### Caso 3: Landing Page para SaaS
 
@@ -736,10 +736,10 @@ Déjame compartirte ejemplos concretos (sin mencionar clientes por privacidad):
 **Solución:** CRO-focused design + desarrollo ágil
 
 **Resultado:**
-- ⏱️ 2 semanas desde idea hasta producción
-- 📊 A/B testing integrado
-- 🎯 Diseño enfocado en conversión
-- 📈 Tasa de conversión 12% (above industry average)
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 2 semanas desde idea hasta producción
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></svg> A/B testing integrado
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg> Diseño enfocado en conversión
+- <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg> Tasa de conversión 12% (above industry average)
 
 ## La IA No Reemplaza, Potencia
 
@@ -757,8 +757,8 @@ Sigo siendo yo quien:
 La IA es mi **asistente súper poderoso**, no mi reemplazo.
 
 Es como la diferencia entre:
-- Cortar el pasto con tijeras (manual puro) 🌿✂️
-- Usar una cortadora de césped (herramienta que potencia) 🌿🚜
+- Cortar el pasto con tijeras (manual puro)
+- Usar una cortadora de césped (herramienta que potencia)
 
 Seguís necesitando saber cómo cortar pasto, pero llegás mucho más rápido.
 
@@ -766,17 +766,17 @@ Seguís necesitando saber cómo cortar pasto, pero llegás mucho más rápido.
 
 Esta metodología es perfecta si:
 
-✅ Necesitás lanzar **rápido**  
-✅ Querés **calidad profesional**  
-✅ Tu presupuesto es **limitado pero realista**  
-✅ Valorás **flexibilidad** para iterar  
-✅ Buscás **tecnología moderna**  
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Necesitás lanzar **rápido**  
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Querés **calidad profesional**  
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Tu presupuesto es **limitado pero realista**  
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Valorás **flexibilidad** para iterar  
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><polyline points="20 6 9 17 4 12"></polyline></svg> Buscás **tecnología moderna**  
 
 No es ideal si:
 
-❌ Necesitás algo extremadamente custom y complejo  
-❌ Tenés presupuesto ilimitado y 6 meses disponibles  
-❌ No te interesa la web moderna  
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><path d="M18 6 6 18"/><path d="M6 6 18 18"/></svg> Necesitás algo extremadamente custom y complejo  
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><path d="M18 6 6 18"/><path d="M6 6 18 18"/></svg> Tenés presupuesto ilimitado y 6 meses disponibles  
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2 align-text-bottom"><path d="M18 6 6 18"/><path d="M6 6 18 18"/></svg> No te interesa la web moderna  
 
 ## Conclusión
 

@@ -20,6 +20,7 @@ const translations = {
       pricing: 'Precios',
       faq: 'FAQ',
       contact: 'Contacto',
+      blog: 'Blog',
     },
     hero: {
       title: 'Diseño marcas y sitios web listos para escalar.',
@@ -263,6 +264,7 @@ const translations = {
       pricing: 'Pricing',
       faq: 'FAQ',
       contact: 'Contact',
+      blog: 'Blog',
     },
     hero: {
       title: 'I design brands and websites ready to scale.',
@@ -505,11 +507,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const t = (key: string): string => {
     const keys = key.split('.');
     let value: any = translations[language];
-    
+
     for (const k of keys) {
       value = value?.[k];
     }
-    
+
     return value || key;
   };
 
