@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.groove.com/sitemap.xml
+Sitemap: https://groovedesign.com.ar/sitemap.xml
 
 # Disallow admin or private areas if any
 # User-agent: *
