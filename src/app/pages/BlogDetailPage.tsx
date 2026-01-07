@@ -168,6 +168,17 @@ export function BlogDetailPage() {
                     </div>
                 </section>
 
+                {/* Featured Image */}
+                <section className="relative">
+                    <div className="w-full h-[400px] lg:h-[500px] overflow-hidden">
+                        <img
+                            src={post.featuredImage}
+                            alt={post.title}
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
+                </section>
+
                 {/* Content */}
                 <article className="py-16 lg:py-24">
                     <div className="max-w-4xl mx-auto px-4 sm:px-8">
@@ -193,7 +204,7 @@ export function BlogDetailPage() {
                                     remarkPlugins={[remarkGfm]}
                                     rehypePlugins={[rehypeRaw]}
                                 >
-                                    {post.content}
+                                    {post.content.trim()}
                                 </ReactMarkdown>
                             </div>
                         </RevealAnimation>
@@ -217,7 +228,11 @@ export function BlogDetailPage() {
                                         >
                                             <article>
                                                 <div className="aspect-[16/10] bg-gray-200 mb-4 overflow-hidden">
-                                                    <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 group-hover:scale-105 transition-transform duration-500" />
+                                                    <img
+                                                        src={relatedPost.featuredImage}
+                                                        alt={relatedPost.title}
+                                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                    />
                                                 </div>
                                                 <h3 className="text-xl mb-3 group-hover:text-gray-600 transition-colors">
                                                     {relatedPost.title}

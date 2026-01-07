@@ -65,7 +65,11 @@ export function BlogListPage() {
                                         <article className="h-full flex flex-col">
                                             {/* Featured Image */}
                                             <div className="aspect-[16/10] bg-gray-100 mb-6 overflow-hidden">
-                                                <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 group-hover:scale-105 transition-transform duration-500" />
+                                                <img
+                                                    src={post.featuredImage}
+                                                    alt={post.title}
+                                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                />
                                             </div>
 
                                             {/* Category */}
