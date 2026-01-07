@@ -4,6 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { RevealAnimation } from '../components/RevealAnimation';
 import { motion, AnimatePresence } from 'motion/react';
 import { useEffect } from 'react';
+import { SEO } from '../hooks/useSEO';
 
 export function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -94,84 +95,105 @@ export function FAQPage() {
 
   const currentFaqs = faqs[language];
 
-  return (
-    <div className="min-h-screen bg-white pt-16">
-      <section className="bg-gray-50 py-20 lg:py-32">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
-          <RevealAnimation>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl tracking-tight mb-8">
-              {language === 'es' ? 'Preguntas frecuentes' : 'Frequently Asked Questions'}
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mb-16">
-              {language === 'es' 
-                ? 'Todo lo que necesitás saber sobre el proceso, plazos y formas de trabajo.' 
-                : 'Everything you need to know about the process, deadlines and ways of working.'}
-            </p>
-          </RevealAnimation>
-          
-          <div className="space-y-4">
-            {currentFaqs.map((faq, index) => (
-              <RevealAnimation key={index} delay={index * 0.05}>
-                <div className="bg-white border border-gray-200">
-                  <button
-                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                    className="w-full py-6 px-6 sm:px-8 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
-                  >
-                    <h3 className="text-xl sm:text-2xl pr-8">{faq.question}</h3>
-                    {openIndex === index ? (
-                      <Minus className="w-6 h-6 flex-shrink-0" />
-                    ) : (
-                      <Plus className="w-6 h-6 flex-shrink-0" />
-                    )}
-                  </button>
-                  
-                  <AnimatePresence>
-                    {openIndex === index && (
-                      <motion.div 
-                        className="overflow-hidden"
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
-                      >
-                        <div className="px-6 sm:px-8 pb-6">
-                          {faq.answer.split('\n').map((line, i) => (
-                            line.trim() ? (
-                              <p key={i} className="text-gray-600 mb-3 last:mb-0">
-                                {line}
-                              </p>
-                            ) : (
-                              <div key={i} className="h-3" />
-                            )
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              </RevealAnimation>
-            ))}
-          </div>
+  // Generate FAQ Schema for SEO
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": currentFaqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
 
-          <RevealAnimation delay={0.5}>
-            <div className="mt-16 text-center">
-              <p className="text-xl text-gray-600 mb-6">
-                {language === 'es' 
-                  ? '¿Tenés otra pregunta?' 
-                  : 'Do you have another question?'}
+  return (
+    <>
+      <SEO>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </SEO>
+      <div className="min-h-screen bg-white pt-16">
+        <section className="bg-gray-50 py-20 lg:py-32">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+            <RevealAnimation>
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl tracking-tight mb-8">
+                {language === 'es' ? 'Preguntas frecuentes' : 'Frequently Asked Questions'}
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl mb-16">
+                {language === 'es'
+                  ? 'Todo lo que necesitás saber sobre el proceso, plazos y formas de trabajo.'
+                  : 'Everything you need to know about the process, deadlines and ways of working.'}
               </p>
-              <a 
-                href="https://wa.me/5493436987030"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-black text-white px-8 py-4 hover:bg-gray-800 transition-colors"
-              >
-                {language === 'es' ? 'Escribime por WhatsApp' : 'Message me on WhatsApp'}
-              </a>
+            </RevealAnimation>
+
+            <div className="space-y-4">
+              {currentFaqs.map((faq, index) => (
+                <RevealAnimation key={index} delay={index * 0.05}>
+                  <div className="bg-white border border-gray-200">
+                    <button
+                      onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                      className="w-full py-6 px-6 sm:px-8 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+                    >
+                      <h3 className="text-xl sm:text-2xl pr-8">{faq.question}</h3>
+                      {openIndex === index ? (
+                        <Minus className="w-6 h-6 flex-shrink-0" />
+                      ) : (
+                        <Plus className="w-6 h-6 flex-shrink-0" />
+                      )}
+                    </button>
+
+                    <AnimatePresence>
+                      {openIndex === index && (
+                        <motion.div
+                          className="overflow-hidden"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
+                        >
+                          <div className="px-6 sm:px-8 pb-6">
+                            {faq.answer.split('\n').map((line, i) => (
+                              line.trim() ? (
+                                <p key={i} className="text-gray-600 mb-3 last:mb-0">
+                                  {line}
+                                </p>
+                              ) : (
+                                <div key={i} className="h-3" />
+                              )
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </RevealAnimation>
+              ))}
             </div>
-          </RevealAnimation>
-        </div>
-      </section>
-    </div>
+
+            <RevealAnimation delay={0.5}>
+              <div className="mt-16 text-center">
+                <p className="text-xl text-gray-600 mb-6">
+                  {language === 'es'
+                    ? '¿Tenés otra pregunta?'
+                    : 'Do you have another question?'}
+                </p>
+                <a
+                  href="https://wa.me/5493436987030"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-black text-white px-8 py-4 hover:bg-gray-800 transition-colors"
+                >
+                  {language === 'es' ? 'Escribime por WhatsApp' : 'Message me on WhatsApp'}
+                </a>
+              </div>
+            </RevealAnimation>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }

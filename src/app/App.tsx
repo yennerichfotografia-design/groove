@@ -17,6 +17,8 @@ const ProjectDetail = lazy(() => import('./pages/ProjectDetail').then(m => ({ de
 const FAQPage = lazy(() => import('./pages/FAQPage').then(m => ({ default: m.FAQPage })));
 const AIPhotographyPage = lazy(() => import('./pages/AIPhotographyPage').then(m => ({ default: m.AIPhotographyPage })));
 const AIPhotographyFormPage = lazy(() => import('./pages/AIPhotographyFormPage').then(m => ({ default: m.AIPhotographyFormPage })));
+const BlogListPage = lazy(() => import('./pages/BlogListPage').then(m => ({ default: m.BlogListPage })));
+const BlogDetailPage = lazy(() => import('./pages/BlogDetailPage').then(m => ({ default: m.BlogDetailPage })));
 const NotFound = lazy(() => import('./pages/NotFound').then(m => ({ default: m.NotFound })));
 
 // Loading fallback component
@@ -66,6 +68,21 @@ export default function App() {
                 <Route path="/proyecto/:slug" element={<ProjectDetail />} />
                 <Route path="/fotografia-ia" element={<AIPhotographyPage />} />
                 <Route path="/formulario-fotografia-ia" element={<AIPhotographyFormPage />} />
+                {/* Blog Routes */}
+                <Route path="/blog" element={
+                  <>
+                    <Header />
+                    <BlogListPage />
+                    <Footer />
+                  </>
+                } />
+                <Route path="/blog/:slug" element={
+                  <>
+                    <Header />
+                    <BlogDetailPage />
+                    <Footer />
+                  </>
+                } />
                 {/* 404 Route - must be last */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
