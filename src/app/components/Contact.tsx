@@ -9,12 +9,12 @@ export function Contact() {
     company: '',
     message: ''
   });
-  
+
   const { language } = useLanguage();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Construir mensaje para WhatsApp
     let message = `💼 *NUEVA CONSULTA*\n\n`;
     message += `*Nombre:* ${formData.name}\n`;
@@ -23,10 +23,10 @@ export function Contact() {
       message += `*Empresa:* ${formData.company}\n`;
     }
     message += `\n*Mensaje:*\n${formData.message}`;
-    
+
     // Codificar el mensaje para URL
     const encodedMessage = encodeURIComponent(message);
-    
+
     // Abrir WhatsApp con el mensaje
     window.open(`https://wa.me/5493436987030?text=${encodedMessage}`, '_blank');
   };
@@ -40,26 +40,26 @@ export function Contact() {
 
   const translations = {
     es: {
-      title: '¿Tenés un proyecto en mente?',
+      title: '¿Listo para escalar?',
       subtitle1: 'Marca, web o rediseño.',
-      subtitle2: 'Lo vemos rápido y te digo si puedo ayudarte.',
-      footer: 'Respuesta clara. Próximo paso definido.',
-      name: 'Nombre *',
-      email: 'Email *',
-      company: 'Empresa',
-      message: 'Mensaje *',
-      submit: 'Enviar mensaje'
+      subtitle2: 'Analizo tu caso y te digo si soy la persona correcta.',
+      footer: 'Respuesta clara en -24hs.',
+      name: 'Tu Nombre *',
+      email: 'Tu Mejor Email *',
+      company: 'Link a tu web actual (opcional)',
+      message: '¿Cuál es tu mayor desafío hoy? *',
+      submit: 'Enviar consulta (Sin compromiso)'
     },
     en: {
-      title: 'Have a project in mind?',
+      title: 'Ready to scale?',
       subtitle1: 'Brand, website or redesign.',
-      subtitle2: "Let's take a quick look and I'll tell you if I can help.",
-      footer: 'Clear response. Next step defined.',
-      name: 'Name *',
-      email: 'Email *',
-      company: 'Company',
-      message: 'Message *',
-      submit: 'Send message'
+      subtitle2: "I'll analyze your case and tell you if I'm the right fit.",
+      footer: 'Clear response in -24hs.',
+      name: 'Your Name *',
+      email: 'Your Best Email *',
+      company: 'Link to current site (optional)',
+      message: 'What is your biggest challenge today? *',
+      submit: 'Send inquiry (No commitment)'
     }
   };
 
@@ -87,7 +87,7 @@ export function Contact() {
               </p>
             </RevealAnimation>
           </div>
-          
+
           <RevealAnimation delay={0.2}>
             <div>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -105,7 +105,7 @@ export function Contact() {
                     className="w-full bg-white/10 border border-white/20 px-4 py-3 focus:outline-none focus:border-white transition-colors"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block mb-2 text-sm">
                     {t.email}
@@ -120,7 +120,7 @@ export function Contact() {
                     className="w-full bg-white/10 border border-white/20 px-4 py-3 focus:outline-none focus:border-white transition-colors"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="company" className="block mb-2 text-sm">
                     {t.company}
@@ -134,7 +134,7 @@ export function Contact() {
                     className="w-full bg-white/10 border border-white/20 px-4 py-3 focus:outline-none focus:border-white transition-colors"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block mb-2 text-sm">
                     {t.message}
@@ -149,7 +149,7 @@ export function Contact() {
                     className="w-full bg-white/10 border border-white/20 px-4 py-3 focus:outline-none focus:border-white transition-colors resize-none"
                   />
                 </div>
-                
+
                 <button
                   type="submit"
                   className="w-full bg-white text-black py-4 hover:bg-gray-200 transition-colors"

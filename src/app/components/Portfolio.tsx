@@ -14,11 +14,11 @@ const projects = [
     slug: 'fresca-branding',
     titleEs: 'Fresca',
     titleEn: 'Fresca',
-    categoryEs: 'Branding',
-    categoryEn: 'Branding',
+    categoryEs: 'Branding + Estrategia',
+    categoryEn: 'Branding + Strategy',
     year: '2024',
-    descEs: 'Identidad visual para marca de productos frescos',
-    descEn: 'Visual identity for fresh products brand',
+    descEs: 'Identidad visual diseñada para destacar en góndola y atraer público joven.',
+    descEn: 'Visual identity designed to stand out on shelf and attract young audience.',
     behanceUrl: 'https://www.behance.net/gallery/227200673/Fresca-branding',
     coverImage: frescaImage,
   },
@@ -27,11 +27,11 @@ const projects = [
     slug: 'burger-rocket-branding',
     titleEs: 'Burger Rocket',
     titleEn: 'Burger Rocket',
-    categoryEs: 'Branding',
-    categoryEn: 'Branding',
+    categoryEs: 'Branding Fast-Food',
+    categoryEn: 'Fast-Food Branding',
     year: '2024',
-    descEs: 'Identidad visual para marca de hamburguesas',
-    descEn: 'Visual identity for burger brand',
+    descEs: 'Marca dinámica y de alto impacto visual para franquicia en expansión.',
+    descEn: 'Dynamic and high visual impact brand for expanding franchise.',
     behanceUrl: 'https://www.behance.net/gallery/227201079/Identity-Visual-Burger-Rocket-Branding',
     coverImage: burgerRocketImage,
   },
@@ -40,11 +40,11 @@ const projects = [
     slug: 'academy-branding',
     titleEs: 'Coffee Academy',
     titleEn: 'Coffee Academy',
-    categoryEs: 'Branding',
-    categoryEn: 'Branding',
+    categoryEs: 'Branding Premium',
+    categoryEn: 'Premium Branding',
     year: '2024',
-    descEs: 'Identidad visual para marca de café premium',
-    descEn: 'Visual identity for premium coffee brand',
+    descEs: 'Identidad minimalista y sofisticada para cafetería de especialidad.',
+    descEn: 'Minimalist and sophisticated identity for specialty coffee shop.',
     behanceUrl: 'https://www.behance.net/gallery/227199549/Academy-branding',
     coverImage: academyImage,
   },
@@ -53,11 +53,11 @@ const projects = [
     slug: 'forza-branding',
     titleEs: 'Forza Co.',
     titleEn: 'Forza Co.',
-    categoryEs: 'Branding',
-    categoryEn: 'Branding',
+    categoryEs: 'Branding Moda',
+    categoryEn: 'Fashion Branding',
     year: '2024',
-    descEs: 'Identidad visual para marca de indumentaria',
-    descEn: 'Visual identity for clothing brand',
+    descEs: 'Sistema visual audaz para marca de indumentaria urbana.',
+    descEn: 'Bold visual system for urban clothing brand.',
     behanceUrl: 'https://www.behance.net/gallery/227203217/Forza-branding',
     coverImage: forzaImage,
   },
@@ -143,12 +143,12 @@ export function Portfolio() {
         <RevealAnimation>
           <div className="mb-16 text-center">
             <h2 className="text-5xl sm:text-6xl lg:text-7xl tracking-tight mb-4">
-              {language === 'es' ? 'Proyectos' : 'Projects'}
+              {language === 'es' ? 'Resultados Reales' : 'Real Results'}
             </h2>
             <p className="text-xl text-gray-600">
-              {language === 'es' 
-                ? 'Casos seleccionados de branding y diseño web' 
-                : 'Selected branding and web design cases'}
+              {language === 'es'
+                ? 'Marcas que confiaron en la velocidad y el diseño estratégico'
+                : 'Brands that trusted in speed and strategic design'}
             </p>
           </div>
         </RevealAnimation>
@@ -159,7 +159,7 @@ export function Portfolio() {
             {projects.map((project, index) => {
               const style = getCardStyle(index);
               const isActive = index === currentIndex;
-              
+
               return (
                 <Link
                   key={project.id}
@@ -204,8 +204,8 @@ export function Portfolio() {
           <p className="text-xl text-gray-600 mb-8">
             {language === 'es' ? currentProject.descEs : currentProject.descEn}
           </p>
-          
-          <Link 
+
+          <Link
             to={`/proyecto/${currentProject.slug}`}
             className="inline-flex items-center gap-2 text-black border border-black px-8 py-4 hover:bg-black hover:text-white transition-colors"
           >
@@ -216,30 +216,29 @@ export function Portfolio() {
 
         {/* Navegación */}
         <div className="flex items-center justify-center gap-6">
-          <button 
+          <button
             onClick={prev}
             className="p-4 border border-gray-300 hover:border-black transition-colors rounded-full"
             aria-label="Proyecto anterior"
           >
             <ChevronLeft size={24} />
           </button>
-          
+
           <div className="flex items-center gap-2">
             {projects.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`h-2 rounded-full transition-all ${
-                  index === currentIndex 
-                    ? 'w-8 bg-black' 
+                className={`h-2 rounded-full transition-all ${index === currentIndex
+                    ? 'w-8 bg-black'
                     : 'w-2 bg-gray-300 hover:bg-gray-400'
-                }`}
+                  }`}
                 aria-label={`Ir al proyecto ${index + 1}`}
               />
             ))}
           </div>
-          
-          <button 
+
+          <button
             onClick={next}
             className="p-4 border border-gray-300 hover:border-black transition-colors rounded-full"
             aria-label="Siguiente proyecto"

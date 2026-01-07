@@ -12,38 +12,38 @@ export function FAQ() {
   const faqs = {
     es: [
       {
-        question: '¿Las webs se hacen directamente en código?',
-        answer: 'No. Se diseñan en Figma y luego se llevan a producción.'
+        question: '¿Me entregás código o diseño?',
+        answer: 'Ambos. Diseño en Figma, aprobamos juntos y desarrollo el código final optimizado.'
       },
       {
-        question: '¿Qué rol cumple Figma Make?',
-        answer: 'Acelera el paso de diseño a código, manteniendo coherencia.'
+        question: '¿Cuánto tardamos?',
+        answer: 'Webs simples: 2-3 semanas. Proyectos completos: 4-6 semanas. La velocidad es mi prioridad.'
       },
       {
-        question: '¿Usás IA para diseñar?',
-        answer: 'Sí, como herramienta. Las decisiones siguen siendo humanas.'
+        question: '¿Trabajás con plantillas?',
+        answer: 'Nunca. Todo se diseña y codifica a medida de tus objetivos.'
       },
       {
-        question: '¿Trabajás con clientes del exterior?',
-        answer: 'Sí, 100% remoto.'
+        question: '¿Cómo es el pago?',
+        answer: '50% para reservar fecha y comenzar, 50% contra entrega final satisfactoria.'
       }
     ],
     en: [
       {
-        question: 'Are websites built directly in code?',
-        answer: 'No. They are designed in Figma and then brought to production.'
+        question: 'Do you deliver code or design?',
+        answer: 'Both. I design in Figma, we approve together, and I develop the final optimized code.'
       },
       {
-        question: 'What role does Figma Make play?',
-        answer: 'It accelerates the design-to-code transition while maintaining consistency.'
+        question: 'How long does it take?',
+        answer: 'Simple sites: 2-3 weeks. Full projects: 4-6 weeks. Speed is my priority.'
       },
       {
-        question: 'Do you use AI for design?',
-        answer: 'Yes, as a tool. The decisions remain human.'
+        question: 'Do you use templates?',
+        answer: 'Never. Everything is designed and coded closely to your objectives.'
       },
       {
-        question: 'Do you work with international clients?',
-        answer: 'Yes, 100% remote.'
+        question: 'How is payment handled?',
+        answer: '50% to reserve the date and start, 50% upon satisfactory final delivery.'
       }
     ]
   };
@@ -58,7 +58,7 @@ export function FAQ() {
             FAQ
           </h2>
         </RevealAnimation>
-        
+
         <div className="space-y-4">
           {currentFaqs.map((faq, index) => (
             <RevealAnimation key={index} delay={index * 0.1}>
@@ -74,10 +74,10 @@ export function FAQ() {
                     <Plus className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
                   )}
                 </button>
-                
+
                 <AnimatePresence>
                   {openIndex === index && (
-                    <motion.div 
+                    <motion.div
                       className="pb-6 overflow-hidden"
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
@@ -92,10 +92,10 @@ export function FAQ() {
             </RevealAnimation>
           ))}
         </div>
-        
+
         <RevealAnimation delay={currentFaqs.length * 0.1 + 0.1}>
           <div className="mt-12 text-center">
-            <Link 
+            <Link
               to="/preguntas-frecuentes"
               className="inline-flex items-center gap-2 text-lg hover:opacity-60 transition-opacity"
             >

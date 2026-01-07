@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X, Globe, Zap, Folder, Star, User, CreditCard, HelpCircle, Mail, FileText } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import logoImage from 'figma:asset/2a1be87d495193914ab22c7cd47e0a19e7433208.png';
 
@@ -110,28 +110,36 @@ export function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden pb-4 space-y-3">
-            <button onClick={() => handleNavClick('services')} className="block w-full text-left text-sm hover:text-gray-600 transition-colors">
+            <button onClick={() => handleNavClick('services')} className="flex items-center gap-3 w-full text-left text-sm hover:text-gray-600 transition-colors py-2">
+              <Zap className="w-4 h-4" strokeWidth={1.5} />
               {t('header.services')}
             </button>
-            <button onClick={() => handleNavClick('portfolio')} className="block w-full text-left text-sm hover:text-gray-600 transition-colors">
+            <button onClick={() => handleNavClick('portfolio')} className="flex items-center gap-3 w-full text-left text-sm hover:text-gray-600 transition-colors py-2">
+              <Folder className="w-4 h-4" strokeWidth={1.5} />
               {t('header.portfolio')}
             </button>
-            <button onClick={() => handleNavClick('why')} className="block w-full text-left text-sm hover:text-gray-600 transition-colors">
+            <button onClick={() => handleNavClick('why')} className="flex items-center gap-3 w-full text-left text-sm hover:text-gray-600 transition-colors py-2">
+              <Star className="w-4 h-4" strokeWidth={1.5} />
               {t('header.why')}
             </button>
-            <button onClick={() => handleNavClick('about')} className="block w-full text-left text-sm hover:text-gray-600 transition-colors">
+            <button onClick={() => handleNavClick('about')} className="flex items-center gap-3 w-full text-left text-sm hover:text-gray-600 transition-colors py-2">
+              <User className="w-4 h-4" strokeWidth={1.5} />
               {t('header.about')}
             </button>
-            <button onClick={() => handleNavClick('pricing')} className="block w-full text-left text-sm hover:text-gray-600 transition-colors">
+            <button onClick={() => handleNavClick('pricing')} className="flex items-center gap-3 w-full text-left text-sm hover:text-gray-600 transition-colors py-2">
+              <CreditCard className="w-4 h-4" strokeWidth={1.5} />
               {t('header.pricing')}
             </button>
-            <button onClick={() => handleNavClick('faq')} className="block w-full text-left text-sm hover:text-gray-600 transition-colors">
+            <button onClick={() => handleNavClick('faq')} className="flex items-center gap-3 w-full text-left text-sm hover:text-gray-600 transition-colors py-2">
+              <HelpCircle className="w-4 h-4" strokeWidth={1.5} />
               {t('header.faq')}
             </button>
-            <button onClick={() => handleNavClick('contact')} className="block w-full text-left text-sm hover:text-gray-600 transition-colors">
+            <button onClick={() => handleNavClick('contact')} className="flex items-center gap-3 w-full text-left text-sm hover:text-gray-600 transition-colors py-2">
+              <Mail className="w-4 h-4" strokeWidth={1.5} />
               {t('header.contact')}
             </button>
-            <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="block w-full text-left text-sm hover:text-gray-600 transition-colors">
+            <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-3 w-full text-left text-sm hover:text-gray-600 transition-colors py-2">
+              <FileText className="w-4 h-4" strokeWidth={1.5} />
               {t('header.blog')}
             </Link>
             <button

@@ -6,9 +6,9 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 export function HeroSection() {
   const { t } = useLanguage();
-  
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
+
+  const scrollToPricing = () => {
+    const element = document.getElementById('pricing');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -26,10 +26,10 @@ export function HeroSection() {
           />
         </picture>
       </div>
-      
+
       <div className="relative z-10 w-full py-20 flex items-center justify-center px-4">
         <div className="text-center text-white max-w-4xl">
-          <motion.h1 
+          <motion.h1
             className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-4 sm:mb-6 leading-tight px-2"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ export function HeroSection() {
           >
             {t('hero.title')}
           </motion.h1>
-          <motion.p 
+          <motion.p
             className="text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto opacity-90 mb-6 sm:mb-8 leading-relaxed px-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -45,8 +45,8 @@ export function HeroSection() {
           >
             {t('hero.subtitle')}
           </motion.p>
-          <motion.button 
-            onClick={scrollToContact}
+          <motion.button
+            onClick={scrollToPricing}
             className="inline-block bg-white text-black px-6 sm:px-8 py-3 text-sm sm:text-base hover:bg-gray-200 transition-colors"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -59,7 +59,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <motion.div 
+      <motion.div
         className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white"
         animate={{ y: [0, 10, 0] }}
         transition={{

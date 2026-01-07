@@ -5,104 +5,102 @@ import { RevealAnimation } from './RevealAnimation';
 
 export function Pricing() {
   const { language } = useLanguage();
-  
+
   const translations = {
     es: {
-      title: 'Inversión clara. Proyectos a medida.',
-      intro1: 'Cada proyecto es distinto.',
-      intro2: 'Por eso no trabajo con precios fijos, sino con propuestas pensadas según lo que realmente necesitás.',
-      intro3: 'Elegí el tipo de proyecto y contame los detalles. Con esa info te envío una cotización clara por WhatsApp.',
+      title: 'Inversión Clara. Paquetes Transparentes.',
+      intro1: 'Sin vueltas ni costos ocultos.',
+      intro2: 'Trabajo con rangos de precios claros para que sepas dónde estás parado desde el día 1.',
+      intro3: 'Elegí el paquete que mejor se ajuste a tu etapa actual y empecemos.',
       branding: {
-        title: 'Branding & Identidad de marca',
-        desc: 'Diseño marcas desde cero o las llevo a un nuevo nivel. El alcance depende de la etapa y los objetivos del negocio.',
-        helps: 'Este formulario me ayuda a entender:',
+        title: 'Branding Estratégico',
+        desc: 'Identidad visual completa pensada para diferenciarte y vender más.',
+        helps: 'Incluye:',
         items: [
-          'Tipo de marca (personal, empresa, startup)',
-          'Etapa del proyecto',
-          'Alcance (logo, sistema visual, branding completo)',
-          'Uso principal (web, redes, comercial, institucional)',
-          'Plazos'
+          'Estrategia de marca',
+          'Sistema visual (Logo, Colores, Typos)',
+          'Manual de marca digital',
+          'Assets para redes sociales',
+          'Archivos editables finales'
         ],
-        cta: 'Completar formulario de branding',
-        note: 'Te respondo por WhatsApp con una propuesta'
+        cta: 'Empezar Branding',
+        note: 'Se reserva con el 50%'
       },
       web: {
-        title: 'Diseño y desarrollo web',
-        desc: 'Webs diseadas en Figma y construidas con procesos modernos, rpidas y listas para escalar.',
-        allows: 'Este formulario me permite definir:',
+        title: 'Diseño Web High-Perf',
+        desc: 'Tu web rápida, moderna y optimizada para conversión. Sin builders pesados.',
+        allows: 'Incluye:',
         items: [
-          'Tipo de sitio (institucional, landing, portfolio)',
-          'Cantidad de secciones',
-          'Idiomas',
-          'Objetivo principal (ventas, contacto, posicionamiento)',
-          'Plazos y urgencia',
-          'E-commerce: solo en plataformas (Tienda Nube, Shopify)'
+          'Diseño UI Premium en Figma',
+          'Desarrollo a medida (Next.js/React)',
+          'Animaciones "Vibe Coding"',
+          'SEO Técnico base',
+          'Optimización de velocidad (90+)'
         ],
-        cta: 'Completar formulario de sitio web',
-        note: 'Seguimos la cotización por WhatsApp'
+        cta: 'Empezar Web',
+        note: 'Se reserva con el 50%'
       },
       aiPhotography: {
-        title: 'Fotografía de producto con IA',
-        desc: 'Imágenes profesionales de tu producto sin estudios, sin producciones costosas y sin complicaciones. Con solo una foto tomada con el celular, genero imágenes realistas y de alta calidad listas para usar en tu web, e-commerce o redes.',
-        cta: 'Quiero saber más'
+        title: 'Fotografía IA',
+        desc: 'Imágenes de producto nivel estudio, generadas con IA a partir de fotos caseras.',
+        cta: 'Ver Fotografía IA'
       },
       trust: {
         clear: 'Proceso claro',
-        fast: 'Respuesta rápida',
-        noCommit: 'Sin compromiso'
+        fast: 'Velocidad real',
+        noCommit: 'Calidad garantizada'
       },
-      whatsapp: 'Hablemos directo por WhatsApp'
+      whatsapp: 'Consultar por WhatsApp'
     },
     en: {
-      title: 'Clear investment. Custom projects.',
-      intro1: 'Each project is different.',
-      intro2: "That's why I don't work with fixed prices, but with proposals tailored to what you really need.",
-      intro3: 'Choose the project type and tell me the details. With that info, I\'ll send you a clear quote via WhatsApp.',
+      title: 'Clear Investment. Transparent Packages.',
+      intro1: 'No fluff, no hidden costs.',
+      intro2: 'I work with clear price ranges so you know where you stand from day 1.',
+      intro3: 'Choose the package that best fits your current stage and let\'s start.',
       branding: {
-        title: 'Branding & Brand Identity',
-        desc: 'I design brands from scratch or take them to the next level. The scope depends on the stage and business objectives.',
-        helps: 'This form helps me understand:',
+        title: 'Strategic Branding',
+        desc: 'Complete visual identity designed to differentiate you and sell more.',
+        helps: 'Includes:',
         items: [
-          'Brand type (personal, company, startup)',
-          'Project stage',
-          'Scope (logo, visual system, complete branding)',
-          'Main use (web, social media, commercial, institutional)',
-          'Timelines'
+          'Brand Strategy',
+          'Visual System (Logo, Colors, Typos)',
+          'Digital Brand Manual',
+          'Social Media Assets',
+          'Final Editable Files'
         ],
-        cta: 'Complete branding form',
-        note: "I'll reply via WhatsApp with a proposal"
+        cta: 'Start Branding',
+        note: '50% deposit to start'
       },
       web: {
-        title: 'Web design and development',
-        desc: 'Websites designed in Figma and built with modern processes, fast and ready to scale.',
-        allows: 'This form allows me to define:',
+        title: 'High-Perf Web Design',
+        desc: 'Your fast, modern website optimized for conversion. No heavy builders.',
+        allows: 'Includes:',
         items: [
-          'Site type (corporate, landing, portfolio)',
-          'Number of sections',
-          'Languages',
-          'Main goal (sales, contact, positioning)',
-          'Deadlines and urgency',
-          'E-commerce: only on platforms (Tienda Nube, Shopify)'
+          'Premium UI Design in Figma',
+          'Custom Development (Next.js/React)',
+          '"Vibe Coding" Animations',
+          'Base Technical SEO',
+          'Speed Optimization (90+)'
         ],
-        cta: 'Complete website form',
-        note: "We'll continue the quote via WhatsApp"
+        cta: 'Start Web',
+        note: '50% deposit to start'
       },
       aiPhotography: {
-        title: 'Product Photography with AI',
-        desc: 'Professional images of your product without studies, without expensive productions, and without complications. With just a photo taken with your phone, I generate realistic and high-quality images ready to use on your website, e-commerce, or social media.',
-        cta: 'I want to know more'
+        title: 'AI Photography',
+        desc: 'Studio-level product images generated with AI from amateur photos.',
+        cta: 'See AI Photography'
       },
       trust: {
         clear: 'Clear process',
-        fast: 'Fast response',
-        noCommit: 'No commitment'
+        fast: 'Real speed',
+        noCommit: 'Guaranteed quality'
       },
-      whatsapp: 'Let\'s talk directly on WhatsApp'
+      whatsapp: 'Chat on WhatsApp'
     }
   };
 
   const t = translations[language];
-  
+
   return (
     <section id="pricing" className="relative z-10 bg-white py-20 lg:py-32 -mt-[50vh]">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
@@ -116,7 +114,7 @@ export function Pricing() {
             </p>
           </div>
         </RevealAnimation>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-24">
           <RevealAnimation delay={0.1}>
             <p className="text-2xl sm:text-3xl text-gray-600">
@@ -142,13 +140,13 @@ export function Pricing() {
               <div className="mb-6 flex-grow">
                 <div className="text-sm tracking-wider text-gray-400 mb-4 sm:mb-6 group-hover:text-gray-400">01</div>
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4 group-hover:text-white">{t.branding.title}</h3>
-                
+
                 <p className="text-base sm:text-lg mb-6 sm:mb-8 group-hover:text-gray-300">
                   {t.branding.desc}
                 </p>
 
                 <p className="text-xs sm:text-sm uppercase tracking-wider opacity-60 mb-3 group-hover:text-gray-400">{t.branding.helps}</p>
-                
+
                 <ul className="space-y-2 mb-8 sm:mb-10 group-hover:text-gray-300 text-sm sm:text-base">
                   {t.branding.items.map((item, i) => (
                     <li key={i} className="pl-4 border-l border-gray-300 group-hover:border-gray-600">{item}</li>
@@ -157,7 +155,7 @@ export function Pricing() {
               </div>
 
               <div className="mt-auto">
-                <Link 
+                <Link
                   to="/formulario-branding"
                   className="inline-block w-full text-center bg-black text-white py-3 sm:py-4 text-sm sm:text-base group-hover:bg-white group-hover:text-black transition-colors mb-2"
                 >
@@ -176,13 +174,13 @@ export function Pricing() {
               <div className="mb-6 flex-grow">
                 <div className="text-sm tracking-wider text-gray-400 mb-4 sm:mb-6 group-hover:text-gray-400">02</div>
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4 group-hover:text-white">{t.web.title}</h3>
-                
+
                 <p className="text-base sm:text-lg mb-6 sm:mb-8 group-hover:text-gray-300">
                   {t.web.desc}
                 </p>
 
                 <p className="text-xs sm:text-sm uppercase tracking-wider opacity-60 mb-3 group-hover:text-gray-400">{t.web.allows}</p>
-                
+
                 <ul className="space-y-2 mb-8 sm:mb-10 group-hover:text-gray-300 text-sm sm:text-base">
                   {t.web.items.map((item, i) => (
                     <li key={i} className="pl-4 border-l border-gray-300 group-hover:border-gray-600">{item}</li>
@@ -191,7 +189,7 @@ export function Pricing() {
               </div>
 
               <div className="mt-auto">
-                <Link 
+                <Link
                   to="/formulario-web"
                   className="inline-block w-full text-center bg-black text-white py-3 sm:py-4 text-sm sm:text-base group-hover:bg-white group-hover:text-black transition-colors mb-2"
                 >
@@ -210,14 +208,14 @@ export function Pricing() {
               <div className="mb-6 flex-grow">
                 <div className="text-sm tracking-wider text-gray-400 mb-4 sm:mb-6 group-hover:text-gray-400">03</div>
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl mb-3 sm:mb-4 group-hover:text-white">{t.aiPhotography.title}</h3>
-                
+
                 <p className="text-base sm:text-lg mb-6 sm:mb-8 group-hover:text-gray-300">
                   {t.aiPhotography.desc}
                 </p>
               </div>
 
               <div className="mt-auto">
-                <Link 
+                <Link
                   to="/fotografia-ia"
                   className="inline-block w-full text-center bg-black text-white py-3 sm:py-4 text-sm sm:text-base group-hover:bg-white group-hover:text-black transition-colors mb-2"
                 >
@@ -252,7 +250,7 @@ export function Pricing() {
         {/* BOTÓN FINAL */}
         <RevealAnimation delay={0.5}>
           <div className="text-center">
-            <a 
+            <a
               href="https://wa.me/5493436987030"
               target="_blank"
               rel="noopener noreferrer"

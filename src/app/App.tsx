@@ -11,6 +11,7 @@ import { Footer } from './components/Footer';
 // Lazy loading for pages - improves initial load performance
 const HomePage = lazy(() => import('./pages/HomePage').then(m => ({ default: m.HomePage })));
 const AboutExtended = lazy(() => import('./pages/AboutExtended').then(m => ({ default: m.AboutExtended })));
+const MethodPage = lazy(() => import('./pages/MethodPage').then(m => ({ default: m.MethodPage })));
 const BrandingFormPage = lazy(() => import('./pages/BrandingFormPage').then(m => ({ default: m.BrandingFormPage })));
 const WebFormPage = lazy(() => import('./pages/WebFormPage').then(m => ({ default: m.WebFormPage })));
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail').then(m => ({ default: m.ProjectDetail })));
@@ -53,6 +54,13 @@ export default function App() {
                   <>
                     <Header />
                     <AboutExtended />
+                    <Footer />
+                  </>
+                } />
+                <Route path="/metodo" element={
+                  <>
+                    <Header />
+                    <MethodPage />
                     <Footer />
                   </>
                 } />

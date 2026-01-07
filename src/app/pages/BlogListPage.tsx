@@ -41,13 +41,13 @@ export function BlogListPage() {
             <SEO />
             <div className="min-h-screen bg-white">
                 {/* Hero Section */}
-                <section className="bg-white pt-32 pb-12 lg:pt-48 lg:pb-16">
+                <section className="bg-white pt-32 pb-20 lg:pt-48 lg:pb-32">
                     <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
                         <RevealAnimation>
-                            <h1 className="text-6xl sm:text-7xl lg:text-8xl mb-8">
+                            <h1 className="text-6xl sm:text-7xl lg:text-9xl mb-8 tracking-tighter">
                                 {t.title}
                             </h1>
-                            <p className="text-xl sm:text-2xl text-gray-500 max-w-2xl leading-relaxed">
+                            <p className="text-xl sm:text-2xl text-gray-500 max-w-2xl leading-relaxed font-light">
                                 {t.subtitle}
                             </p>
                         </RevealAnimation>
@@ -56,13 +56,13 @@ export function BlogListPage() {
 
                 {/* Featured Post */}
                 {featuredPost && (
-                    <section className="pb-20">
+                    <section className="pb-24 lg:pb-32">
                         <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
                             <RevealAnimation>
                                 <Link to={`/blog/${featuredPost.slug}`} className="group block">
-                                    <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-                                        <div className="aspect-[16/10] bg-gray-50 overflow-hidden rounded-sm relative">
-                                            <div className="absolute top-4 left-4 z-10 bg-black text-white text-xs font-medium px-3 py-1 rounded-full uppercase tracking-widest">
+                                    <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+                                        <div className="lg:col-span-7 aspect-[16/10] bg-gray-50 overflow-hidden rounded-sm relative">
+                                            <div className="absolute top-6 left-6 z-10 bg-white text-black text-xs font-bold px-4 py-2 rounded-full uppercase tracking-widest shadow-sm">
                                                 {t.latest}
                                             </div>
                                             <img
@@ -71,23 +71,23 @@ export function BlogListPage() {
                                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                                             />
                                         </div>
-                                        <div className="flex flex-col justify-center">
-                                            <div className="flex items-center gap-2 mb-6">
-                                                <span className="text-xs font-medium uppercase tracking-widest text-gray-400 border border-gray-100 px-3 py-1 rounded-full">
+                                        <div className="lg:col-span-5 flex flex-col justify-center">
+                                            <div className="flex items-center gap-3 mb-8">
+                                                <span className="text-xs font-medium uppercase tracking-widest text-black border border-gray-200 px-3 py-1 rounded-full">
                                                     {featuredPost.category}
                                                 </span>
-                                                <span className="text-xs text-gray-400">
+                                                <span className="text-xs text-gray-400 font-medium">
                                                     {featuredPost.readingTime} min
                                                 </span>
                                             </div>
-                                            <h2 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.1] mb-6 group-hover:text-gray-600 transition-colors">
+                                            <h2 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.1] mb-8 font-medium group-hover:text-gray-600 transition-colors tracking-tight">
                                                 {featuredPost.title}
                                             </h2>
-                                            <p className="text-xl text-gray-500 mb-8 line-clamp-3 leading-relaxed max-w-xl">
+                                            <p className="text-lg text-gray-500 mb-10 line-clamp-3 leading-relaxed">
                                                 {featuredPost.excerpt}
                                             </p>
-                                            <span className="text-sm font-medium text-black group-hover:translate-x-1 transition-transform duration-300 inline-flex items-center gap-2 uppercase tracking-widest">
-                                                {t.readMore} <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+                                            <span className="text-sm font-bold text-black group-hover:translate-x-1 transition-transform duration-300 inline-flex items-center gap-2 uppercase tracking-widest">
+                                                {t.readMore} <ArrowRight className="w-4 h-4" strokeWidth={2} />
                                             </span>
                                         </div>
                                     </div>
@@ -99,9 +99,9 @@ export function BlogListPage() {
 
                 {/* Other Posts Grid */}
                 {otherPosts.length > 0 && (
-                    <section className="pb-32 lg:pb-40 border-t border-gray-100 pt-20">
+                    <section className="pb-32 lg:pb-40 border-t border-gray-100 pt-24">
                         <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-20">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20">
                                 {otherPosts.map((post, index) => (
                                     <RevealAnimation key={post.slug} delay={index * 0.1}>
                                         <Link
@@ -119,36 +119,40 @@ export function BlogListPage() {
                                                 </div>
 
                                                 {/* Category */}
-                                                <div className="flex items-center gap-2 mb-4">
-                                                    <span className="text-xs font-medium uppercase tracking-widest text-gray-400">
+                                                <div className="flex items-center gap-3 mb-5">
+                                                    <span className="text-xs font-bold uppercase tracking-widest text-gray-900">
                                                         {post.category}
+                                                    </span>
+                                                    <span className="w-1 h-1 rounded-full bg-gray-300"></span>
+                                                    <span className="text-xs text-gray-400 font-medium">
+                                                        {post.readingTime} min
                                                     </span>
                                                 </div>
 
                                                 {/* Title */}
-                                                <h2 className="text-2xl lg:text-3xl leading-tight mb-4 group-hover:text-gray-600 transition-colors">
+                                                <h2 className="text-2xl lg:text-3xl leading-tight mb-4 font-medium group-hover:text-gray-600 transition-colors tracking-tight">
                                                     {post.title}
                                                 </h2>
 
                                                 {/* Excerpt */}
-                                                <p className="text-gray-500 mb-8 line-clamp-3 leading-relaxed text-sm">
+                                                <p className="text-gray-500 mb-8 line-clamp-3 leading-relaxed text-base font-light">
                                                     {post.excerpt}
                                                 </p>
 
                                                 {/* Meta Information */}
                                                 <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-6">
-                                                    <div className="flex items-center gap-4 text-sm text-gray-400">
+                                                    <div className="flex items-center gap-4 text-xs font-medium text-gray-400 uppercase tracking-wider">
                                                         <time dateTime={post.publishDate}>
                                                             {new Date(post.publishDate).toLocaleDateString(language === 'es' ? 'es-AR' : 'en-US', {
-                                                                month: 'long',
+                                                                month: 'short',
                                                                 day: 'numeric',
                                                                 year: 'numeric'
                                                             })}
                                                         </time>
                                                     </div>
 
-                                                    <span className="text-sm font-medium text-black group-hover:translate-x-1 transition-transform duration-300 inline-flex items-center gap-2">
-                                                        <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+                                                    <span className="text-xs font-bold text-black group-hover:translate-x-1 transition-transform duration-300 inline-flex items-center gap-2 uppercase tracking-widest">
+                                                        <ArrowRight className="w-4 h-4" strokeWidth={2} />
                                                     </span>
                                                 </div>
                                             </article>

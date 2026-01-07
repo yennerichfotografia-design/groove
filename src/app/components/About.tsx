@@ -6,12 +6,12 @@ import { RevealAnimation } from './RevealAnimation';
 
 export function About() {
   const { t } = useLanguage();
-  
+
   return (
     <section id="about" className="relative z-10 bg-black text-white py-20 lg:py-32">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 mb-20">
-          <div>
+          <div className="order-2 lg:order-1">
             <RevealAnimation>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-8">
                 {t('about.title')}
@@ -32,22 +32,22 @@ export function About() {
                 <li>• {t('about.points.2')}</li>
               </ul>
             </RevealAnimation>
-            
+
             <RevealAnimation delay={0.3}>
               <p className="text-lg text-gray-400 mb-6">
                 {t('about.description')}
               </p>
             </RevealAnimation>
-            
+
             <RevealAnimation delay={0.4}>
               <p className="text-gray-400 mb-8">
                 {t('about.experience')}
               </p>
             </RevealAnimation>
-            
+
             <RevealAnimation delay={0.5}>
-              <Link 
-                to="/sobre-mi"
+              <Link
+                to="/metodo"
                 className="inline-block bg-white text-black px-8 py-4 hover:bg-gray-200 transition-colors"
               >
                 {t('about.cta')}
@@ -55,7 +55,7 @@ export function About() {
             </RevealAnimation>
           </div>
 
-          <RevealAnimation delay={0.2} direction="left">
+          <RevealAnimation delay={0.2} direction="left" className="order-1 lg:order-2">
             <div className="aspect-[4/5] overflow-hidden rounded-lg sm:rounded-none">
               <img
                 src={profileImage}

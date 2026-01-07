@@ -2,6 +2,73 @@ import { BlogPost } from './blogTypes';
 
 export const blogPosts: BlogPost[] = [
     {
+        slug: 'google-antigravity-editor-codigo-ia',
+        title: 'Google Antigravity: el editor de código con IA que acelera la creación de productos digitales',
+        excerpt: 'Google Antigravity es el nuevo editor de código impulsado por inteligencia artificial que está redefiniendo cómo se construyen productos digitales y acelerando la transformación de proyectos desde la idea hasta el lanzamiento.',
+        author: 'Matias Yennerich',
+        publishDate: '2026-01-07',
+        readingTime: 5,
+        category: 'Tecnología',
+        tags: ['Google Antigravity', 'IA', 'Desarrollo Web', 'Innovación'],
+        featuredImage: '/blog/antigravity-hero.png',
+        seo: {
+            title: 'Google Antigravity: editor de código con IA para acelerar desarrollo digital',
+            description: 'Descubre cómo Google Antigravity revoluciona el desarrollo de productos digitales y cómo en Groove Design lo aprovechamos para potenciar diseño, calidad y velocidad de entrega.',
+            keywords: 'google antigravity, editor codigo ia, desarrollo web ia, groove design, desarrollo productos digitales'
+        },
+        content: `
+# Google Antigravity: el editor de código con IA que acelera la creación de productos digitales
+
+En un mercado donde la velocidad y la calidad son factores diferenciales, adoptar herramientas que potencien equipos y procesos no es una moda: es una estrategia competitiva. **Google Antigravity** es el nuevo editor de código impulsado por inteligencia artificial que está redefiniendo cómo se construyen productos digitales y acelerando la transformación de proyectos desde la idea hasta el lanzamiento.
+
+## ¿Qué es Google Antigravity y por qué importa?
+
+Google Antigravity es un editor de código de nueva generación con agentes de IA integrados que no solo sugieren líneas de código, sino que realizan tareas completas por ti: generan código, ejecutan pruebas, verifican resultados reales e incluso navegan aplicaciones para validar entregables.
+
+Esto marca un cambio de paradigma: la IA deja de ser un asistente pasivo para convertirse en un miembro activo del flujo de trabajo.
+
+> Ideal para equipos que buscan agilidad técnica, precisión y foco en valor real, no solo en horas de trabajo.
+
+## Principales ventajas de Antigravity
+
+### 1. Desarrollos más rápidos y confiables
+Antigravity reduce tiempos de desarrollo, automatiza pruebas y elimina tareas repetitivas, liberando a los equipos para enfocarse en problemas de negocio y diseño estratégico.
+
+### 2. Integración inteligente entre código, terminal y navegador
+La IA puede interactuar con entornos reales y ejecutar flujos de trabajo completos, no solo sugerir snippets.
+
+### 3. Documentación automatizada y trazabilidad
+Cada acción queda registrada: tests, validaciones, cambios de código y evidencia de resultados. Esto es vital para procesos de calidad y entregables consistentes.
+
+## ¿Qué significa esto para tu empresa?
+
+En Groove Design, transformamos ideas en productos digitales que realmente funcionan y venden. Sabemos que desarrollar productos digitales exitosos depende de:
+
+- Diseño UX/UI estratégico y centrado en el usuario
+- Arquitecturas robustas y escalables
+- Procesos eficientes de desarrollo y despliegue
+- Resultados medibles, no solo entregables bonitos
+
+**Google Antigravity acelera todos estos vectores.** No reemplaza talento humano, pero multiplica su impacto: permite que los equipos se concentren en diseño, experiencia y estrategia omnicanal mientras la IA gestiona rutinas técnicas complejas.
+
+## ¿Por qué ahora?
+
+El desarrollo tradicional está llegando a un punto donde:
+
+- Crece la demanda de productos digitales complejos
+- Los equipos necesitan iterar más rápido
+- La experiencia del usuario define resultados de negocio
+
+En este escenario, herramientas como Antigravity no son un extra: son un diferencial que permite a agencias y empresas entregar productos de alto valor en plazos competitivos.
+
+## Conclusión: IA al servicio del diseño y la ejecución
+
+Google Antigravity no es solo una novedad técnica. Es una señal de hacia dónde va el desarrollo digital: más automatización, más inteligencia integrada, más foco en lo que realmente agrega valor.
+
+En **Groove Design**, aprovechamos tecnologías como Antigravity y otras plataformas de IA para acelerar ciclos de desarrollo y elevar la calidad de nuestros entregables, sin perder de vista lo que más importa: tu crecimiento y resultados.
+        `
+    },
+    {
         slug: 'vibe-coding-futuro-desarrollo-web',
         title: 'Vibe Coding: El Futuro del Desarrollo Web',
         excerpt: 'Descubre Vibe Coding, la metodología revolucionaria que combina IA y desarrollo para crear sitios web profesionales en tiempo récord sin sacrificar calidad.',

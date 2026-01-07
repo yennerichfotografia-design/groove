@@ -14,8 +14,8 @@ export function AboutExtended() {
 
           {/* Imagen de perfil */}
           <div className="mb-12">
-            <img 
-              src={profileImage} 
+            <img
+              src={profileImage}
               alt="Foto de perfil"
               className="w-full max-w-md mx-auto rounded-lg"
             />
@@ -37,56 +37,17 @@ export function AboutExtended() {
               </p>
             </div>
 
-            <div className="pt-8">
-              <h2 className="text-3xl sm:text-4xl mb-6">
-                Diseño, tecnología y criterio
-              </h2>
-              <p className="text-gray-700 mb-4">
-                Trabajo con Figma como base del proceso, porque permite pensar, prototipar y validar antes de construir.
-                Sobre esa base incorporo nuevas tecnologías, IA y Figma Make para acelerar tiempos, iterar más rápido y mejorar resultados, sin perder control ni calidad.
-              </p>
-              <p className="text-gray-700">
-                No uso inteligencia artificial como atajo ni como reemplazo del criterio profesional. La uso como lo que es:
-                un acelerador que permite enfocarse más en estrategia, experiencia y detalle.
-              </p>
-            </div>
-
-            <div className="pt-8">
-              <h2 className="text-3xl sm:text-4xl mb-6">
-                Formación constante
-              </h2>
-              <p className="text-gray-700 mb-4">
-                Me capacito de forma permanente para mantenerme a la vanguardia del diseño, la tecnología y los avances en IA.
-                El ecosistema digital cambia todo el tiempo, y creo que la única forma de ofrecer soluciones relevantes es seguir aprendiendo, probando y adaptándose.
-              </p>
-              <p className="text-gray-700 mb-4">
-                Eso se traduce en:
-              </p>
-              <ul className="list-none space-y-2 text-gray-700">
-                <li>• procesos más ágiles,</li>
-                <li>• decisiones mejor informadas,</li>
-                <li>• y proyectos preparados para escalar.</li>
-              </ul>
-            </div>
-
-            <div className="pt-8">
-              <h2 className="text-3xl sm:text-4xl mb-6">
-                Cómo trabajo
-              </h2>
-              <p className="text-gray-700 mb-4">
-                Prefiero procesos claros, comunicación directa y objetivos bien definidos.
-                Trabajo de manera independiente para involucrarme de verdad en cada proyecto y construir soluciones a medida.
-              </p>
-              <p className="text-gray-700 mb-2">
-                No vendo fórmulas.
-              </p>
-              <p className="text-gray-700">
-                Diseño marcas y sitios web pensados para durar, crecer y adaptarse.
-              </p>
+            <div className="pt-12">
+              <Link
+                to="/metodo"
+                className="inline-block border-2 border-black text-black px-8 py-4 hover:bg-black hover:text-white transition-colors mr-4"
+              >
+                Ver Método de Trabajo →
+              </Link>
             </div>
 
             <div className="pt-12">
-              <Link 
+              <Link
                 to="/"
                 className="inline-block bg-black text-white px-8 py-4 hover:bg-gray-800 transition-colors"
               >
