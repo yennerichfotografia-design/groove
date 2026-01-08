@@ -44,8 +44,15 @@ export default defineConfig({
         },
         // Optimize asset file names
         assetFileNames: (assetInfo) => {
-          const info = assetInfo.name?.split('.') || [];
+          const name = assetInfo.name || '';
+          const info = name.split('.');
           const ext = info[info.length - 1];
+
+          // Keep favicon files in root without hashing
+          if (/^(favicon|apple-touch-icon|icon-\d+|og-image|manifest)\.(ico|png|svg|jpg|json)$/i.test(name)) {
+            return `[name][extname]`;
+          }
+
           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
             return `assets/images/[name]-[hash][extname]`;
           } else if (/woff|woff2/.test(ext)) {
