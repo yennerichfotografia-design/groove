@@ -14,6 +14,16 @@ export interface BlogPost {
         description: string;
         keywords: string;
     };
+    // English Content
+    titleEn?: string;
+    excerptEn?: string;
+    contentEn?: string;
+    categoryEn?: string;
+    seoEn?: {
+        title: string;
+        description: string;
+        keywords: string;
+    };
 }
 
 export interface BlogCategory {

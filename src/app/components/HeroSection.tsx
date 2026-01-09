@@ -15,14 +15,16 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen bg-black flex items-center">
-      <div className="absolute inset-0">
+    <section className="relative z-0 min-h-screen bg-black flex items-center overflow-hidden">
+
+      {/* Fallback/Base Background Image (Optional: reduced opacity for visual layering, or keep as is) */}
+      <div className="absolute inset-0 -z-20 opacity-30 pointer-events-none">
         <picture>
           <source media="(min-width: 640px)" srcSet={heroImage} />
           <img
             src={heroImageMobile}
             alt="Hero background"
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover"
           />
         </picture>
       </div>

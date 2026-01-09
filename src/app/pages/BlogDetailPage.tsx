@@ -14,9 +14,26 @@ import { TableOfContents } from '../components/TableOfContents';
 
 export function BlogDetailPage() {
     const { slug } = useParams<{ slug: string }>();
-    const post = slug ? getPostBySlug(slug) : undefined;
-    const allPosts = getAllPosts();
     const { language } = useLanguage();
+    const originalPost = slug ? getPostBySlug(slug) : undefined;
+    const allPosts = getAllPosts();
+
+    const getLocalizedPost = (p: any) => {
+        if (!p) return undefined;
+        if (language === 'en') {
+            return {
+                ...p,
+                title: p.titleEn || p.title,
+                excerpt: p.excerptEn || p.excerpt,
+                content: p.contentEn || p.content,
+                category: p.categoryEn || p.category,
+                seo: p.seoEn || p.seo
+            };
+        }
+        return p;
+    };
+
+    const post = getLocalizedPost(originalPost);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -27,9 +44,9 @@ export function BlogDetailPage() {
     }
 
     const relatedPosts = allPosts
-        .filter(p => p.slug !== post.slug && (
-            p.category === post.category ||
-            p.tags.some(tag => post.tags.includes(tag))
+        .filter(p => p.slug !== originalPost.slug && (
+            p.category === originalPost.category ||
+            p.tags.some(tag => originalPost.tags.includes(tag))
         ))
         .slice(0, 3);
 
@@ -320,40 +337,43 @@ export function BlogDetailPage() {
                             </RevealAnimation>
 
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-16">
-                                {relatedPosts.map((relatedPost, index) => (
-                                    <RevealAnimation key={relatedPost.slug} delay={index * 0.1}>
-                                        <Link
-                                            to={`/blog/${relatedPost.slug}`}
-                                            className="group block h-full"
-                                        >
-                                            <article className="h-full flex flex-col">
-                                                <div className="aspect-[4/3] bg-gray-200 mb-8 overflow-hidden rounded-sm relative">
-                                                    <img
-                                                        src={relatedPost.featuredImage}
-                                                        alt={relatedPost.title}
-                                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                                                    />
-                                                    <div className="absolute top-4 left-4">
-                                                        <span className="text-xs font-bold uppercase tracking-widest text-black bg-white px-3 py-1 rounded-full shadow-sm">
-                                                            {relatedPost.category}
+                                {relatedPosts.map((originalRelatedPost, index) => {
+                                    const relatedPost = getLocalizedPost(originalRelatedPost);
+                                    return (
+                                        <RevealAnimation key={relatedPost.slug} delay={index * 0.1}>
+                                            <Link
+                                                to={`/blog/${relatedPost.slug}`}
+                                                className="group block h-full"
+                                            >
+                                                <article className="h-full flex flex-col">
+                                                    <div className="aspect-[4/3] bg-gray-200 mb-8 overflow-hidden rounded-sm relative">
+                                                        <img
+                                                            src={relatedPost.featuredImage}
+                                                            alt={relatedPost.title}
+                                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                                                        />
+                                                        <div className="absolute top-4 left-4">
+                                                            <span className="text-xs font-bold uppercase tracking-widest text-black bg-white px-3 py-1 rounded-full shadow-sm">
+                                                                {relatedPost.category}
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <h3 className="text-2xl mb-4 leading-tight font-medium group-hover:text-gray-600 transition-colors tracking-tight">
+                                                        {relatedPost.title}
+                                                    </h3>
+                                                    <p className="text-gray-500 text-base font-light line-clamp-3 mb-6 leading-relaxed">
+                                                        {relatedPost.excerpt}
+                                                    </p>
+                                                    <div className="mt-auto pt-6 border-t border-gray-200/50">
+                                                        <span className="text-xs font-bold uppercase tracking-widest text-black group-hover:translate-x-1 transition-transform inline-flex items-center gap-2">
+                                                            {t.readMore} <ArrowRight className="w-4 h-4" strokeWidth={2} />
                                                         </span>
                                                     </div>
-                                                </div>
-                                                <h3 className="text-2xl mb-4 leading-tight font-medium group-hover:text-gray-600 transition-colors tracking-tight">
-                                                    {relatedPost.title}
-                                                </h3>
-                                                <p className="text-gray-500 text-base font-light line-clamp-3 mb-6 leading-relaxed">
-                                                    {relatedPost.excerpt}
-                                                </p>
-                                                <div className="mt-auto pt-6 border-t border-gray-200/50">
-                                                    <span className="text-xs font-bold uppercase tracking-widest text-black group-hover:translate-x-1 transition-transform inline-flex items-center gap-2">
-                                                        {t.readMore} <ArrowRight className="w-4 h-4" strokeWidth={2} />
-                                                    </span>
-                                                </div>
-                                            </article>
-                                        </Link>
-                                    </RevealAnimation>
-                                ))}
+                                                </article>
+                                            </Link>
+                                        </RevealAnimation>
+                                    );
+                                })}
                             </div>
                         </div>
                     </section>
