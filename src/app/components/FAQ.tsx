@@ -18,7 +18,7 @@ export function FAQ() {
     <section id="faq" className="relative z-10 bg-white" style={{ padding: 'var(--space-section-y) 0' }}>
       <div className="max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
         <RevealAnimation>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-16">
+          <h2 className="tracking-tight mb-16" style={{ fontSize: 'var(--text-section)' }}>
             {t('faq.title')}
           </h2>
         </RevealAnimation>
@@ -46,7 +46,7 @@ export function FAQ() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
+                      transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
                     >
                       <p className="text-gray-600">{faq.answer}</p>
                     </motion.div>

@@ -24,7 +24,7 @@ export function Intro() {
             </p>
           </RevealAnimation>
           <RevealAnimation delay={0.3}>
-            <p className="text-lg sm:text-xl text-gray-400 max-w-2xl leading-relaxed">
+            <p className="text-lg sm:text-xl text-white/60 max-w-2xl leading-relaxed">
               {t('intro.text2')}
             </p>
           </RevealAnimation>

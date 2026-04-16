@@ -22,7 +22,7 @@ export function TrustedBy() {
     <section className="relative z-10 bg-white overflow-hidden" style={{ padding: 'var(--space-section-y) 0' }}>
       <div className="relative z-10 max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
         <RevealAnimation>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-12 sm:mb-16 text-black">
+          <h2 className="text-center mb-12 sm:mb-16 text-black" style={{ fontSize: 'var(--text-section)' }}>
             {language === 'es' ? 'Ya confiaron en m\u00ed' : 'They already trusted me'}
           </h2>
         </RevealAnimation>

@@ -56,7 +56,7 @@ export function Contact() {
             <p className="text-sm uppercase tracking-[0.2em] text-white/40 mb-4">
               {es ? 'Contacto' : 'Contact'}
             </p>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-6">
+            <h2 className="tracking-tight mb-6" style={{ fontSize: 'var(--text-section)' }}>
               {t('contact.title')}
             </h2>
             <p className="text-lg text-white/50">

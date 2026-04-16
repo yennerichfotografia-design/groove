@@ -14,7 +14,7 @@ export function Performance() {
 
       <div className="relative z-10 max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
         <RevealAnimation>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-20 text-black">
+          <h2 className="tracking-tight mb-20 text-black" style={{ fontSize: 'var(--text-section)' }}>
             {t('performance.title')}
           </h2>
         </RevealAnimation>

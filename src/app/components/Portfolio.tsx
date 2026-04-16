@@ -123,7 +123,7 @@ export function Portfolio() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
                     {/* Content over image at bottom */}
                     <div className="absolute bottom-0 left-0 right-0 p-5">
-                      <p className="text-[10px] text-white/50 uppercase tracking-wider mb-2">{cat} &mdash; {p.year}</p>
+                      <p className="text-[10px] text-white/40 uppercase tracking-wider mb-2">{cat} &mdash; {p.year}</p>
                       <h3 className="text-xl font-medium mb-1.5 leading-tight">{t}</h3>
                       <p className="text-xs text-white/50 leading-relaxed mb-3 line-clamp-2">{d}</p>
                       <span className="inline-flex items-center gap-1.5 text-xs font-medium" style={{ color: 'var(--groove-accent)' }}>
