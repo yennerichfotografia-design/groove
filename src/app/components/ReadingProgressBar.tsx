@@ -27,8 +27,8 @@ export function ReadingProgressBar() {
 
     return (
         <motion.div
-            className="fixed top-0 left-0 right-0 h-1 bg-black z-50 origin-left"
-            style={{ scaleX }}
+            className="fixed top-0 left-0 right-0 h-0.5 z-[60] origin-left"
+            style={{ background: 'var(--groove-accent)', scaleX }}
         />
     );
 }

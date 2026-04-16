@@ -8,6 +8,7 @@ import { ScrollToTop } from './components/ScrollToTop';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { Footer } from './components/Footer';
+import { WhatsAppButton } from './components/WhatsAppButton';
 
 // Lazy loading for pages - improves initial load performance
 const HomePage = lazy(() => import('./pages/HomePage').then(m => ({ default: m.HomePage })));
@@ -42,6 +43,7 @@ export default function App() {
         <BrowserRouter>
           <ScrollToTop />
           <div className="w-full">
+            <WhatsAppButton />
             <Suspense fallback={<LoadingFallback />}>
               <Routes>
                 <Route path="/" element={

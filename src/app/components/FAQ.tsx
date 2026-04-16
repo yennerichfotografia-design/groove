@@ -7,60 +7,24 @@ import { motion, AnimatePresence } from 'motion/react';
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const { language } = useLanguage();
+  const { t } = useLanguage();
 
-  const faqs = {
-    es: [
-      {
-        question: '¿Me entregás código o diseño?',
-        answer: 'Ambos. Diseño en Figma, aprobamos juntos y desarrollo el código final optimizado.'
-      },
-      {
-        question: '¿Cuánto tardamos?',
-        answer: 'Webs simples: 2-3 semanas. Proyectos completos: 4-6 semanas. La velocidad es mi prioridad.'
-      },
-      {
-        question: '¿Trabajás con plantillas?',
-        answer: 'Nunca. Todo se diseña y codifica a medida de tus objetivos.'
-      },
-      {
-        question: '¿Cómo es el pago?',
-        answer: '50% para reservar fecha y comenzar, 50% contra entrega final satisfactoria.'
-      }
-    ],
-    en: [
-      {
-        question: 'Do you deliver code or design?',
-        answer: 'Both. I design in Figma, we approve together, and I develop the final optimized code.'
-      },
-      {
-        question: 'How long does it take?',
-        answer: 'Simple sites: 2-3 weeks. Full projects: 4-6 weeks. Speed is my priority.'
-      },
-      {
-        question: 'Do you use templates?',
-        answer: 'Never. Everything is designed and coded closely to your objectives.'
-      },
-      {
-        question: 'How is payment handled?',
-        answer: '50% to reserve the date and start, 50% upon satisfactory final delivery.'
-      }
-    ]
-  };
-
-  const currentFaqs = faqs[language];
+  const faqs = Array.from({ length: 6 }, (_, i) => ({
+    question: t(`faq.items.${i}.q`),
+    answer: t(`faq.items.${i}.a`),
+  }));
 
   return (
-    <section id="faq" className="relative z-10 bg-gray-50 py-20 lg:py-32">
+    <section id="faq" className="relative z-10 bg-white py-20 lg:py-32">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
         <RevealAnimation>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-16">
-            FAQ
+            {t('faq.title')}
           </h2>
         </RevealAnimation>
 
         <div className="space-y-4">
-          {currentFaqs.map((faq, index) => (
+          {faqs.map((faq, index) => (
             <RevealAnimation key={index} delay={index * 0.1}>
               <div className="border-b border-black/10">
                 <button
@@ -93,13 +57,13 @@ export function FAQ() {
           ))}
         </div>
 
-        <RevealAnimation delay={currentFaqs.length * 0.1 + 0.1}>
+        <RevealAnimation delay={faqs.length * 0.1 + 0.1}>
           <div className="mt-12 text-center">
             <Link
               to="/preguntas-frecuentes"
               className="inline-flex items-center gap-2 text-lg hover:opacity-60 transition-opacity"
             >
-              {language === 'es' ? 'Ver todas las preguntas' : 'See all questions'}
+              {t('faq.seeAll')}
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>

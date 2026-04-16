@@ -16,7 +16,6 @@ export function TableOfContents({ content }: TableOfContentsProps) {
     const [headings, setHeadings] = useState<Heading[]>([]);
 
     useEffect(() => {
-        // Extract headings from markdown
         const lines = content.split('\n');
         const extractedHeadings: Heading[] = [];
 
@@ -24,18 +23,8 @@ export function TableOfContents({ content }: TableOfContentsProps) {
             const match = line.match(/^(#{2,3})\s+(.+)$/);
             if (match) {
                 const level = match[1].length;
-                // Strip HTML tags from text
-                const cleanText = match[2].replace(/<[^>]*>/g, '').trim();
-
-                // Keep original text for rendering if needed, but for TOC usually we want clean text
-                const text = cleanText;
-
-                // Create a slug from text
-                const id = text
-                    .toLowerCase()
-                    .replace(/[^\w\s-]/g, '')
-                    .replace(/\s+/g, '-');
-
+                const text = match[2].replace(/<[^>]*>/g, '').trim();
+                const id = text.toLowerCase().replace(/[^\w\s-]/g, '').replace(/\s+/g, '-');
                 extractedHeadings.push({ id, text, level });
             }
         });
@@ -57,9 +46,7 @@ export function TableOfContents({ content }: TableOfContentsProps) {
 
         headings.forEach((heading) => {
             const element = document.getElementById(heading.id);
-            if (element) {
-                observer.observe(element);
-            }
+            if (element) observer.observe(element);
         });
 
         return () => observer.disconnect();
@@ -69,10 +56,7 @@ export function TableOfContents({ content }: TableOfContentsProps) {
         e.preventDefault();
         const element = document.getElementById(id);
         if (element) {
-            window.scrollTo({
-                top: element.offsetTop - 120, // Offset for header + padding
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: element.offsetTop - 120, behavior: 'smooth' });
             setActiveId(id);
         }
     };
@@ -81,30 +65,26 @@ export function TableOfContents({ content }: TableOfContentsProps) {
 
     return (
         <nav className="hidden lg:block sticky top-32 self-start w-64 max-h-[calc(100vh-200px)] overflow-y-auto pr-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-white/30 mb-6">
                 Contenido
             </h4>
             <ul className="space-y-3">
                 {headings.map((heading) => (
-                    <li
-                        key={heading.id}
-                        className={`${heading.level === 3 ? 'pl-4' : ''}`}
-                    >
+                    <li key={heading.id} className={`${heading.level === 3 ? 'pl-4' : ''} relative`}>
                         <a
                             href={`#${heading.id}`}
                             onClick={(e) => scrollToHeading(heading.id, e)}
-                            className={`
-                                text-sm block transition-colors duration-200
-                                ${activeId === heading.id
-                                    ? 'text-black font-medium'
-                                    : 'text-gray-400 hover:text-gray-600'
-                                }
-                            `}
+                            className={`text-sm block transition-colors duration-200 ${
+                                activeId === heading.id
+                                    ? 'text-[var(--groove-accent)] font-medium'
+                                    : 'text-white/40 hover:text-[var(--groove-accent)]'
+                            }`}
                         >
                             {activeId === heading.id && (
                                 <motion.span
                                     layoutId="toc-indicator"
-                                    className="absolute left-0 w-[2px] h-4 bg-black -ml-4"
+                                    className="absolute left-0 w-[2px] h-4 -ml-4"
+                                    style={{ background: 'var(--groove-accent)' }}
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     transition={{ duration: 0.2 }}

@@ -4,6 +4,7 @@ import forzaLogo from 'figma:asset/15aba8bd1e7b556e33a4adadc64c41b0399c03bc.png'
 import frescaLogo from 'figma:asset/25db106fa7b359e421fd49c538e26a5f158e508c.png';
 import pollyLogo from 'figma:asset/1c5fa85e3733084144b3bf92294c3d7eb1f37362.png';
 import { useLanguage } from '../contexts/LanguageContext';
+import { RevealAnimation } from './RevealAnimation';
 
 const logos = [
   { src: academyLogo, alt: 'Academy' },
@@ -15,34 +16,29 @@ const logos = [
 
 export function TrustedBy() {
   const { language } = useLanguage();
-  
-  // Duplicamos los logos para crear el efecto de loop infinito
   const duplicatedLogos = [...logos, ...logos, ...logos];
 
   return (
     <section className="relative z-10 bg-white py-16 sm:py-20 lg:py-24 overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-12 sm:mb-16">
-          {language === 'es' ? 'Ya confiaron en mí' : 'They already trusted me'}
-        </h2>
-        
+      <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+        <RevealAnimation>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-12 sm:mb-16 text-black">
+            {language === 'es' ? 'Ya confiaron en m\u00ed' : 'They already trusted me'}
+          </h2>
+        </RevealAnimation>
+
         <div className="relative">
-          {/* Gradient overlays para efecto fade */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
-          
-          {/* Contenedor del carrusel */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-white to-transparent z-10" />
+
           <div className="logos-scroll-container">
             <div className="logos-scroll-track">
               {duplicatedLogos.map((logo, index) => (
-                <div
-                  key={index}
-                  className="logo-item"
-                >
+                <div key={index} className="logo-item">
                   <img
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-16 sm:h-20 lg:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+                    className="h-16 sm:h-20 lg:h-24 w-auto object-contain brightness-0 opacity-30 hover:opacity-70 transition-all duration-300"
                   />
                 </div>
               ))}
@@ -56,51 +52,31 @@ export function TrustedBy() {
           width: 100%;
           overflow: hidden;
         }
-
         .logos-scroll-track {
           display: flex;
-          gap: 4rem;
+          gap: 2rem;
           animation: scroll 30s linear infinite;
           width: max-content;
         }
-
         .logo-item {
           display: flex;
           align-items: center;
           justify-content: center;
-          min-width: 150px;
+          min-width: 120px;
           flex-shrink: 0;
         }
-
         @media (min-width: 640px) {
-          .logos-scroll-track {
-            gap: 6rem;
-          }
-          
-          .logo-item {
-            min-width: 200px;
-          }
+          .logos-scroll-track { gap: 6rem; }
+          .logo-item { min-width: 200px; }
         }
-
         @media (min-width: 1024px) {
-          .logos-scroll-track {
-            gap: 8rem;
-          }
-          
-          .logo-item {
-            min-width: 250px;
-          }
+          .logos-scroll-track { gap: 8rem; }
+          .logo-item { min-width: 250px; }
         }
-
         @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(calc(-100% / 3));
-          }
+          0% { transform: translateX(0); }
+          100% { transform: translateX(calc(-100% / 3)); }
         }
-
         .logos-scroll-track:hover {
           animation-play-state: paused;
         }

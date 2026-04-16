@@ -12,7 +12,7 @@ interface RevealAnimationProps {
 export function RevealAnimation({ 
   children, 
   delay = 0, 
-  duration = 0.6,
+  duration = 0.5,
   direction = 'up',
   className = ''
 }: RevealAnimationProps) {
@@ -20,11 +20,11 @@ export function RevealAnimation({
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const directions = {
-    up: { y: 40 },
-    down: { y: -40 },
-    left: { x: 40 },
-    right: { x: -40 },
-    none: {}
+    up: { y: 30, filter: 'blur(3px)' },
+    down: { y: -30, filter: 'blur(3px)' },
+    left: { x: 30, filter: 'blur(3px)' },
+    right: { x: -30, filter: 'blur(3px)' },
+    none: { filter: 'blur(2px)' }
   };
 
   return (
@@ -34,18 +34,19 @@ export function RevealAnimation({
         opacity: 0,
         ...directions[direction]
       }}
-      animate={isInView ? { 
+      animate={isInView ? {
         opacity: 1,
         x: 0,
-        y: 0
+        y: 0,
+        filter: 'blur(0px)'
       } : {
         opacity: 0,
         ...directions[direction]
       }}
-      transition={{ 
+      transition={{
         duration,
         delay,
-        ease: [0.25, 0.4, 0.25, 1]
+        ease: [0.23, 1, 0.32, 1]
       }}
       className={className}
     >

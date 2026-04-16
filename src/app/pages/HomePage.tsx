@@ -11,15 +11,19 @@ import { Pricing } from '../components/Pricing';
 import { FAQ } from '../components/FAQ';
 import { Contact } from '../components/Contact';
 import { TrustedBy } from '../components/TrustedBy';
+import { Marquee } from '../components/Marquee';
+import { WebShowcase } from '../components/WebShowcase';
 
 export function HomePage() {
   return (
     <>
       <Intro />
+      <Marquee />
       <Services />
       <HeroBanner />
       <WhyChoose />
       <Portfolio />
+      <WebShowcase />
       <Stats />
       <About />
       <Performance />

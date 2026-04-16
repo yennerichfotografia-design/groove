@@ -1,106 +1,142 @@
-import { ImageWithFallback } from './figma/ImageWithFallback';
-import profileImage from 'figma:asset/c7d69569fe29a1d285dd404c1a3e3baafc4146c9.png';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { RevealAnimation } from './RevealAnimation';
 
+const profileImageMobile = '/about-profile.webp';
+const profileImageDesktop = '/about-profile-desktop.webp';
+
 export function About() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const es = language === 'es';
 
   return (
-    <section id="about" className="relative z-10 bg-black text-white py-20 lg:py-32">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 mb-20">
-          <div className="order-2 lg:order-1">
-            <RevealAnimation>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-8">
-                {t('about.title')}
-              </h2>
-            </RevealAnimation>
-            <RevealAnimation delay={0.1}>
-              <p className="text-xl text-gray-400 mb-8">
-                {t('about.intro')}
-              </p>
-            </RevealAnimation>
-            <RevealAnimation delay={0.2}>
-              <p className="text-gray-400 mb-4">
-                {t('about.belief')}
-              </p>
-              <ul className="space-y-2 text-gray-400 mb-8">
-                <li>• {t('about.points.0')}</li>
-                <li>• {t('about.points.1')}</li>
-                <li>• {t('about.points.2')}</li>
-              </ul>
-            </RevealAnimation>
+    <section id="about" className="relative z-10 text-white overflow-hidden">
 
-            <RevealAnimation delay={0.3}>
-              <p className="text-lg text-gray-400 mb-6">
-                {t('about.description')}
-              </p>
-            </RevealAnimation>
-
-            <RevealAnimation delay={0.4}>
-              <p className="text-gray-400 mb-8">
-                {t('about.experience')}
-              </p>
-            </RevealAnimation>
-
-            <RevealAnimation delay={0.5}>
-              <Link
-                to="/metodo"
-                className="inline-block bg-white text-black px-8 py-4 hover:bg-gray-200 transition-colors"
-              >
-                {t('about.cta')}
-              </Link>
-            </RevealAnimation>
-          </div>
-
-          <RevealAnimation delay={0.2} direction="left" className="order-1 lg:order-2">
-            <div className="aspect-[4/5] overflow-hidden rounded-lg sm:rounded-none">
-              <img
-                src={profileImage}
-                alt="Professional portrait"
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </RevealAnimation>
+      {/* ===== MOBILE LAYOUT ===== */}
+      <div className="lg:hidden bg-black noise-bg">
+        {/* Photo - no text overlay */}
+        <div className="relative aspect-[3/4] w-full">
+          <img
+            src={profileImageMobile}
+            alt="Professional portrait"
+            className="w-full h-full object-cover object-top"
+          />
+          <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent" />
         </div>
 
-        <div>
+        {/* Content below photo */}
+        <div className="px-6 sm:px-8 pb-16 -mt-8 relative z-10">
           <RevealAnimation>
-            <h3 className="text-3xl sm:text-4xl mb-12">{t('about.howTitle')}</h3>
+            <p className="text-sm uppercase tracking-[0.2em] text-white/40 mb-3">
+              {es ? 'Sobre mí' : 'About'}
+            </p>
+            <h2 className="text-3xl sm:text-4xl tracking-tight mb-5 font-medium">
+              {t('about.title')}
+            </h2>
           </RevealAnimation>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
-            <RevealAnimation delay={0.1}>
-              <div className="border-l-2 border-white/20 pl-6 py-4 hover:border-white/60 transition-colors group">
-                <div className="text-6xl sm:text-7xl mb-4 font-light opacity-40 group-hover:opacity-100 transition-opacity">1</div>
-                <p className="text-gray-300 group-hover:text-white transition-colors">{t('about.steps.0')}</p>
+          <RevealAnimation delay={0.1}>
+            <p className="text-base text-white/60 mb-8 leading-relaxed">
+              {t('about.intro')}
+            </p>
+          </RevealAnimation>
+
+          {/* Manifesto */}
+          <div className="space-y-3 mb-8">
+            {[0, 1, 2].map((i) => (
+              <RevealAnimation key={i} delay={0.15 + i * 0.05}>
+                <p className="text-base font-medium text-white/80 border-l-2 pl-4" style={{ borderColor: 'var(--groove-accent)' }}>
+                  {t(`about.points.${i}`)}
+                </p>
+              </RevealAnimation>
+            ))}
+          </div>
+
+          <RevealAnimation delay={0.35}>
+            <Link
+              to="/metodo"
+              className="inline-flex items-center gap-2 bg-[var(--groove-accent)] text-black px-6 py-3.5 hover:bg-[var(--groove-accent-dark)] transition-colors duration-200 rounded-full font-medium text-sm"
+            >
+              {t('about.cta')} <ArrowRight size={14} />
+            </Link>
+          </RevealAnimation>
+        </div>
+      </div>
+
+      {/* ===== DESKTOP LAYOUT ===== */}
+      <div className="hidden lg:block relative min-h-screen">
+        <img
+          src={profileImageDesktop}
+          alt="Professional portrait"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
+        <div className="absolute inset-0 bg-black/20" />
+
+        <div className="relative z-10 min-h-screen flex flex-col justify-end px-20 pb-24 pt-32">
+          <div className="max-w-[1440px] mx-auto w-full">
+            <div className="max-w-3xl ml-auto">
+              <RevealAnimation>
+                <p className="text-sm uppercase tracking-[0.2em] text-white/40 mb-4">
+                  {es ? 'Sobre mí' : 'About'}
+                </p>
+                <h2 className="text-5xl lg:text-7xl tracking-tight mb-6 font-medium">
+                  {t('about.title')}
+                </h2>
+              </RevealAnimation>
+              <RevealAnimation delay={0.1}>
+                <p className="text-xl text-white/70 mb-10 max-w-xl">
+                  {t('about.intro')}
+                </p>
+              </RevealAnimation>
+
+              <div className="space-y-4 mb-10">
+                {[0, 1, 2].map((i) => (
+                  <RevealAnimation key={i} delay={0.15 + i * 0.06}>
+                    <p className="text-xl font-medium text-white/80 border-l-2 pl-5" style={{ borderColor: 'var(--groove-accent)' }}>
+                      {t(`about.points.${i}`)}
+                    </p>
+                  </RevealAnimation>
+                ))}
               </div>
-            </RevealAnimation>
-            <RevealAnimation delay={0.2}>
-              <div className="border-l-2 border-white/20 pl-6 py-4 hover:border-white/60 transition-colors group">
-                <div className="text-6xl sm:text-7xl mb-4 font-light opacity-40 group-hover:opacity-100 transition-opacity">2</div>
-                <p className="text-gray-300 group-hover:text-white transition-colors">{t('about.steps.1')}</p>
-              </div>
-            </RevealAnimation>
-            <RevealAnimation delay={0.3}>
-              <div className="border-l-2 border-white/20 pl-6 py-4 hover:border-white/60 transition-colors group">
-                <div className="text-6xl sm:text-7xl mb-4 font-light opacity-40 group-hover:opacity-100 transition-opacity">3</div>
-                <p className="text-gray-300 group-hover:text-white transition-colors">{t('about.steps.2')}</p>
-              </div>
-            </RevealAnimation>
-            <RevealAnimation delay={0.4}>
-              <div className="border-l-2 border-white/20 pl-6 py-4 hover:border-white/60 transition-colors group">
-                <div className="text-6xl sm:text-7xl mb-4 font-light opacity-40 group-hover:opacity-100 transition-opacity">4</div>
-                <p className="text-gray-300 group-hover:text-white transition-colors">{t('about.steps.3')}</p>
-              </div>
-            </RevealAnimation>
-            <RevealAnimation delay={0.5}>
-              <div className="border-l-2 border-white/20 pl-6 py-4 hover:border-white/60 transition-colors group">
-                <div className="text-6xl sm:text-7xl mb-4 font-light opacity-40 group-hover:opacity-100 transition-opacity">5</div>
-                <p className="text-gray-300 group-hover:text-white transition-colors">{t('about.steps.4')}</p>
-              </div>
-            </RevealAnimation>
+
+              <RevealAnimation delay={0.4}>
+                <Link
+                  to="/metodo"
+                  className="inline-flex items-center gap-2 bg-[var(--groove-accent)] text-black px-8 py-4 hover:bg-[var(--groove-accent-dark)] transition-colors duration-200 rounded-full font-medium"
+                >
+                  {t('about.cta')} <ArrowRight size={16} />
+                </Link>
+              </RevealAnimation>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Process cards - shared */}
+      <div className="bg-black noise-bg px-6 sm:px-12 lg:px-20 py-16">
+        <div className="max-w-[1440px] mx-auto">
+          <RevealAnimation>
+            <p className="text-sm uppercase tracking-[0.2em] text-white/40 mb-8">
+              {t('about.howTitle')}
+            </p>
+          </RevealAnimation>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 lg:gap-4">
+            {[0, 1, 2, 3, 4].map((i) => (
+              <RevealAnimation key={i} delay={0.05 + i * 0.05}>
+                <div className="group bg-white/[0.03] border border-white/10 rounded-xl p-4 sm:p-5 hover:border-[var(--groove-accent)]/40 hover:bg-white/[0.06] transition-all duration-300">
+                  <span
+                    className="block text-xl sm:text-2xl lg:text-3xl font-bold tracking-tighter mb-2"
+                    style={{ color: 'var(--groove-accent)' }}
+                  >
+                    0{i + 1}
+                  </span>
+                  <p className="text-xs sm:text-sm text-white/50 group-hover:text-white transition-colors duration-300">
+                    {t(`about.steps.${i}`)}
+                  </p>
+                </div>
+              </RevealAnimation>
+            ))}
           </div>
         </div>
       </div>

@@ -84,15 +84,16 @@ function StatItem({ value, label }: StatItemProps) {
   };
 
   return (
-    <div ref={ref}>
-      <div 
-        className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-3 sm:mb-4 tracking-tight transition-opacity duration-1000 ${
-          isVisible ? 'opacity-100' : 'opacity-0'
+    <div ref={ref} className="text-center sm:text-left">
+      <div
+        className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-3 sm:mb-4 tracking-tighter font-medium transition-all duration-1000 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}
+        style={{ transitionTimingFunction: 'var(--ease-out-strong)' }}
       >
-        {displayValue()}
+        <span style={{ color: 'var(--groove-accent)' }}>{displayValue()}</span>
       </div>
-      <p className="text-sm sm:text-base text-gray-600">{label}</p>
+      <p className="text-sm sm:text-base text-white/40 uppercase tracking-wider">{label}</p>
     </div>
   );
 }
@@ -116,7 +117,7 @@ export function Stats() {
   ];
   
   return (
-    <section className="relative z-10 bg-gray-50 py-20 lg:py-32">
+    <section className="relative z-10 bg-black py-20 lg:py-32 noise-bg">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
           {stats.map((stat, index) => (

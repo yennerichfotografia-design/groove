@@ -116,14 +116,14 @@ export function FAQPage() {
           {JSON.stringify(faqSchema)}
         </script>
       </SEO>
-      <div className="min-h-screen bg-white pt-16">
-        <section className="bg-gray-50 py-20 lg:py-32">
+      <div className="min-h-screen bg-black text-white pt-16 noise-bg">
+        <section className="py-20 lg:py-32">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
             <RevealAnimation>
               <h1 className="text-5xl sm:text-6xl lg:text-7xl tracking-tight mb-8">
                 {language === 'es' ? 'Preguntas frecuentes' : 'Frequently Asked Questions'}
               </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mb-16">
+              <p className="text-xl text-white/50 max-w-3xl mb-16">
                 {language === 'es'
                   ? 'Todo lo que necesitás saber sobre el proceso, plazos y formas de trabajo.'
                   : 'Everything you need to know about the process, deadlines and ways of working.'}
@@ -133,10 +133,10 @@ export function FAQPage() {
             <div className="space-y-4">
               {currentFaqs.map((faq, index) => (
                 <RevealAnimation key={index} delay={index * 0.05}>
-                  <div className="bg-white border border-gray-200">
+                  <div className="bg-white/[0.03] border border-white/10 rounded-xl">
                     <button
                       onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                      className="w-full py-6 px-6 sm:px-8 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+                      className="w-full py-6 px-6 sm:px-8 flex items-center justify-between text-left hover:bg-white/[0.05] transition-colors rounded-xl"
                     >
                       <h3 className="text-xl sm:text-2xl pr-8">{faq.question}</h3>
                       {openIndex === index ? (
@@ -158,7 +158,7 @@ export function FAQPage() {
                           <div className="px-6 sm:px-8 pb-6">
                             {faq.answer.split('\n').map((line, i) => (
                               line.trim() ? (
-                                <p key={i} className="text-gray-600 mb-3 last:mb-0">
+                                <p key={i} className="text-white/50 mb-3 last:mb-0">
                                   {line}
                                 </p>
                               ) : (
@@ -176,7 +176,7 @@ export function FAQPage() {
 
             <RevealAnimation delay={0.5}>
               <div className="mt-16 text-center">
-                <p className="text-xl text-gray-600 mb-6">
+                <p className="text-xl text-white/50 mb-6">
                   {language === 'es'
                     ? '¿Tenés otra pregunta?'
                     : 'Do you have another question?'}
@@ -185,7 +185,7 @@ export function FAQPage() {
                   href="https://wa.me/5493436987030"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-black text-white px-8 py-4 hover:bg-gray-800 transition-colors"
+                  className="inline-flex items-center gap-2 bg-[var(--groove-accent)] text-black px-8 py-4 rounded-full font-medium hover:bg-[var(--groove-accent-dark)] transition-colors duration-200"
                 >
                   {language === 'es' ? 'Escribime por WhatsApp' : 'Message me on WhatsApp'}
                 </a>
