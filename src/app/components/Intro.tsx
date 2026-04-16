@@ -19,7 +19,7 @@ export function Intro() {
       <div className="relative z-10 max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
         <div className="max-w-4xl">
           <RevealAnimation delay={0.1}>
-            <p className="leading-tight font-medium tracking-tight mb-10" style={{ fontSize: 'var(--text-section)' }}>
+            <p className="text-xl sm:text-2xl md:text-3xl leading-tight font-medium tracking-tight mb-10">
               {t('intro.text1')}
             </p>
           </RevealAnimation>
