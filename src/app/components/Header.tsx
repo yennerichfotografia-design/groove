@@ -13,7 +13,7 @@ export function Header() {
   const { language, setLanguage, t } = useLanguage();
 
   // Pages with dark hero backgrounds where header should start transparent+white
-  const hasDarkHero = location.pathname === '/';
+  const hasDarkHero = location.pathname === '/' || location.pathname.startsWith('/blog') || location.pathname === '/preguntas-frecuentes' || location.pathname === '/fotografia-ia' || location.pathname === '/sobre-mi' || location.pathname === '/metodo';
 
   useEffect(() => {
     const handleScroll = () => {

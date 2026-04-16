@@ -1,10 +1,15 @@
-import heroImage from 'figma:asset/da7803c75fd8cecc7fae0dc6483ec3ca93ebeea1.png';
-import heroImageMobile from 'figma:asset/9eb21e371da9b763ee5f45ba0a80bd5095c91d95.png';
+import { useRef, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export function HeroSection() {
   const { t } = useLanguage();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) video.play().catch(() => {});
+  }, []);
 
   const scrollToPricing = () => {
     const element = document.getElementById('pricing');
@@ -19,12 +24,13 @@ export function HeroSection() {
       {/* Video background */}
       <div className="absolute inset-0 -z-20 pointer-events-none">
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
+          preload="auto"
           className="w-full h-full object-cover opacity-35"
-          poster={heroImage}
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
@@ -91,7 +97,7 @@ export function HeroSection() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4, duration: 0.8 }}
       >
-        <span className="text-xs uppercase tracking-[0.2em]">{t('hero.scroll')}</span>
+        <span className="text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] text-center whitespace-nowrap">{t('hero.scroll')}</span>
         <motion.div
           className="w-px h-8 sm:h-12 bg-white/20"
           animate={{ scaleY: [1, 1.3, 1] }}
