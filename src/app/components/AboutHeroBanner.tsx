@@ -2,7 +2,7 @@ import heroBannerImage from 'figma:asset/4e0ac645121bdf207b06221a1da459894e46183
 
 export function AboutHeroBanner() {
   return (
-    <section className="w-full h-[60vh] lg:h-[80vh] relative">
+    <section className="w-full relative landscape-safe" style={{ height: 'clamp(40vh, 50vw, 80vh)' }}>
       <div className="w-full h-full">
         <img
           src={heroBannerImage}

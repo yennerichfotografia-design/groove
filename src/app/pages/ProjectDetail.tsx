@@ -110,7 +110,7 @@ export function ProjectDetail() {
       <Header />
       <div className="pt-16">
         {/* Hero - full width image */}
-        <section className="relative h-[60vh] sm:h-[70vh] lg:h-[80vh] bg-black">
+        <section className="relative bg-black landscape-safe" style={{ height: 'clamp(40vh, 60vw, 80vh)' }}>
           <img
             src={project.heroImage}
             alt={title}

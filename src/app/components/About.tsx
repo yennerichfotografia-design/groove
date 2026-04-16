@@ -16,7 +16,7 @@ export function About() {
       {/* ===== MOBILE LAYOUT ===== */}
       <div className="lg:hidden bg-black noise-bg">
         {/* Photo - no text overlay */}
-        <div className="relative aspect-[3/4] w-full">
+        <div className="relative aspect-[3/4] sm:aspect-[4/3] md:aspect-[3/4] w-full">
           <img
             src={profileImageMobile}
             alt="Professional portrait"

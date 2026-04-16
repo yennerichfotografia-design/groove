@@ -61,7 +61,7 @@ function WebCard({ site, index, language }: { site: typeof websites[0]; index: n
               </div>
             </div>
             {/* Screenshot */}
-            <div className="relative aspect-[16/10] overflow-hidden">
+            <div className="relative aspect-[4/3] sm:aspect-[16/10] overflow-hidden">
               <img
                 src={site.image}
                 alt={site.name}

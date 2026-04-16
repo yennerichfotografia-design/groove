@@ -81,7 +81,7 @@ export function BlogDetailPage() {
             <div className="min-h-screen bg-black text-white">
                 {/* Hero */}
                 <section className="relative">
-                    <div className="aspect-[21/9] w-full overflow-hidden">
+                    <div className="aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] w-full overflow-hidden">
                         <img src={post.featuredImage} alt={post.title} className="w-full h-full object-cover" />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />

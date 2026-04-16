@@ -62,7 +62,7 @@ export function BlogListPage() {
                             <RevealAnimation>
                                 <Link to={`/blog/${featuredPost.slug}`} className="group block">
                                     <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                                        <div className="lg:col-span-7 aspect-[16/10] overflow-hidden rounded-2xl relative">
+                                        <div className="lg:col-span-7 aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-2xl relative">
                                             <div className="absolute top-4 left-4 z-10 text-xs font-medium px-3 py-1.5 rounded-full" style={{ background: 'var(--groove-accent)', color: 'black' }}>
                                                 {t.latest}
                                             </div>

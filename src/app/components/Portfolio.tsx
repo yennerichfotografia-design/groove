@@ -117,7 +117,7 @@ export function Portfolio() {
             return (
               <div key={p.id} className="snap-start shrink-0 w-[85%] sm:w-[70%]">
                 <Link to={`/proyecto/${p.slug}`} className="block group">
-                  <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
+                  <div className="relative aspect-[3/4] sm:aspect-[4/5] rounded-2xl overflow-hidden">
                     <img src={p.coverImage} alt={t} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" style={{ transitionTimingFunction: 'var(--ease-out-strong)' }} />
                     {/* Gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
