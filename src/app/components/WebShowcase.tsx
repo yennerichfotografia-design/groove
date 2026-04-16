@@ -109,14 +109,14 @@ export function WebShowcase() {
   const es = language === 'es';
 
   return (
-    <section className="relative z-10 bg-white py-24 lg:py-32">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+    <section className="relative z-10 bg-white" style={{ padding: 'var(--space-section-y) 0' }}>
+      <div className="max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
         <RevealAnimation>
           <div className="mb-16">
             <p className="text-sm uppercase tracking-[0.2em] text-gray-400 mb-4">
               {es ? 'Webs que constru\u00ed' : 'Websites I built'}
             </p>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight">
+            <h2 className="tracking-tight" style={{ fontSize: 'var(--text-section)' }}>
               {es ? 'Proyectos web en vivo' : 'Live web projects'}
             </h2>
           </div>

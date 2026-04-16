@@ -32,8 +32,8 @@ export function Pricing() {
   const es = language === 'es';
 
   return (
-    <section id="pricing" className="relative z-10 bg-white py-24 lg:py-32 -mt-[50vh]">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+    <section id="pricing" className="relative z-10 bg-white -mt-[50vh]" style={{ padding: 'var(--space-section-y) 0' }}>
+      <div className="max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
 
         {/* Header */}
         <RevealAnimation>
@@ -41,7 +41,7 @@ export function Pricing() {
             <p className="text-sm uppercase tracking-[0.2em] text-gray-400 mb-4">
               {es ? 'Inversi\u00f3n' : 'Pricing'}
             </p>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-6">
+            <h2 className="tracking-tight mb-6" style={{ fontSize: 'var(--text-section)' }}>
               {es ? 'Eleg\u00ed tu paquete' : 'Choose your package'}
             </h2>
             <p className="text-lg text-gray-500 max-w-xl mx-auto">

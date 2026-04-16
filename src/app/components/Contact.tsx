@@ -42,14 +42,14 @@ export function Contact() {
   const inputClass = "w-full bg-transparent border-b border-white/20 px-0 py-4 focus:outline-none focus:border-[var(--groove-accent)] transition-colors duration-300 text-white placeholder:text-white/30 text-lg";
 
   return (
-    <section id="contact" className="relative z-10 bg-black text-white py-24 lg:py-32 noise-bg overflow-hidden">
+    <section id="contact" className="relative z-10 bg-black text-white noise-bg overflow-hidden" style={{ padding: 'var(--space-section-y) 0' }}>
       {/* Accent glow */}
       <div
         className="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full opacity-[0.06] blur-[150px] pointer-events-none"
         style={{ background: 'var(--groove-accent)' }}
       />
 
-      <div className="relative z-10 max-w-2xl mx-auto px-4 sm:px-8">
+      <div className="relative z-10 max-w-2xl mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
         {/* Header */}
         <RevealAnimation>
           <div className="text-center mb-14">

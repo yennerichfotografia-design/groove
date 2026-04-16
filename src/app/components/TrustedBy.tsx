@@ -19,8 +19,8 @@ export function TrustedBy() {
   const duplicatedLogos = [...logos, ...logos, ...logos];
 
   return (
-    <section className="relative z-10 bg-white py-16 sm:py-20 lg:py-24 overflow-hidden">
-      <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+    <section className="relative z-10 bg-white overflow-hidden" style={{ padding: 'var(--space-section-y) 0' }}>
+      <div className="relative z-10 max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
         <RevealAnimation>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center mb-12 sm:mb-16 text-black">
             {language === 'es' ? 'Ya confiaron en m\u00ed' : 'They already trusted me'}

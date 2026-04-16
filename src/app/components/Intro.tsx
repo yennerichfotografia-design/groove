@@ -5,7 +5,7 @@ export function Intro() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative bg-black text-white py-24 lg:py-40 overflow-hidden noise-bg">
+    <section className="relative bg-black text-white overflow-hidden noise-bg" style={{ padding: 'var(--space-section-y) 0' }}>
       {/* Gradient accent glow */}
       <div
         className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-10 blur-[120px] pointer-events-none"
@@ -16,10 +16,10 @@ export function Intro() {
         style={{ background: 'var(--groove-accent)' }}
       />
 
-      <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+      <div className="relative z-10 max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
         <div className="max-w-4xl">
           <RevealAnimation delay={0.1}>
-            <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight font-medium tracking-tight mb-10">
+            <p className="leading-tight font-medium tracking-tight mb-10" style={{ fontSize: 'var(--text-section)' }}>
               {t('intro.text1')}
             </p>
           </RevealAnimation>

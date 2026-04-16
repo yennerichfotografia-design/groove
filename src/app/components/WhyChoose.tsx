@@ -36,8 +36,8 @@ export function WhyChoose() {
   const { language } = useLanguage();
 
   return (
-    <section id="why" className="relative z-10 bg-black text-white py-24 lg:py-32 lg:-mt-[50vh] overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+    <section id="why" className="relative z-10 bg-black text-white lg:-mt-[50vh] overflow-hidden" style={{ padding: 'var(--space-section-y) 0' }}>
+      <div className="max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden">
           {benefits.map((b, i) => (
             <RevealAnimation key={i} delay={i * 0.08}>

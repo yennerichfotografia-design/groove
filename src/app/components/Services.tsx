@@ -58,13 +58,13 @@ export function Services() {
   const { t, language } = useLanguage();
 
   return (
-    <section id="services" className="bg-white pt-24 pb-28 lg:py-32 overflow-visible">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+    <section id="services" className="bg-white overflow-visible" style={{ padding: 'var(--space-section-y) 0', paddingBottom: 'calc(var(--space-section-y) + 1rem)' }}>
+      <div className="max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
         <RevealAnimation>
           <p className="text-sm uppercase tracking-[0.2em] text-gray-400 mb-4">
             {language === 'es' ? 'Servicios' : 'Services'}
           </p>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-16 max-w-2xl">
+          <h2 className="tracking-tight mb-16 max-w-2xl" style={{ fontSize: 'var(--text-section)' }}>
             {t('services.title')}
           </h2>
         </RevealAnimation>

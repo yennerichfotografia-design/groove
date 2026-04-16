@@ -64,7 +64,7 @@ export function About() {
       </div>
 
       {/* ===== DESKTOP LAYOUT ===== */}
-      <div className="hidden lg:block relative min-h-screen">
+      <div className="hidden lg:block relative min-h-dvh landscape-safe">
         <img
           src={profileImageDesktop}
           alt="Professional portrait"
@@ -73,7 +73,7 @@ export function About() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
         <div className="absolute inset-0 bg-black/20" />
 
-        <div className="relative z-10 min-h-screen flex flex-col justify-end px-20 pb-24 pt-32">
+        <div className="relative z-10 min-h-dvh landscape-safe flex flex-col justify-end" style={{ padding: 'var(--space-section-y) var(--space-section-x)' }}>
           <div className="max-w-[1440px] mx-auto w-full">
             <div className="max-w-3xl ml-auto">
               <RevealAnimation>
@@ -114,7 +114,7 @@ export function About() {
       </div>
 
       {/* Process cards - shared */}
-      <div className="bg-black noise-bg px-6 sm:px-12 lg:px-20 py-16">
+      <div className="bg-black noise-bg" style={{ padding: 'var(--space-section-y) var(--space-section-x)' }}>
         <div className="max-w-[1440px] mx-auto">
           <RevealAnimation>
             <p className="text-sm uppercase tracking-[0.2em] text-white/40 mb-8">

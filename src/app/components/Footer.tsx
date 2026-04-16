@@ -12,8 +12,8 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative py-10 sm:py-16 lg:py-20 text-black" style={{ background: 'var(--groove-accent)' }}>
-      <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+    <footer className="relative text-black" style={{ background: 'var(--groove-accent)', padding: 'clamp(2.5rem, 5vw, 5rem) 0' }}>
+      <div className="relative z-10 max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
 
         {/* Mobile: compact stacked layout */}
         <div className="md:hidden">

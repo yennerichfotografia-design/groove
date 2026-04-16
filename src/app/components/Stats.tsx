@@ -116,8 +116,8 @@ export function Stats() {
   ];
   
   return (
-    <section className="relative z-10 bg-black py-20 lg:py-32 noise-bg">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+    <section className="relative z-10 bg-black noise-bg" style={{ padding: 'var(--space-section-y) 0' }}>
+      <div className="max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
           {stats.map((stat, index) => (
             <StatItem key={index} value={stat.value} label={stat.label} />

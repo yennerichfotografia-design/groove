@@ -72,15 +72,15 @@ export function Header() {
     <>
     {/* Mobile fullscreen menu - outside header to avoid stacking context issues */}
     {isMenuOpen && (
-      <div className="md:hidden fixed inset-0" style={{ background: '#000', zIndex: 9999 }}>
-        <div className="flex items-center justify-between h-16 px-4 sm:px-6">
-          <img src={logoImage} alt="Logo" className="h-8 w-auto" style={{ filter: 'brightness(0) invert(1)' }} />
+      <div className="md:hidden fixed inset-0 overflow-y-auto" style={{ background: '#000', zIndex: 9999 }}>
+        <div className="flex items-center justify-between h-14 px-4 sm:px-6 sticky top-0" style={{ background: '#000' }}>
+          <img src={logoImage} alt="Logo" className="h-7 w-auto" style={{ filter: 'brightness(0) invert(1)' }} />
           <button onClick={() => setIsMenuOpen(false)} className="p-2 text-white">
-            <X size={24} />
+            <X size={22} />
           </button>
         </div>
-        <nav className="flex flex-col justify-center px-8 pt-8 pb-12 h-[calc(100vh-4rem)]">
-          <div className="space-y-1 mb-10">
+        <nav className="flex flex-col px-6 pb-8 pt-4" style={{ minHeight: 'calc(100dvh - 3.5rem)' }}>
+          <div className="space-y-0.5 mb-6">
             {[
               { id: 'services', icon: Zap, label: t('header.services') },
               { id: 'portfolio', icon: Folder, label: t('header.portfolio') },
@@ -89,21 +89,21 @@ export function Header() {
               { id: 'pricing', icon: CreditCard, label: t('header.pricing') },
               { id: 'faq', icon: HelpCircle, label: t('header.faq') },
             ].map(({ id, icon: Icon, label }) => (
-              <button key={id} onClick={() => handleNavClick(id)} className="flex items-center gap-4 w-full text-left text-lg font-medium text-white hover:text-[var(--groove-accent)] transition-colors py-3 group">
-                <Icon size={18} className="text-white/20 group-hover:text-[var(--groove-accent)] transition-colors" strokeWidth={1.5} />
+              <button key={id} onClick={() => handleNavClick(id)} className="flex items-center gap-3 w-full text-left font-medium text-white hover:text-[var(--groove-accent)] transition-colors py-2.5 group" style={{ fontSize: 'var(--text-body-lg)' }}>
+                <Icon size={16} className="text-white/20 group-hover:text-[var(--groove-accent)] transition-colors shrink-0" strokeWidth={1.5} />
                 {label}
               </button>
             ))}
-            <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-4 w-full text-left text-lg font-medium text-white hover:text-[var(--groove-accent)] transition-colors py-3 group">
-              <FileText size={18} className="text-white/20 group-hover:text-[var(--groove-accent)] transition-colors" strokeWidth={1.5} />
+            <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="flex items-center gap-3 w-full text-left font-medium text-white hover:text-[var(--groove-accent)] transition-colors py-2.5 group" style={{ fontSize: 'var(--text-body-lg)' }}>
+              <FileText size={16} className="text-white/20 group-hover:text-[var(--groove-accent)] transition-colors shrink-0" strokeWidth={1.5} />
               {t('header.blog')}
             </Link>
           </div>
-          <div className="flex items-center gap-4 mt-auto">
-            <button onClick={() => handleNavClick('contact')} className="flex-1 text-center bg-[var(--groove-accent)] text-black py-4 rounded-full font-medium text-base">
+          <div className="flex items-center gap-3 mt-auto">
+            <button onClick={() => handleNavClick('contact')} className="flex-1 text-center bg-[var(--groove-accent)] text-black py-3.5 rounded-full font-medium" style={{ fontSize: 'var(--text-body)' }}>
               {t('header.contact')}
             </button>
-            <button onClick={toggleLanguage} className="w-12 h-12 flex items-center justify-center border border-white/15 rounded-full text-white text-xs font-medium uppercase">
+            <button onClick={toggleLanguage} className="w-11 h-11 flex items-center justify-center border border-white/15 rounded-full text-white text-xs font-medium uppercase shrink-0">
               {language === 'es' ? 'EN' : 'ES'}
             </button>
           </div>

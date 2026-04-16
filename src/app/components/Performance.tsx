@@ -5,14 +5,14 @@ export function Performance() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative z-10 py-24 lg:py-40 overflow-hidden" style={{ background: 'var(--groove-accent)' }}>
+    <section className="relative z-10 overflow-hidden" style={{ background: 'var(--groove-accent)', padding: 'var(--space-section-y) 0' }}>
       {/* Subtle pattern overlay */}
       <div className="absolute inset-0 opacity-10 pointer-events-none" style={{
         backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(0,0,0,0.15) 1px, transparent 0)',
         backgroundSize: '40px 40px'
       }} />
 
-      <div className="relative z-10 max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+      <div className="relative z-10 max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
         <RevealAnimation>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-20 text-black">
             {t('performance.title')}

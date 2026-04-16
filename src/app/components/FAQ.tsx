@@ -15,8 +15,8 @@ export function FAQ() {
   }));
 
   return (
-    <section id="faq" className="relative z-10 bg-white py-20 lg:py-32">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">
+    <section id="faq" className="relative z-10 bg-white" style={{ padding: 'var(--space-section-y) 0' }}>
+      <div className="max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
         <RevealAnimation>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight mb-16">
             {t('faq.title')}

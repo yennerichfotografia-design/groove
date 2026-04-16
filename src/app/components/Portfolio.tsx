@@ -146,7 +146,7 @@ export function Portfolio() {
       </div>
 
       {/* DESKTOP layout - fullscreen showcase */}
-      <div className="hidden lg:block relative w-full h-screen">
+      <div className="hidden lg:block relative w-full h-dvh landscape-safe">
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={project.id}
