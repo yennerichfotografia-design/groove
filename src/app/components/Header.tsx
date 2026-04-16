@@ -72,7 +72,7 @@ export function Header() {
     <>
     {/* Mobile fullscreen menu - outside header to avoid stacking context issues */}
     {isMenuOpen && (
-      <div className="md:hidden fixed inset-0 overflow-y-auto" style={{ background: '#000', zIndex: 9999 }}>
+      <div className="lg:hidden fixed inset-0 overflow-y-auto" style={{ background: '#000', zIndex: 9999 }}>
         <div className="flex items-center justify-between h-14 px-4 sm:px-6 sticky top-0" style={{ background: '#000' }}>
           <img src={logoImage} alt="Logo" className="h-7 w-auto" style={{ filter: 'brightness(0) invert(1)' }} />
           <button onClick={() => setIsMenuOpen(false)} className="p-2 text-white">
@@ -139,7 +139,7 @@ export function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             <button onClick={() => handleNavClick('services')} className="text-sm hover:text-[var(--groove-accent)] transition-colors duration-200">
               {t('header.services')}
             </button>
@@ -178,7 +178,7 @@ export function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2"
+            className="lg:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
