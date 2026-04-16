@@ -29,3 +29,10 @@ Thumbs.db
 # Debug
 *.log
 .vercel
+
+# Dev folders
+errores/
+ERRORES/
+imagenes web/
+Video/
+Skill/

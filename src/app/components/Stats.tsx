@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
-
 interface StatItemProps {
   value: string;
   label: string;

@@ -20,7 +20,8 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error capturado por ErrorBoundary:', error, errorInfo);
+    // Error logged in development only
+    if (import.meta.env.DEV) console.error('ErrorBoundary:', error, errorInfo);
   }
 
   public render() {

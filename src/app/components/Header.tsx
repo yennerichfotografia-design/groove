@@ -116,7 +116,9 @@ export function Header() {
         isVisible ? 'translate-y-0' : '-translate-y-full'
       } ${
         isScrolled
-          ? 'bg-white/70 backdrop-blur-xl border-b border-black/5 shadow-[0_1px_3px_rgba(0,0,0,0.05)] text-black'
+          ? hasDarkHero
+            ? 'bg-black/70 backdrop-blur-xl border-b border-white/5 text-white'
+            : 'bg-white/70 backdrop-blur-xl border-b border-black/5 shadow-[0_1px_3px_rgba(0,0,0,0.05)] text-black'
           : hasDarkHero
             ? 'bg-transparent border-b border-transparent text-white'
             : 'bg-white/70 backdrop-blur-xl border-b border-black/5 text-black'
@@ -131,7 +133,7 @@ export function Header() {
                 src={logoImage}
                 alt="Logo"
                 className="h-8 sm:h-10 w-auto transition-all duration-500"
-                style={{ filter: (isScrolled || !hasDarkHero) ? 'brightness(0)' : 'brightness(0) invert(1)' }}
+                style={{ filter: (!hasDarkHero && isScrolled) || !hasDarkHero ? 'brightness(0)' : 'brightness(0) invert(1)' }}
               />
             </Link>
           </div>
