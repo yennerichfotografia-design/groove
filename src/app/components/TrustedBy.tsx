@@ -11,7 +11,8 @@ const logos = [
   { src: chulaLogo, alt: 'Chula' },
   { src: forzaLogo, alt: 'Forza' },
   { src: frescaLogo, alt: 'Fresca' },
-  { src: pollyLogo, alt: 'Polly' }
+  { src: pollyLogo, alt: 'Polly' },
+  { src: '/logo-natufarma.webp', alt: 'Natufarma' }
 ];
 
 export function TrustedBy() {
