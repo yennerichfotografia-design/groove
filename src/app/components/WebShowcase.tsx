@@ -23,13 +23,13 @@ const websites = [
     tagsEn: ['Web Design', 'Branding', 'Development'],
   },
   {
-    name: 'Pazcel',
-    url: 'https://pazcel.com.ar/',
-    image: '/web-pazcel.webp',
-    descEs: 'Conferencias de liderazgo y cultura corporativa. Web de alto impacto visual.',
-    descEn: 'Leadership and corporate culture conferences. High visual impact website.',
-    tags: ['Dise\u00f1o Web', 'Desarrollo', 'Animaciones'],
-    tagsEn: ['Web Design', 'Development', 'Animations'],
+    name: 'Vitaneral',
+    url: 'https://vitaneral.natufarma.com/',
+    image: '/web-vitaneral.webp',
+    descEs: 'Landing de producto para Natufarma. Dise\u00f1o limpio orientado a conversi\u00f3n.',
+    descEn: 'Product landing page for Natufarma. Clean design focused on conversion.',
+    tags: ['Landing Page', 'Dise\u00f1o Web', 'Desarrollo'],
+    tagsEn: ['Landing Page', 'Web Design', 'Development'],
   },
 ];
 
