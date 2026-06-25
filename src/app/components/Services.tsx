@@ -1,40 +1,28 @@
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { RevealAnimation } from './RevealAnimation';
-import { use3DTilt } from '../hooks/use3DTilt';
 import { Globe, Palette, Camera } from 'lucide-react';
+import { StickyNarrative } from './redesign/effects/StickyNarrative';
+import { RevealText } from './redesign/effects/RevealText';
 
-function ServiceCard({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
-  const { ref, style, handleMouseMove, handleMouseLeave } = use3DTilt(8);
-
-  return (
-    <RevealAnimation delay={delay} className="flex">
-      <div
-        ref={ref}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        style={style}
-        className="w-full"
-      >
-        {children}
-      </div>
-    </RevealAnimation>
-  );
-}
-
-const services = [
+const SERVICES = [
   {
     Icon: Globe,
     num: '01',
+    labelEs: 'Web',
+    labelEn: 'Web',
     titleEs: 'Web que vende',
     titleEn: 'Website that sells',
-    descEs: 'Ultra-r\u00e1pida, SEO optimizada, dise\u00f1ada para convertir.',
+    descEs: 'Ultra-rápida, SEO optimizada, diseñada para convertir.',
     descEn: 'Ultra-fast, SEO optimized, designed to convert.',
-    tagsEs: ['95+ PageSpeed', 'SEO', 'Conversi\u00f3n', 'Mobile-first'],
+    tagsEs: ['95+ PageSpeed', 'SEO', 'Conversión', 'Mobile-first'],
     tagsEn: ['95+ PageSpeed', 'SEO', 'Conversion', 'Mobile-first'],
   },
   {
     Icon: Palette,
     num: '02',
+    labelEs: 'Branding',
+    labelEn: 'Branding',
     titleEs: 'Marca que impacta',
     titleEn: 'Brand that impacts',
     descEs: 'Identidad visual que justifica tu precio premium.',
@@ -45,92 +33,275 @@ const services = [
   {
     Icon: Camera,
     num: '03',
+    labelEs: 'Fotografía IA',
+    labelEn: 'AI Photography',
     titleEs: 'Fotos sin estudio',
     titleEn: 'Photos without a studio',
-    descEs: 'Fotograf\u00eda de producto con IA. Calidad de estudio, cero log\u00edstica.',
+    descEs: 'Fotografía de producto con IA. Calidad de estudio, cero logística.',
     descEn: 'AI product photography. Studio quality, zero logistics.',
-    tagsEs: ['IA 4K', 'Sin producci\u00f3n', '48hs entrega', 'Fotorrealista'],
+    tagsEs: ['IA 4K', 'Sin producción', '48hs entrega', 'Fotorrealista'],
     tagsEn: ['AI 4K', 'No production', '48hrs delivery', 'Photorealistic'],
   },
 ];
 
 export function Services() {
   const { t, language } = useLanguage();
+  const [activeIdx, setActiveIdx] = useState(0);
+  const active = SERVICES[activeIdx];
+  const ActiveIcon = active.Icon;
+
+  const getLabel = (s: (typeof SERVICES)[0]) =>
+    language === 'es' ? s.labelEs : s.labelEn;
 
   return (
-    <section id="services" className="bg-white overflow-visible" style={{ padding: 'var(--space-section-y) 0', paddingBottom: 'calc(var(--space-section-y) + 1rem)' }}>
-      <div className="max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
-        <RevealAnimation>
-          <p className="text-sm uppercase tracking-[0.2em] text-gray-400 mb-4">
+    <section id="services" className="rd-dark rd-grid-fine rd-noise relative overflow-hidden">
+
+      {/* ── Header ──────────────────────────────────────────────────── */}
+      <div
+        className="max-w-[1440px] mx-auto"
+        style={{
+          paddingTop: 'var(--space-section-y)',
+          paddingLeft: 'var(--space-section-x)',
+          paddingRight: 'var(--space-section-x)',
+        }}
+      >
+        {/* Meta label */}
+        <div className="flex items-center gap-3 mb-14">
+          <motion.span
+            initial={{ scale: 0, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ type: 'spring', damping: 20, stiffness: 160, delay: 0.1 }}
+            className="block w-2 h-2 rounded-full flex-shrink-0"
+            style={{ background: 'var(--rd-accent)' }}
+          />
+          <span className="rd-meta">
             {language === 'es' ? 'Servicios' : 'Services'}
-          </p>
-          <h2 className="tracking-tight mb-16 max-w-2xl" style={{ fontSize: 'var(--text-section)' }}>
-            {t('services.title')}
-          </h2>
-        </RevealAnimation>
+          </span>
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {services.map((s, idx) => (
-            <ServiceCard key={idx} delay={0.1 + idx * 0.1}>
-              <div className="group relative h-full bg-gray-50 rounded-2xl p-6 sm:p-8 lg:p-10 overflow-hidden hover:bg-black transition-colors duration-500 flex flex-col">
-                {/* Accent glow on hover */}
-                <div
-                  className="absolute -top-20 -right-20 w-40 h-40 rounded-full opacity-0 group-hover:opacity-20 blur-[60px] transition-opacity duration-500 pointer-events-none"
-                  style={{ background: 'var(--groove-accent)' }}
-                />
+        {/* Giant display title */}
+        <RevealText
+          as="h2"
+          className="font-display leading-none tracking-tighter uppercase [font-size:var(--text-hero-lg)]"
+          whenInView
+          stagger={0.04}
+          delay={0.1}
+        >
+          {t('services.title')}
+        </RevealText>
+      </div>
 
-                {/* Number + Icon */}
-                <div className="flex items-center justify-between mb-8 relative z-10">
+      {/* ── Divider ─────────────────────────────────────────────────── */}
+      <div
+        className="max-w-[1440px] mx-auto mt-20"
+        style={{
+          paddingLeft: 'var(--space-section-x)',
+          paddingRight: 'var(--space-section-x)',
+        }}
+      >
+        <div style={{ height: '1px', background: 'var(--rd-line)' }} />
+      </div>
+
+      {/* ── Sticky Narrative ────────────────────────────────────────── */}
+      <div
+        className="max-w-[1440px] mx-auto"
+        style={{
+          paddingTop: 'calc(var(--space-section-y) * 0.75)',
+          paddingBottom: 'var(--space-section-y)',
+          paddingLeft: 'var(--space-section-x)',
+          paddingRight: 'var(--space-section-x)',
+        }}
+      >
+        <StickyNarrative
+          stickyTop="top-32"
+          leftWidth="lg:w-[34%]"
+          left={
+            <div>
+              {/* Service nav */}
+              <nav aria-label={language === 'es' ? 'Servicios' : 'Services'}>
+                <ul>
+                  {SERVICES.map((s, i) => {
+                    const isActive = i === activeIdx;
+                    return (
+                      <li
+                        key={s.num}
+                        style={{ borderTop: '1px solid var(--rd-line)' }}
+                      >
+                        <button
+                          type="button"
+                          onMouseEnter={() => setActiveIdx(i)}
+                          onClick={() => setActiveIdx(i)}
+                          className="w-full text-left flex items-center gap-5 py-6"
+                        >
+                          {/* Active dot */}
+                          <motion.span
+                            initial={false}
+                            animate={{
+                              opacity: isActive ? 1 : 0,
+                              scale: isActive ? 1 : 0.3,
+                            }}
+                            transition={{ type: 'spring', damping: 28, stiffness: 160 }}
+                            className="block w-1.5 h-1.5 rounded-full flex-shrink-0"
+                            style={{ background: 'var(--rd-accent)' }}
+                          />
+
+                          {/* Number */}
+                          <span
+                            className="rd-meta w-7 flex-shrink-0 transition-colors duration-200"
+                            style={{
+                              color: isActive ? 'var(--rd-accent)' : 'var(--rd-fg-dim)',
+                            }}
+                          >
+                            {s.num}
+                          </span>
+
+                          {/* Label */}
+                          <span
+                            className="text-base tracking-tight transition-colors duration-200"
+                            style={{
+                              color: isActive ? 'var(--rd-fg)' : 'var(--rd-fg-dim)',
+                              fontWeight: isActive ? 500 : 400,
+                            }}
+                          >
+                            {getLabel(s)}
+                          </span>
+
+                          {/* Arrow */}
+                          <AnimatePresence mode="popLayout">
+                            {isActive && (
+                              <motion.span
+                                key="arrow"
+                                initial={{ opacity: 0, x: -8 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                exit={{ opacity: 0, x: 8 }}
+                                transition={{ type: 'spring', damping: 28, stiffness: 140 }}
+                                className="ml-auto rd-meta"
+                                style={{ color: 'var(--rd-accent)' }}
+                              >
+                                →
+                              </motion.span>
+                            )}
+                          </AnimatePresence>
+                        </button>
+                      </li>
+                    );
+                  })}
+                  {/* Closing rule */}
+                  <li style={{ borderTop: '1px solid var(--rd-line)' }} aria-hidden="true" />
+                </ul>
+              </nav>
+
+              {/* Counter */}
+              <p className="rd-meta mt-10" style={{ color: 'var(--rd-fg-dim)' }}>
+                {String(activeIdx + 1).padStart(2, '0')} / {String(SERVICES.length).padStart(2, '0')}
+              </p>
+            </div>
+          }
+          right={
+            <AnimatePresence mode="wait">
+              <motion.article
+                key={activeIdx}
+                initial={{ opacity: 0, y: 28 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -16 }}
+                transition={{ type: 'spring', damping: 28, stiffness: 130, mass: 0.85 }}
+              >
+                {/* Tag row */}
+                <div className="flex items-center gap-3 mb-10">
                   <span
-                    className="text-5xl sm:text-6xl font-bold tracking-tighter"
-                    style={{ color: 'var(--groove-accent)' }}
+                    className="inline-flex items-center justify-center w-9 h-9 rounded-md flex-shrink-0"
+                    style={{
+                      background: 'var(--rd-bg-soft)',
+                      border: '1px solid var(--rd-line)',
+                    }}
                   >
-                    {s.num}
+                    <ActiveIcon
+                      size={15}
+                      strokeWidth={1.5}
+                      style={{ color: 'var(--rd-accent)' }}
+                    />
                   </span>
-                  <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center"
-                    style={{ background: 'var(--groove-accent)' }}
-                  >
-                    <s.Icon size={22} className="text-black" strokeWidth={1.5} />
-                  </div>
+                  <span className="rd-meta" style={{ color: 'var(--rd-accent)' }}>
+                    {active.num}
+                  </span>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-2xl sm:text-3xl font-medium mb-3 group-hover:text-white transition-colors duration-500 relative z-10">
-                  {language === 'es' ? s.titleEs : s.titleEn}
+                {/* Service title */}
+                <h3
+                  className="font-display tracking-tighter leading-[0.92] mb-8"
+                  style={{
+                    fontSize: 'var(--text-section)',
+                    color: 'var(--rd-fg)',
+                  }}
+                >
+                  {language === 'es' ? active.titleEs : active.titleEn}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-500 group-hover:text-gray-400 transition-colors duration-500 mb-8 relative z-10">
-                  {language === 'es' ? s.descEs : s.descEn}
+                <p
+                  className="mb-12 max-w-sm leading-relaxed"
+                  style={{
+                    fontSize: 'var(--text-body, 1rem)',
+                    color: 'var(--rd-fg-dim)',
+                  }}
+                >
+                  {language === 'es' ? active.descEs : active.descEn}
                 </p>
 
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mt-auto relative z-10">
-                  {(language === 'es' ? s.tagsEs : s.tagsEn).map((tag, i) => (
-                    <span
-                      key={i}
-                      className="text-xs px-3 py-1.5 rounded-full border border-black/10 text-gray-500 group-hover:border-white/10 group-hover:text-white/60 transition-colors duration-500"
+                {/* Feature list */}
+                <ul>
+                  {(language === 'es' ? active.tagsEs : active.tagsEn).map((tag, i) => (
+                    <motion.li
+                      key={tag}
+                      initial={{ opacity: 0, x: 14 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{
+                        type: 'spring',
+                        damping: 24,
+                        stiffness: 130,
+                        delay: 0.06 + i * 0.07,
+                      }}
+                      className="flex items-center gap-4 py-4"
+                      style={{ borderBottom: '1px solid var(--rd-line)' }}
                     >
-                      {tag}
-                    </span>
+                      <span
+                        className="w-1.5 h-1.5 rounded-full flex-shrink-0"
+                        style={{ background: 'var(--rd-accent)' }}
+                      />
+                      <span style={{ fontSize: 'var(--text-body, 1rem)', color: 'var(--rd-fg)' }}>
+                        {tag}
+                      </span>
+                    </motion.li>
                   ))}
-                </div>
-              </div>
-            </ServiceCard>
-          ))}
-        </div>
+                </ul>
 
-        <RevealAnimation delay={0.5}>
-          <div className="mt-12 sm:mt-16 pb-4 text-center">
-            <a
-              href="#contact"
-              className="inline-block bg-[var(--groove-accent)] text-black px-8 sm:px-10 py-4 hover:bg-[var(--groove-accent-dark)] transition-colors duration-200 rounded-full text-base sm:text-lg font-medium"
-            >
-              {t('services.cta')}
-            </a>
-          </div>
-        </RevealAnimation>
+                {/* CTA */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.38, duration: 0.4 }}
+                  className="mt-12"
+                >
+                  <a href="#contact" className="inline-flex items-center gap-2 group">
+                    <span
+                      className="rd-meta transition-colors duration-200"
+                      style={{ color: 'var(--rd-fg-dim)' }}
+                    >
+                      {t('services.cta')}
+                    </span>
+                    <span
+                      className="rd-meta transition-transform duration-200 group-hover:translate-x-1"
+                      style={{ color: 'var(--rd-accent)' }}
+                    >
+                      →
+                    </span>
+                  </a>
+                </motion.div>
+              </motion.article>
+            </AnimatePresence>
+          }
+        />
       </div>
     </section>
   );
