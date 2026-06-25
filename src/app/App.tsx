@@ -6,9 +6,11 @@ import { ScrollToTop } from './components/ScrollToTop';
 
 // Eager loading for critical components
 import { Header } from './components/Header';
-import { HeroSection } from './components/HeroSection';
+import { Hero } from './components/redesign/Hero';
 import { Footer } from './components/Footer';
 import { WhatsAppButton } from './components/WhatsAppButton';
+import { CustomCursor } from './components/redesign/CustomCursor';
+import { SmoothScroll } from './components/redesign/SmoothScroll';
 
 // Lazy loading for pages - improves initial load performance
 const HomePage = lazy(() => import('./pages/HomePage').then(m => ({ default: m.HomePage })));
@@ -42,6 +44,8 @@ export default function App() {
       <LanguageProvider>
         <BrowserRouter>
           <ScrollToTop />
+          <SmoothScroll />
+          <CustomCursor />
           <div className="w-full">
             <WhatsAppButton />
             <Suspense fallback={<LoadingFallback />}>
@@ -49,7 +53,7 @@ export default function App() {
                 <Route path="/" element={
                   <>
                     <Header />
-                    <HeroSection />
+                    <Hero />
                     <HomePage />
                     <Footer />
                   </>
