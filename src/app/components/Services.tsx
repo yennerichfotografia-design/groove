@@ -107,7 +107,7 @@ export function Services() {
         {/* Giant display title */}
         <RevealText
           as="h2"
-          className="font-display leading-none tracking-tighter uppercase [font-size:var(--text-hero-lg)]"
+          className="font-display leading-none tracking-tighter uppercase [font-size:clamp(2rem,_8vw_+_1rem,_10rem)]"
           whenInView
           stagger={0.04}
           delay={0.1}
