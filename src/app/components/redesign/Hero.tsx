@@ -89,8 +89,8 @@ export function Hero() {
   };
 
   const services = language === 'es'
-    ? ['Branding', 'Diseño Web', 'Apps & SaaS', 'Estrategia']
-    : ['Branding', 'Web Design', 'Apps & SaaS', 'Strategy'];
+    ? ['Branding', 'Diseño Web', 'Apps & SaaS', 'Fotografía']
+    : ['Branding', 'Web Design', 'Apps & SaaS', 'Photography'];
 
   return (
     <section

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { Globe, Palette, Code2 } from 'lucide-react';
+import { Globe, Palette, Code2, Camera } from 'lucide-react';
 import { StickyNarrative } from './redesign/effects/StickyNarrative';
 import { RevealText } from './redesign/effects/RevealText';
 
@@ -41,6 +41,18 @@ const SERVICES = [
     descEn: 'We build complete custom digital products, front to back. SaaS platforms, dashboards, internal systems: whatever your business needs, with clean and fast code.',
     tagsEs: ['Front + Backend', 'SaaS a medida', 'Paneles & sistemas', 'Código limpio'],
     tagsEn: ['Front + Backend', 'Custom SaaS', 'Dashboards & systems', 'Clean code'],
+  },
+  {
+    Icon: Camera,
+    num: '04',
+    labelEs: 'Fotografía',
+    labelEn: 'Photography',
+    titleEs: 'Fotos sin estudio',
+    titleEn: 'Photos without a studio',
+    descEs: 'Fotografías realistas de prendas y productos sin necesidad de estudio fotográfico. Para indumentaria o productos de cualquier tipo, con calidad profesional.',
+    descEn: 'Realistic photos of clothing and products with no photo studio required. For apparel or any kind of product, with professional quality.',
+    tagsEs: ['Indumentaria', 'Productos', 'Sin estudio', 'Realista'],
+    tagsEn: ['Apparel', 'Products', 'No studio', 'Realistic'],
   },
 ];
 
