@@ -51,7 +51,7 @@ export function LogoCarousel3D({ logos, speed = 40, className = '' }: Props) {
             <img
               src={logo.src}
               alt={logo.alt}
-              className="h-8 sm:h-10 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300"
+              className="h-12 sm:h-16 lg:h-20 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity duration-300"
               loading="lazy"
               draggable={false}
             />

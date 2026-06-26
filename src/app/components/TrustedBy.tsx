@@ -61,7 +61,7 @@ export function TrustedBy() {
             delay={0.1}
             whenInView
           >
-            {language === 'es' ? 'Ya confiaron en mí' : 'They already trusted me'}
+            {language === 'es' ? 'Ya confiaron en nosotros' : 'They already trusted us'}
           </RevealText>
         </div>
 
