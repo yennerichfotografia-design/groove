@@ -1,4 +1,4 @@
-import { useRef, useEffect, type ReactNode, type MouseEvent as ReactMouseEvent } from 'react';
+import { useRef, type ReactNode, type MouseEvent as ReactMouseEvent } from 'react';
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'motion/react';
 import { ArrowDownRight } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
@@ -55,7 +55,6 @@ function MaskLine({ children, delay = 0, className = '' }: { children: React.Rea
 export function Hero() {
   const { t, language } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -65,10 +64,6 @@ export function Hero() {
   const videoScale = useTransform(scrollYProgress, [0, 1], [1.05, 1.18]);
   const contentY = useTransform(scrollYProgress, [0, 1], ['0%', '40%']);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
-
-  useEffect(() => {
-    videoRef.current?.play().catch(() => {});
-  }, []);
 
   const scrollToNext = () => {
     const el = document.getElementById('intro') || document.getElementById('pricing');
@@ -84,23 +79,18 @@ export function Hero() {
       ref={sectionRef}
       className="rd-dark rd-noise relative z-0 isolate min-h-dvh w-full overflow-hidden flex flex-col landscape-safe"
     >
-      {/* Background video with parallax */}
+      {/* Background photo with parallax */}
       <motion.div className="absolute inset-0 -z-20 pointer-events-none" style={{ y: videoY, scale: videoScale }}>
-        <video
-          ref={videoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="w-full h-full object-cover opacity-85"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
+        <img
+          src="/hero-image.webp"
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover"
+        />
       </motion.div>
 
-      {/* Dark wash + grid overlay — edge-weighted so the video stays visible */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/45 via-black/10 to-black/80 pointer-events-none" />
+      {/* Dark wash + grid overlay — keeps white/green text readable over the photo */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/55 via-black/35 to-black/85 pointer-events-none" />
       <div className="absolute inset-0 -z-10 rd-grid-fine opacity-30 pointer-events-none" />
       <motion.div
         className="absolute inset-0 -z-10 pointer-events-none"
@@ -161,7 +151,7 @@ export function Hero() {
           className="rd-meta mb-5 flex items-center gap-3"
         >
           <span className="inline-block w-10 h-px bg-[var(--rd-accent)]" />
-          {t('hero.line1')}
+          {language === 'es' ? 'Diseño web premium & branding' : 'Premium web design & branding'}
         </motion.p>
 
         <h1
@@ -169,7 +159,7 @@ export function Hero() {
           style={{ fontSize: 'var(--text-hero-lg)' }}
         >
           <MaskLine delay={0.35} className="text-[var(--rd-fg)]">
-            {language === 'es' ? 'Tu marca' : 'Your brand'}
+            {t('hero.line1')}
           </MaskLine>
           <MaskLine delay={0.48} className="text-[var(--rd-accent)]">
             {t('hero.line2')} <span className="text-[var(--rd-fg)]">✱</span>
