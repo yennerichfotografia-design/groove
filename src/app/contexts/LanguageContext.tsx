@@ -31,10 +31,10 @@ const translations = {
     },
     intro: {
       text1: 'Creemos que tu branding y tu web tienen un solo trabajo: hacer crecer tu negocio. Por eso, dise\u00f1amos con est\u00e9tica premium y la ingenier\u00eda exacta para que te elijan.',
-      text2: 'Estuve del lado de la agencia. S\u00e9 exactamente qu\u00e9 frustra a los clientes: tiempos eternos, costos ocultos, m\u00faltiples intermediarios. Por eso elimin\u00e9 todo eso. Ac\u00e1 habl\u00e1s directo con quien construye tu futuro digital.',
+      text2: 'Estuvimos del lado de la agencia. Sabemos exactamente qu\u00e9 frustra a los clientes: tiempos eternos, costos ocultos, m\u00faltiples intermediarios. Por eso eliminamos todo eso. Ac\u00e1 habl\u00e1s directo con quienes construyen tu futuro digital.',
     },
     services: {
-      title: 'Lo que gan\u00e1s trabajando conmigo',
+      title: 'Lo que gan\u00e1s trabajando con nosotros',
       web: {
         title: '01 Tu Web como M\u00e1quina de Ventas',
         subtitle: 'Una web que carga casi instant\u00e1neo, posiciona en Google y convierte visitantes en clientes. Sin templates ni builders pesados.',
@@ -275,10 +275,10 @@ const translations = {
     },
     intro: {
       text1: 'We believe your branding and your website have one job: to grow your business. That\'s why we design with premium aesthetics and the exact engineering it takes to make them choose you.',
-      text2: 'I\'ve been on the agency side. I know exactly what frustrates clients: endless timelines, hidden costs, multiple middlemen. That\'s why I eliminated all of it. Here, you talk directly to the one building your digital future.',
+      text2: 'We\'ve been on the agency side. We know exactly what frustrates clients: endless timelines, hidden costs, multiple middlemen. That\'s why we eliminated all of it. Here, you talk directly to the ones building your digital future.',
     },
     services: {
-      title: 'What you get working with me',
+      title: 'What you get working with us',
       web: {
         title: '01 Your Website as a Sales Machine',
         subtitle: 'A site that loads almost instantly, ranks on Google, and converts visitors into clients. No templates, no heavy builders.',

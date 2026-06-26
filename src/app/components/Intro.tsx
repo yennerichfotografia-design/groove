@@ -122,12 +122,12 @@ export function Intro() {
           className="font-display font-semibold tracking-tight"
           style={{
             fontSize: 'clamp(2.25rem, 4.2vw + 0.5rem, 6rem)',
-            lineHeight: '0.94',
+            lineHeight: '1.06',
             marginBottom: 'clamp(4rem, 7vw, 7rem)',
           }}
         >
-          {/* Beat 1: muted setup */}
-          <div style={{ color: 'var(--rd-fg-dim)' }}>
+          {/* Beat 1: accent setup */}
+          <div style={{ color: 'var(--rd-accent)' }}>
             <RevealText as="div" whenInView stagger={0.04} delay={0}>
               {dim}
             </RevealText>

@@ -63,7 +63,7 @@ export function RevealText({
         : { animate: 'visible' })}
     >
       {words.map((w, i) => (
-        <span key={i} className="inline-block overflow-hidden align-bottom pb-[0.04em]">
+        <span key={i} className="inline-block overflow-hidden align-bottom pb-[0.18em] -mb-[0.18em]">
           <motion.span className="inline-block" variants={word}>
             {w}
             {i < words.length - 1 ? ' ' : ''}
