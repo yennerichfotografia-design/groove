@@ -17,6 +17,7 @@ const HomePage = lazy(() => import('./pages/HomePage').then(m => ({ default: m.H
 const AboutExtended = lazy(() => import('./pages/AboutExtended').then(m => ({ default: m.AboutExtended })));
 const MethodPage = lazy(() => import('./pages/MethodPage').then(m => ({ default: m.MethodPage })));
 const BrandingFormPage = lazy(() => import('./pages/BrandingFormPage').then(m => ({ default: m.BrandingFormPage })));
+const BriefPage = lazy(() => import('./pages/BriefPage').then(m => ({ default: m.BriefPage })));
 const WebFormPage = lazy(() => import('./pages/WebFormPage').then(m => ({ default: m.WebFormPage })));
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail').then(m => ({ default: m.ProjectDetail })));
 const FAQPage = lazy(() => import('./pages/FAQPage').then(m => ({ default: m.FAQPage })));
@@ -79,6 +80,7 @@ export default function App() {
                     <Footer />
                   </>
                 } />
+                <Route path="/brief" element={<BriefPage />} />
                 <Route path="/formulario-branding" element={<BrandingFormPage />} />
                 <Route path="/formulario-web" element={<WebFormPage />} />
                 <Route path="/proyecto/:slug" element={<ProjectDetail />} />

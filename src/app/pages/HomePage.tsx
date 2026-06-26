@@ -6,7 +6,6 @@ import { WhyChoose } from '../components/WhyChoose';
 import { Stats } from '../components/Stats';
 import { About } from '../components/About';
 import { Performance } from '../components/Performance';
-import { MidBanner } from '../components/MidBanner';
 import { Pricing } from '../components/Pricing';
 import { FAQ } from '../components/FAQ';
 import { Contact } from '../components/Contact';
@@ -27,7 +26,6 @@ export function HomePage() {
       <Stats />
       <About />
       <Performance />
-      <MidBanner />
       <Pricing />
       <FAQ />
       <TrustedBy />
