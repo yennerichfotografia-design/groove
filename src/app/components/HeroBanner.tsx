@@ -17,7 +17,8 @@ export function HeroBanner() {
           loop
           muted
           playsInline
-          preload="auto"
+          preload="none"
+          poster="/hero-image.webp"
           className="w-full h-full object-cover"
         >
           <source src="/hero-bubble-video.mp4" type="video/mp4" />
