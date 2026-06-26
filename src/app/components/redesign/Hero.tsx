@@ -2,6 +2,7 @@ import { useRef, type ReactNode, type MouseEvent as ReactMouseEvent } from 'reac
 import { motion, useScroll, useTransform, useMotionValue, useSpring, useMotionTemplate } from 'motion/react';
 import { ArrowDownRight } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
+import logoImage from 'figma:asset/2a1be87d495193914ab22c7cd47e0a19e7433208.png';
 
 const EASE = [0.23, 1, 0.32, 1] as const;
 
@@ -160,9 +161,14 @@ export function Hero() {
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.45, ease: EASE }}
-          className="text-right"
+          className="flex flex-col items-end text-right"
         >
-          <p className="rd-meta mb-3 text-[var(--rd-accent)]">GRV · 2K26</p>
+          <img
+            src={logoImage}
+            alt="Groove"
+            className="h-9 w-auto mb-5"
+            style={{ filter: 'brightness(0) invert(1)' }}
+          />
           <ul className="rd-meta space-y-1">
             {services.map((s) => (
               <li key={s}>{s}</li>
