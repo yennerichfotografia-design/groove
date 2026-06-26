@@ -76,44 +76,44 @@ export function Footer() {
         {/* ── CTA statement ──────────────────────────────── */}
         <div
           style={{
-            paddingTop: 'clamp(5rem, 12vw, 10rem)',
-            paddingBottom: 'clamp(4rem, 8vw, 7rem)',
+            paddingTop: 'clamp(3.5rem, 12vw, 10rem)',
+            paddingBottom: 'clamp(2.5rem, 8vw, 7rem)',
             borderBottom: '1px solid var(--rd-line)',
           }}
         >
           <h2
             className="font-display"
             style={{
-              fontSize: 'clamp(4.5rem, 14vw, 13rem)',
-              lineHeight: 0.88,
+              fontSize: 'clamp(3rem, 13vw, 13rem)',
+              lineHeight: 0.9,
               letterSpacing: '-0.04em',
               color: 'var(--rd-fg)',
             }}
           >
             <RevealText>Construyamos.</RevealText>
           </h2>
-          <p className="rd-meta" style={{ marginTop: '2rem' }}>
+          <p className="rd-meta" style={{ marginTop: '1.5rem' }}>
             Let's build something great together.
           </p>
         </div>
 
         {/* ── Columns ──────────────────────────────────── */}
         <div
-          className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr]"
+          className="grid grid-cols-2 md:grid-cols-[2fr_1fr_1fr]"
           style={{
-            paddingTop: 'clamp(3rem, 6vw, 5rem)',
-            paddingBottom: 'clamp(3rem, 6vw, 5rem)',
+            paddingTop: 'clamp(2.5rem, 6vw, 5rem)',
+            paddingBottom: 'clamp(2.5rem, 6vw, 5rem)',
           }}
         >
           {/* Brand */}
           <div
-            className="pb-10 md:pb-0 md:pr-16 border-b md:border-b-0 md:border-r"
+            className="col-span-2 md:col-span-1 pb-8 mb-8 md:mb-0 md:pb-0 md:pr-16 border-b md:border-b-0 md:border-r"
             style={{ borderColor: 'var(--rd-line)' }}
           >
             <img
               src={logoImage}
               alt="Groove"
-              className="h-9 w-auto mb-8"
+              className="h-8 md:h-9 w-auto mb-6 md:mb-8"
               style={{ filter: 'brightness(0) invert(1)' }}
             />
             <p
@@ -126,13 +126,13 @@ export function Footer() {
 
           {/* Links */}
           <div
-            className="py-10 md:py-0 md:px-14 border-b md:border-b-0 md:border-r"
+            className="md:px-14 md:border-r"
             style={{ borderColor: 'var(--rd-line)' }}
           >
-            <p className="rd-meta" style={{ marginBottom: '2rem' }}>
+            <p className="rd-meta" style={{ marginBottom: '1.25rem' }}>
               Links
             </p>
-            <nav className="flex flex-col gap-4">
+            <nav className="flex flex-col gap-3.5">
               {navLinks.map(({ id, label }) => (
                 <button
                   key={id}
@@ -166,11 +166,11 @@ export function Footer() {
           </div>
 
           {/* Social */}
-          <div className="pt-10 md:pt-0 md:pl-14">
-            <p className="rd-meta" style={{ marginBottom: '2rem' }}>
+          <div className="md:pl-14">
+            <p className="rd-meta" style={{ marginBottom: '1.25rem' }}>
               Social
             </p>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3.5">
               {socialLinks.map(({ label, href, icon }) => (
                 <a
                   key={label}
