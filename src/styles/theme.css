@@ -1,5 +1,13 @@
 @custom-variant dark (&:is(.dark *));
 
+/* Global horizontal-overflow guard (mobile "sideways scroll").
+   `clip` (not `hidden`) so it doesn't break position: sticky. */
+html,
+body {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
 :root {
   --font-size: 16px;
   --background: #ffffff;
