@@ -112,14 +112,11 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.3, ease: EASE }}
           className="max-w-[16rem]"
         >
-          <div className="flex items-center gap-1.5 mb-3">
-            <span className="font-display text-xl font-semibold tracking-tight text-[var(--rd-fg)]">GROOVE</span>
-            <span className="text-[var(--rd-accent)] text-xl leading-none">✱</span>
-          </div>
           <p className="rd-meta">
-            {language === 'es' ? 'Estudio Digital' : 'Digital Studio'}
+            <span className="text-[var(--rd-accent)]">✱</span>{' '}
+            {language === 'es' ? 'Estudio creativo' : 'Creative studio'}
             <br />
-            Paraná, Argentina
+            {language === 'es' ? 'de Argentina para el mundo' : 'from Argentina to the world'}
           </p>
         </motion.div>
 
