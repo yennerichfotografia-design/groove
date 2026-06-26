@@ -108,15 +108,17 @@ export function ProjectDetail() {
   return (
     <>
       <Header />
-      <div className="pt-16">
-        {/* Hero - full width image */}
-        <section className="relative bg-black landscape-safe" style={{ height: 'clamp(40vh, 60vw, 80vh)' }}>
+      <div className="bg-[#0a0a0a]">
+        {/* Hero - full width image (runs under the fixed transparent header) */}
+        <section className="relative bg-black landscape-safe" style={{ height: 'clamp(50vh, 60vw, 85vh)' }}>
           <img
             src={project.heroImage}
             alt={title}
             className="absolute inset-0 w-full h-full object-cover opacity-80"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+          {/* Top scrim so the transparent header stays readable over bright images */}
+          <div className="absolute top-0 inset-x-0 h-32 bg-gradient-to-b from-black/80 to-transparent pointer-events-none" />
 
           <div className="absolute bottom-0 left-0 right-0 px-6 sm:px-12 lg:px-20 pb-12 sm:pb-16">
             <div className="max-w-[1440px] mx-auto">
