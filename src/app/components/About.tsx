@@ -14,7 +14,7 @@ const fadeUp = (delay = 0) => ({
 
 const TEAM = [
   {
-    photo: '/team-a.webp',
+    photo: '/team-b.webp',
     name: 'Matt',
     roleEs: 'Desarrollo & Producto',
     roleEn: 'Development & Product',
@@ -22,7 +22,7 @@ const TEAM = [
     bioEn: 'Turns ideas into ultra-fast websites and apps, front to back.',
   },
   {
-    photo: '/team-b.webp',
+    photo: '/team-a.webp',
     name: 'Fide',
     roleEs: 'Branding & Dirección de Arte',
     roleEn: 'Branding & Art Direction',
