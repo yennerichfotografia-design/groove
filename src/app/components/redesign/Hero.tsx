@@ -105,7 +105,7 @@ export function Hero() {
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: spotlight ? 'grayscale(1) brightness(0.72)' : 'saturate(1.05)' }}
+          style={{ filter: 'saturate(1.08)' }}
         />
         {spotlight && (
           <motion.img
@@ -114,7 +114,7 @@ export function Hero() {
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover"
             style={{
-              filter: 'saturate(1.12)',
+              filter: 'grayscale(1) brightness(0.85)',
               WebkitMaskImage: revealMask,
               maskImage: revealMask,
               WebkitMaskRepeat: 'no-repeat',
