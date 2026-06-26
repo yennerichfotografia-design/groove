@@ -12,6 +12,14 @@ const EASE = [0.23, 1, 0.32, 1] as const;
 
 const projects = [
   {
+    slug: 'underground-book-gallery',
+    titleEs: 'Underground Book Gallery', titleEn: 'Underground Book Gallery',
+    categoryEs: 'Branding', categoryEn: 'Branding', year: '2024',
+    descEs: 'Identidad bold para una galería de libros y arte independiente.',
+    descEn: 'Bold identity for an independent book & art gallery.',
+    coverImage: '/proj-underground-cover.webp',
+  },
+  {
     slug: 'isla-brew',
     titleEs: 'ISLA Brew', titleEn: 'ISLA Brew',
     categoryEs: 'Branding', categoryEn: 'Branding', year: '2024',

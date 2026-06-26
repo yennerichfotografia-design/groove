@@ -15,6 +15,22 @@ import forzaHeroImage from 'figma:asset/ea189d1f9af7a10cf5a65eaf940f05bccc292479
 import forzaProcessImage from 'figma:asset/1ba2896f40474e6bebe4b2ea8171987da794c31b.png';
 
 const projectsData: Record<string, any> = {
+  'underground-book-gallery': {
+    titleEs: 'Underground Book Gallery', titleEn: 'Underground Book Gallery',
+    categoryEs: 'Branding', categoryEn: 'Branding', year: '2024',
+    clientEs: 'Galería de libros y arte independiente', clientEn: 'Independent book & art gallery',
+    descEs: 'Identidad visual para una galería de libros y arte independiente. Un sistema gráfico bold, en blanco y negro, con piezas para eventos y packaging que capturan su espíritu underground.',
+    descEn: 'Visual identity for an independent book & art gallery. A bold black-and-white graphic system, with event pieces and packaging that capture its underground spirit.',
+    challengeEs: 'Capturar el espíritu independiente y crudo de la galería con una identidad fuerte y memorable, que funcione igual de bien en pósters, packaging y espacio físico.',
+    challengeEn: 'Capture the gallery\'s raw, independent spirit with a strong, memorable identity that works just as well on posters, packaging and the physical space.',
+    solutionEs: 'Desarrollamos un logotipo distintivo y un sistema tipográfico bold, con una estética editorial y cruda. Lo aplicamos en pósters de eventos, packaging y señalética.',
+    solutionEn: 'We built a distinctive logotype and a bold typographic system with a raw, editorial aesthetic. Applied across event posters, packaging and signage.',
+    servicesEs: ['Estrategia de marca', 'Identidad visual', 'Logo y símbolo', 'Diseño editorial', 'Packaging'],
+    servicesEn: ['Brand strategy', 'Visual identity', 'Logo and symbol', 'Editorial design', 'Packaging'],
+    behanceUrl: 'https://www.behance.net/gallery/202764775/Underground-Book-Gallery',
+    behanceEmbed: 'https://www.behance.net/embed/project/202764775?ilo0=1',
+    heroImage: '/proj-underground-hero.webp', processImage: '/proj-underground-process.webp',
+  },
   'isla-brew': {
     titleEs: 'ISLA Brew', titleEn: 'ISLA Brew',
     categoryEs: 'Branding', categoryEn: 'Branding', year: '2024',
