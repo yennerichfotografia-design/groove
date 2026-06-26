@@ -30,7 +30,7 @@ const translations = {
       scroll: 'Ver por qu\u00e9 funcionamos',
     },
     intro: {
-      text1: 'Creemos que tu branding y tu web tienen un solo trabajo: hacer crecer tu negocio. Dise\u00f1amos identidades con prop\u00f3sito y plataformas digitales de primer nivel, combinando est\u00e9tica premium con la ingenier\u00eda necesaria para que tu audiencia conf\u00ede en vos y te elija.',
+      text1: 'Creemos que tu branding y tu web tienen un solo trabajo: hacer crecer tu negocio. Por eso, dise\u00f1amos con est\u00e9tica premium y la ingenier\u00eda exacta para que te elijan.',
       text2: 'Estuve del lado de la agencia. S\u00e9 exactamente qu\u00e9 frustra a los clientes: tiempos eternos, costos ocultos, m\u00faltiples intermediarios. Por eso elimin\u00e9 todo eso. Ac\u00e1 habl\u00e1s directo con quien construye tu futuro digital.',
     },
     services: {
@@ -274,7 +274,7 @@ const translations = {
       scroll: 'Discover more',
     },
     intro: {
-      text1: 'We believe your branding and your website have one job: to grow your business. We design purpose-driven identities and top-tier digital platforms, combining premium aesthetics with the engineering needed for your audience to trust and choose you.',
+      text1: 'We believe your branding and your website have one job: to grow your business. That\'s why we design with premium aesthetics and the exact engineering it takes to make them choose you.',
       text2: 'I\'ve been on the agency side. I know exactly what frustrates clients: endless timelines, hidden costs, multiple middlemen. That\'s why I eliminated all of it. Here, you talk directly to the one building your digital future.',
     },
     services: {
