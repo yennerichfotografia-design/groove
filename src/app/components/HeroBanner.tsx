@@ -51,7 +51,7 @@ export function HeroBanner() {
           {es ? 'Groove — Estudio Digital' : 'Groove — Digital Studio'}
         </motion.span>
 
-        <h2 className="font-display text-[clamp(2.8rem,8.5vw,8rem)] leading-[0.92] tracking-tight max-w-[15ch]">
+        <h2 className="font-display text-[clamp(2.25rem,8.5vw,8rem)] leading-[0.92] tracking-tight max-w-[15ch]">
           <RevealText as="span" whenInView stagger={0.05} className="block text-white">
             {es ? 'Marcas que' : 'Brands that'}
           </RevealText>

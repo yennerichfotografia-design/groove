@@ -169,7 +169,7 @@ export function ProjectDetail() {
                   <span className="w-1 h-1 rounded-full bg-white/30" />
                   <span className="text-sm text-white/40">{project.year}</span>
                 </div>
-                <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl tracking-tight text-white font-semibold">
+                <h1 className="font-display text-4xl sm:text-6xl lg:text-8xl tracking-tight text-white font-semibold">
                   {title}
                 </h1>
               </RevealAnimation>

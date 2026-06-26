@@ -52,7 +52,7 @@ export function About() {
         <div className="pt-12 lg:pt-16">
           <RevealText
             as="h2"
-            className="font-display [font-size:var(--text-hero-lg)] [line-height:1.0] [letter-spacing:-0.03em] text-[var(--rd-fg)]"
+            className="font-display [font-size:clamp(2rem,_7vw,_3rem)] sm:[font-size:var(--text-hero-lg)] [line-height:1.0] [letter-spacing:-0.03em] text-[var(--rd-fg)]"
             whenInView
             stagger={0.045}
           >

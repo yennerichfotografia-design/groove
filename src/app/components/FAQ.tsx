@@ -57,9 +57,10 @@ export function FAQ() {
             <div key={index} style={{ borderTop: '1px solid var(--rd-line)' }}>
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full text-left flex items-start justify-between gap-6 group"
+                className="w-full text-left flex items-start justify-between gap-6 group pr-20 lg:pr-0"
                 style={{
-                  padding: 'clamp(1.25rem, 2.5vw, 2rem) 0',
+                  paddingTop: 'clamp(1.25rem, 2.5vw, 2rem)',
+                  paddingBottom: 'clamp(1.25rem, 2.5vw, 2rem)',
                   color: 'var(--rd-fg)',
                   background: 'none',
                   border: 'none',

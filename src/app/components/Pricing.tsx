@@ -191,9 +191,8 @@ export function Pricing() {
                       key={s.id}
                       type="button"
                       onClick={() => toggleService(s.id)}
-                      className="inline-flex items-center gap-2 rounded-full transition-colors duration-200"
+                      className="inline-flex items-center gap-2 rounded-full transition-colors duration-200 py-3 px-4 lg:py-2"
                       style={{
-                        padding: '0.5rem 1rem',
                         fontSize: '0.8125rem',
                         background: on ? 'var(--rd-accent)' : 'transparent',
                         color: on ? '#000' : 'var(--rd-fg)',
@@ -234,7 +233,7 @@ export function Pricing() {
               to={briefHref}
               onClick={(e) => { if (!ctaReady) e.preventDefault(); }}
               aria-disabled={!ctaReady}
-              className="group inline-flex items-center gap-3 rounded-full font-medium pl-7 pr-2 py-2 shrink-0"
+              className="group inline-flex items-center gap-3 rounded-full font-medium pl-7 pr-2 py-3 lg:py-2 shrink-0"
               style={{ background: 'var(--rd-accent)', color: '#000', fontSize: 'var(--text-body)', opacity: ctaReady ? 1 : 0.4, pointerEvents: ctaReady ? 'auto' : 'none' }}
             >
               <span>{es ? '¡Empecemos!' : "Let's go!"}</span>

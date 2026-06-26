@@ -108,7 +108,7 @@ export function Portfolio() {
 
         <div
           ref={scrollRef}
-          className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-6 -mx-5 px-5"
+          className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-6 -mx-5 px-5 sm:-mx-8 sm:px-8"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
         >
           {projects.map((p) => (
