@@ -166,28 +166,28 @@ export function WhatsAppButton() {
         )}
       </AnimatePresence>
 
-      {/* FAB */}
+      {/* FAB — brand asterisk, amber squircle (no generic green circle) */}
       <button
         onClick={() => isOpen ? handleClose() : setIsOpen(true)}
-        className={`w-14 h-14 flex items-center justify-center rounded-full shadow-lg transition-all duration-200 ${
-          isOpen
-            ? 'bg-white/10 backdrop-blur-xl text-white shadow-black/20'
-            : 'bg-[#25D366] text-white shadow-[#25D366]/30 hover:shadow-xl hover:shadow-[#25D366]/40'
+        className={`group w-14 h-14 flex items-center justify-center rounded-2xl shadow-lg transition-all duration-200 ${
+          isOpen ? 'bg-white/10 backdrop-blur-xl text-white' : 'text-black hover:scale-105'
         }`}
-        style={{ transitionTimingFunction: 'var(--ease-out-strong)' }}
-        aria-label="WhatsApp"
+        style={{
+          background: isOpen ? undefined : 'var(--groove-accent)',
+          boxShadow: isOpen ? undefined : '0 10px 34px -8px var(--groove-accent)',
+          transitionTimingFunction: 'var(--ease-out-strong)',
+        }}
+        aria-label={es ? 'Contactanos' : 'Contact us'}
       >
-        {isOpen ? <X size={22} /> : (
-          <svg width="30" height="30" viewBox="0 0 32 32" fill="none">
-            {/* Chat bubble */}
-            <path d="M16 3C8.82 3 3 7.925 3 14c0 2.5.9 4.8 2.4 6.6L3 27l5.2-1.8C10.2 26.3 13 27 16 27c7.18 0 13-4.925 13-11S23.18 3 16 3z" fill="white"/>
-            {/* Left eye */}
-            <circle cx="12" cy="13" r="1.4" fill="#25D366"/>
-            {/* Right eye */}
-            <circle cx="20" cy="13" r="1.4" fill="#25D366"/>
-            {/* Smile */}
-            <path d="M11.5 17.5c1.2 1.8 3 2.5 4.5 2.5s3.3-.7 4.5-2.5" stroke="#25D366" strokeWidth="1.6" strokeLinecap="round"/>
-          </svg>
+        {isOpen ? (
+          <X size={22} />
+        ) : (
+          <span
+            className="font-display leading-none transition-transform duration-500 group-hover:rotate-[135deg]"
+            style={{ fontSize: '1.9rem' }}
+          >
+            ✱
+          </span>
         )}
       </button>
     </div>

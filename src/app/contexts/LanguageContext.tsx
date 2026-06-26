@@ -224,7 +224,7 @@ const translations = {
     },
     contact: {
       title: 'Empecemos.',
-      subtitle: 'Complet\u00e1 el formulario para recibir una auditor\u00eda estrat\u00e9gica gratuita de tu presencia digital.',
+      subtitle: 'Contanos qu\u00e9 ten\u00e9s en mente y te respondemos r\u00e1pido, sin vueltas. Directo con nosotros, de persona a persona.',
       form: {
         name: 'Nombre y Apellido',
         email: 'Email Corporativo',
@@ -245,7 +245,7 @@ const translations = {
           xlarge: '+ $5,000 (Enterprise)',
         },
         message: 'Cont\u00e1 brevemente sobre tu proyecto y tu mayor desaf\u00edo hoy...',
-        submit: 'Solicitar auditor\u00eda gratuita',
+        submit: 'Mandanos el mensaje',
       },
       footer: 'Respuesta clara en menos de 24hs.',
     },
@@ -468,7 +468,7 @@ const translations = {
     },
     contact: {
       title: 'Let\'s start.',
-      subtitle: 'Fill out the form to receive a free strategic audit of your digital presence.',
+      subtitle: 'Tell us what you have in mind and we\'ll reply fast, no runaround. Straight with us, person to person.',
       form: {
         name: 'Your Name',
         email: 'Your Best Email',
@@ -489,7 +489,7 @@ const translations = {
           xlarge: '+ $5,000 (Enterprise)',
         },
         message: 'Tell me briefly about your project and your biggest challenge today...',
-        submit: 'Request free audit',
+        submit: 'Send us your message',
       },
       footer: 'Clear response in under 24hrs.',
     },

@@ -114,7 +114,7 @@ export function Footer() {
               src={logoImage}
               alt="Groove"
               className="h-9 w-auto mb-8"
-              style={{ filter: 'invert(1)' }}
+              style={{ filter: 'brightness(0) invert(1)' }}
             />
             <p
               className="rd-meta"
