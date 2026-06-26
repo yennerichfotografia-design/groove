@@ -23,7 +23,7 @@ export function Marquee() {
         letterSpacing: '-0.02em',
         lineHeight: 1,
       }}
-      whileHover={{ color: '#72ff56', y: -3 }}
+      whileHover={{ color: '#EE9E03', y: -3 }}
       transition={SPRING}
     >
       {item}
@@ -32,7 +32,7 @@ export function Marquee() {
       key={`sep-${i}`}
       aria-hidden
       className="font-display shrink-0 select-none"
-      style={{ color: '#72ff56', fontSize: 'var(--text-hero-sm)', lineHeight: 1 }}
+      style={{ color: 'var(--rd-accent)', fontSize: 'var(--text-hero-sm)', lineHeight: 1 }}
     >
       ✱
     </span>,

@@ -10,7 +10,7 @@
   --rd-fg-dim: rgba(245, 245, 243, 0.55);
   --rd-line: rgba(245, 245, 243, 0.12);
   --rd-line-soft: rgba(245, 245, 243, 0.06);
-  --rd-accent: var(--groove-accent, #72ff56);
+  --rd-accent: var(--groove-accent, #EE9E03);
 }
 
 /* --- Dark scope: apply to a wrapper to flip the section into dark mode --- */

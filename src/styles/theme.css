@@ -5,10 +5,10 @@
   --background: #ffffff;
   --foreground: oklch(0.145 0 0);
 
-  /* Accent color */
-  --groove-accent: #72FF56;
-  --groove-accent-light: #8fff78;
-  --groove-accent-dark: #5cd946;
+  /* Accent color (golden amber, sampled from hero photo) */
+  --groove-accent: #EE9E03;
+  --groove-accent-light: #FFB733;
+  --groove-accent-dark: #CC8500;
 
   /* Fluid typography - scales smoothly between 375px and 1440px */
   --text-hero-lg: clamp(3rem, 8vw + 1rem, 10rem);

@@ -55,7 +55,7 @@ export function HeroBanner() {
           <RevealText as="span" whenInView stagger={0.05} className="block text-white">
             {es ? 'Marcas que' : 'Brands that'}
           </RevealText>
-          <RevealText as="span" whenInView stagger={0.05} delay={0.12} className="block text-[#72FF56]">
+          <RevealText as="span" whenInView stagger={0.05} delay={0.12} className="block text-[var(--rd-accent)]">
             {es ? 'no pasan desapercibidas' : 'refuse to blend in'}
           </RevealText>
         </h2>
