@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { Plus, Minus, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
-import { RevealAnimation } from './RevealAnimation';
+import { RevealText } from './redesign/effects/RevealText';
 import { motion, AnimatePresence } from 'motion/react';
+
+const SPRING = { type: 'spring' as const, damping: 28, stiffness: 140 };
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -15,59 +16,132 @@ export function FAQ() {
   }));
 
   return (
-    <section id="faq" className="relative z-10 bg-white" style={{ padding: 'var(--space-section-y) 0' }}>
+    <section
+      id="faq"
+      className="rd-dark rd-noise relative z-10"
+      style={{ padding: 'var(--space-section-y) 0' }}
+    >
       <div className="max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
-        <RevealAnimation>
-          <h2 className="tracking-tight mb-16" style={{ fontSize: 'var(--text-section)' }}>
-            {t('faq.title')}
-          </h2>
-        </RevealAnimation>
 
-        <div className="space-y-4">
-          {faqs.map((faq, index) => (
-            <RevealAnimation key={index} delay={index * 0.1}>
-              <div className="border-b border-black/10">
-                <button
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full py-5 sm:py-6 flex items-center justify-between text-left hover:opacity-60 transition-opacity"
-                >
-                  <h3 className="text-lg sm:text-xl lg:text-2xl pr-4 sm:pr-8">{faq.question}</h3>
-                  {openIndex === index ? (
-                    <Minus className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
-                  ) : (
-                    <Plus className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
-                  )}
-                </button>
-
-                <AnimatePresence>
-                  {openIndex === index && (
-                    <motion.div
-                      className="pb-6 overflow-hidden"
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
-                    >
-                      <p className="text-gray-600">{faq.answer}</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            </RevealAnimation>
-          ))}
+        {/* ── Header ─────────────────────────────────────────── */}
+        <div
+          style={{
+            borderTop: '1px solid var(--rd-line)',
+            paddingTop: 'clamp(1.5rem, 3vw, 3rem)',
+            marginBottom: 'clamp(3rem, 6vw, 6rem)',
+          }}
+        >
+          <span className="rd-meta">FAQ</span>
+          <div
+            style={{
+              fontSize: 'var(--text-section)',
+              lineHeight: 1.05,
+              color: 'var(--rd-fg)',
+              marginTop: '0.75rem',
+            }}
+          >
+            <RevealText
+              as="h2"
+              className="font-display tracking-tight"
+              whenInView
+              delay={0.1}
+            >
+              {t('faq.title')}
+            </RevealText>
+          </div>
         </div>
 
-        <RevealAnimation delay={faqs.length * 0.1 + 0.1}>
-          <div className="mt-12 text-center">
-            <Link
-              to="/preguntas-frecuentes"
-              className="inline-flex items-center gap-2 text-lg hover:opacity-60 transition-opacity"
-            >
-              {t('faq.seeAll')}
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </RevealAnimation>
+        {/* ── Accordion list ─────────────────────────────────── */}
+        <div>
+          {faqs.map((faq, index) => (
+            <div key={index} style={{ borderTop: '1px solid var(--rd-line)' }}>
+              <button
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                className="w-full text-left flex items-start justify-between gap-6 group"
+                style={{
+                  padding: 'clamp(1.25rem, 2.5vw, 2rem) 0',
+                  color: 'var(--rd-fg)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                }}
+              >
+                <span
+                  className="font-semibold"
+                  style={{
+                    fontSize: 'var(--text-card-title)',
+                    lineHeight: 1.2,
+                    opacity: openIndex === index ? 1 : 0.8,
+                    transition: 'opacity 0.2s ease',
+                  }}
+                >
+                  {faq.question}
+                </span>
+
+                <motion.span
+                  animate={{ rotate: openIndex === index ? 45 : 0 }}
+                  transition={SPRING}
+                  className="flex-shrink-0"
+                  style={{
+                    color: 'var(--rd-accent)',
+                    fontSize: 'clamp(1.25rem, 2vw, 1.75rem)',
+                    lineHeight: 1,
+                    marginTop: '0.1em',
+                    display: 'block',
+                    fontWeight: 300,
+                  }}
+                  aria-hidden="true"
+                >
+                  +
+                </motion.span>
+              </button>
+
+              <AnimatePresence initial={false}>
+                {openIndex === index && (
+                  <motion.div
+                    key="answer"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{
+                      height: SPRING,
+                      opacity: { duration: 0.22, ease: 'easeOut' },
+                    }}
+                    className="overflow-hidden"
+                  >
+                    <p
+                      style={{
+                        color: 'var(--rd-fg-dim)',
+                        fontSize: 'var(--text-body-lg)',
+                        lineHeight: 1.75,
+                        paddingBottom: 'clamp(1.25rem, 2.5vw, 2rem)',
+                        maxWidth: '72ch',
+                      }}
+                    >
+                      {faq.answer}
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          ))}
+
+          {/* Closing hairline */}
+          <div style={{ borderTop: '1px solid var(--rd-line)' }} />
+        </div>
+
+        {/* ── CTA ────────────────────────────────────────────── */}
+        <div style={{ marginTop: 'clamp(2.5rem, 5vw, 5rem)' }}>
+          <Link
+            to="/preguntas-frecuentes"
+            className="rd-meta inline-flex items-center gap-3 transition-opacity hover:opacity-60"
+            style={{ color: 'var(--rd-accent)' }}
+          >
+            {t('faq.seeAll')}
+            <span aria-hidden="true" style={{ fontSize: '1em' }}>→</span>
+          </Link>
+        </div>
+
       </div>
     </section>
   );

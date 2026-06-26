@@ -1,128 +1,172 @@
 import { useState, useEffect, useRef } from 'react';
+import { motion } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
+
+// ─── Count-up hook (preserves original animation logic) ────────────────────
+function useCountUp(target: number, active: boolean, duration = 2000): number {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!active || target === 0) return;
+    let current = 0;
+    const increment = target / (duration / 16);
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        setCount(target);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(current));
+      }
+    }, 16);
+    return () => clearInterval(timer);
+  }, [active, target, duration]);
+
+  return count;
+}
+
+// ─── Stat cell ──────────────────────────────────────────────────────────────
 interface StatItemProps {
   value: string;
   label: string;
+  index: number;
+  total: number;
+  isVisible: boolean;
 }
 
-function StatItem({ value, label }: StatItemProps) {
-  const [count, setCount] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+function StatItem({ value, label, index, total, isVisible }: StatItemProps) {
+  const isLast = index === total - 1;
+  const numericTarget = value === '50+' ? 50 : value === '90%+' ? 90 : 0;
+  const isNumeric = numericTarget > 0;
+  const count = useCountUp(numericTarget, isVisible && isNumeric);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!isVisible) return;
-
-    // Para números numéricos
-    if (value === '50+') {
-      let current = 0;
-      const target = 50;
-      const duration = 2000;
-      const increment = target / (duration / 16);
-
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          setCount(target);
-          clearInterval(timer);
-        } else {
-          setCount(Math.floor(current));
-        }
-      }, 16);
-
-      return () => clearInterval(timer);
-    } else if (value === '90%+') {
-      let current = 0;
-      const target = 90;
-      const duration = 2000;
-      const increment = target / (duration / 16);
-
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          setCount(target);
-          clearInterval(timer);
-        } else {
-          setCount(Math.floor(current));
-        }
-      }, 16);
-
-      return () => clearInterval(timer);
-    }
-  }, [isVisible, value]);
-
-  const displayValue = () => {
-    if (value === '50+') {
-      return count + '+';
-    } else if (value === '90%+') {
-      return count + '%+';
-    } else {
-      return value;
-    }
+  const displayValue = (): string => {
+    if (value === '50+') return `${count}+`;
+    if (value === '90%+') return `${count}%+`;
+    return value;
   };
 
   return (
-    <div ref={ref} className="text-center sm:text-left">
+    <motion.div
+      initial={{ opacity: 0, y: 48 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 48 }}
+      transition={{
+        type: 'spring',
+        stiffness: 55,
+        damping: 14,
+        delay: index * 0.14,
+      }}
+      // mobile: border-bottom between cells; sm+: border-right instead
+      className={!isLast ? 'border-b sm:border-b-0 sm:border-r' : ''}
+      style={{
+        padding: 'clamp(2.5rem, 5vw, 4rem) var(--space-section-x, 2rem)',
+        borderColor: 'var(--rd-line)',
+      }}
+    >
+      {/* Giant display number */}
       <div
-        className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl mb-3 sm:mb-4 tracking-tighter font-medium transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-        }`}
-        style={{ transitionTimingFunction: 'var(--ease-out-strong)' }}
+        className="font-display"
+        style={{
+          fontSize: 'clamp(4.5rem, 10vw, 8.5rem)',
+          lineHeight: 1,
+          letterSpacing: '-0.04em',
+          color: 'var(--rd-accent)',
+          marginBottom: '1.5rem',
+        }}
       >
-        <span style={{ color: 'var(--groove-accent)' }}>{displayValue()}</span>
+        {displayValue()}
       </div>
-      <p className="text-sm sm:text-base text-white/40 uppercase tracking-wider">{label}</p>
-    </div>
+
+      {/* Hairline rule */}
+      <div
+        style={{
+          width: '2rem',
+          height: '1px',
+          background: 'var(--rd-line)',
+          marginBottom: '1rem',
+        }}
+      />
+
+      {/* Meta label */}
+      <p className="rd-meta">{label}</p>
+    </motion.div>
   );
 }
 
+// ─── Section export ──────────────────────────────────────────────────────────
 export function Stats() {
-  const { t, language } = useLanguage();
-  
+  const { language } = useLanguage();
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true);
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(el);
+    return () => observer.unobserve(el);
+  }, []);
+
   const stats = [
     {
       value: '50+',
-      label: language === 'es' ? 'proyectos realizados' : 'completed projects'
+      label: language === 'es' ? 'proyectos realizados' : 'completed projects',
     },
     {
       value: '90%+',
-      label: language === 'es' ? 'satisfacción' : 'satisfaction'
+      label: language === 'es' ? 'satisfacción' : 'satisfaction',
     },
     {
       value: 'Global',
-      label: language === 'es' ? 'Clientes internacionales' : 'International clients'
-    }
+      label: language === 'es' ? 'Clientes internacionales' : 'International clients',
+    },
   ];
-  
+
   return (
-    <section className="relative z-10 bg-black noise-bg" style={{ padding: 'var(--space-section-y) 0' }}>
-      <div className="max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
-          {stats.map((stat, index) => (
-            <StatItem key={index} value={stat.value} label={stat.label} />
-          ))}
-        </div>
+    <section
+      ref={sectionRef}
+      className="rd-dark rd-noise relative"
+      style={{ borderTop: '1px solid var(--rd-line)' }}
+    >
+      {/* Editorial header row */}
+      <div
+        className="max-w-[1440px] mx-auto"
+        style={{
+          padding: '1.25rem var(--space-section-x, 2rem)',
+          borderBottom: '1px solid var(--rd-line)',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
+        <span className="rd-meta">
+          {language === 'es' ? 'Métricas del proyecto' : 'Project metrics'}
+        </span>
+        <span className="rd-meta" aria-hidden>
+          / 03
+        </span>
+      </div>
+
+      {/* Stats grid */}
+      <div
+        className="max-w-[1440px] mx-auto grid grid-cols-1 sm:grid-cols-3"
+        style={{ borderBottom: '1px solid var(--rd-line)' }}
+      >
+        {stats.map((stat, i) => (
+          <StatItem
+            key={i}
+            value={stat.value}
+            label={stat.label}
+            index={i}
+            total={stats.length}
+            isVisible={isVisible}
+          />
+        ))}
       </div>
     </section>
   );
