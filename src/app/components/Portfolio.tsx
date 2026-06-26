@@ -12,6 +12,14 @@ const EASE = [0.23, 1, 0.32, 1] as const;
 
 const projects = [
   {
+    slug: 'isla-brew',
+    titleEs: 'ISLA Brew', titleEn: 'ISLA Brew',
+    categoryEs: 'Branding', categoryEn: 'Branding', year: '2024',
+    descEs: 'Marca de café de especialidad con un sistema de íconos propio.',
+    descEn: 'Specialty coffee brand with a custom icon system.',
+    coverImage: '/proj-isla-cover.webp',
+  },
+  {
     slug: 'fresca-branding',
     titleEs: 'Fresca', titleEn: 'Fresca',
     categoryEs: 'Branding + Estrategia', categoryEn: 'Branding + Strategy', year: '2024',

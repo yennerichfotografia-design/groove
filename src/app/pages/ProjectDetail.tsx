@@ -15,6 +15,22 @@ import forzaHeroImage from 'figma:asset/ea189d1f9af7a10cf5a65eaf940f05bccc292479
 import forzaProcessImage from 'figma:asset/1ba2896f40474e6bebe4b2ea8171987da794c31b.png';
 
 const projectsData: Record<string, any> = {
+  'isla-brew': {
+    titleEs: 'ISLA Brew', titleEn: 'ISLA Brew',
+    categoryEs: 'Branding', categoryEn: 'Branding', year: '2024',
+    clientEs: 'Marca de café de especialidad', clientEn: 'Specialty coffee brand',
+    descEs: 'Identidad visual para una marca de café de especialidad. Un sistema gráfico cálido y moderno, con un set de íconos propio que da personalidad a toda la marca.',
+    descEn: 'Visual identity for a specialty coffee brand. A warm, modern graphic system with a custom icon set that gives the whole brand its personality.',
+    challengeEs: 'Destacar en un rubro saturado de cafeterías, con una marca que se sienta cercana y a la vez premium, fácil de aplicar en packaging, merch y redes.',
+    challengeEn: 'Stand out in a market saturated with coffee shops, with a brand that feels approachable yet premium and easy to apply across packaging, merch and social.',
+    solutionEs: 'Desarrollamos un logotipo sólido, una paleta cálida y un sistema de íconos que representa cada producto. Un lenguaje visual consistente y flexible para crecer.',
+    solutionEn: 'We built a solid logotype, a warm palette and an icon system representing each product. A consistent, flexible visual language built to scale.',
+    servicesEs: ['Estrategia de marca', 'Identidad visual', 'Logo y símbolo', 'Sistema de íconos', 'Packaging & merch'],
+    servicesEn: ['Brand strategy', 'Visual identity', 'Logo and symbol', 'Icon system', 'Packaging & merch'],
+    behanceUrl: 'https://www.behance.net/gallery/199884537/ISLA-BREW',
+    behanceEmbed: 'https://www.behance.net/embed/project/199884537?ilo0=1',
+    heroImage: '/proj-isla-hero.webp', processImage: '/proj-isla-process.webp',
+  },
   'fresca-branding': {
     titleEs: 'Fresca', titleEn: 'Fresca',
     categoryEs: 'Branding', categoryEn: 'Branding', year: '2024',
