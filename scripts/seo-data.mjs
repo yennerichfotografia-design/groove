@@ -2,7 +2,7 @@
 // Espejo de src/app/utils/seo.ts — mantener en sync. JS plano para correr en el build.
 
 export const SITE = 'https://groovedesign.com.ar';
-export const DEFAULT_OG = `${SITE}/og-cover.jpg`;
+export const DEFAULT_OG = `${SITE}/og-home.jpg`;
 
 // Rutas con meta propio (path => meta). El home (/) ya está en index.html.
 export const ROUTES = {
