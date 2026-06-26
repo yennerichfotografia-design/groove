@@ -114,7 +114,7 @@ export function Hero() {
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover"
             style={{
-              filter: 'grayscale(1) brightness(0.85)',
+              filter: 'grayscale(0.55) brightness(0.16) contrast(1.15)',
               WebkitMaskImage: revealMask,
               maskImage: revealMask,
               WebkitMaskRepeat: 'no-repeat',
