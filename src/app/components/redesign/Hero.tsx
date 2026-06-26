@@ -105,7 +105,7 @@ export function Hero() {
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: 'saturate(1.08)' }}
+          style={{ filter: spotlight ? 'grayscale(1) brightness(0.1)' : 'saturate(1.08)' }}
         />
         {spotlight && (
           <motion.img
@@ -114,7 +114,7 @@ export function Hero() {
             aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover"
             style={{
-              filter: 'grayscale(1) sepia(1) hue-rotate(72deg) saturate(9) brightness(1.2) contrast(0.9)',
+              filter: 'saturate(1.1)',
               WebkitMaskImage: revealMask,
               maskImage: revealMask,
               WebkitMaskRepeat: 'no-repeat',
@@ -125,7 +125,7 @@ export function Hero() {
       </div>
 
       {/* Dark wash + grid overlay — keeps white/green text readable over the photo */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/55 via-black/35 to-black/85 pointer-events-none" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/50 via-black/5 to-black/80 pointer-events-none" />
       <div className="absolute inset-0 -z-10 rd-grid-fine opacity-30 pointer-events-none" />
       <motion.div
         className="absolute inset-0 -z-10 pointer-events-none"
