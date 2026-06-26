@@ -83,10 +83,12 @@ export function Portfolio() {
     setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
   }, []);
 
+  // Restart the autoplay timer whenever the slide changes (manual nav included),
+  // so a click never collides with a pending tick and double-advances.
   useEffect(() => {
     const interval = setInterval(next, 5000);
     return () => clearInterval(interval);
-  }, [next]);
+  }, [next, currentIndex]);
 
   const project = projects[currentIndex];
   if (!project) return null;
