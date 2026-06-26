@@ -1,11 +1,13 @@
 {
-    "name": "Groove - Agencia Digital",
+    "name": "Groove · Diseño Web y Branding",
     "short_name": "Groove",
-    "description": "Agencia digital experta en diseño web, branding y fotografía con IA",
+    "description": "Estudio creativo de Argentina para el mundo. Branding premium, webs y apps que hacen crecer tu negocio.",
     "start_url": "/",
+    "scope": "/",
     "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#030213",
+    "background_color": "#0a0a0a",
+    "theme_color": "#0a0a0a",
+    "lang": "es-AR",
     "orientation": "portrait-primary",
     "icons": [
         {

@@ -5,13 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) — GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-STSGCJ9R4Y"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-STSGCJ9R4Y');
+    // SPA: el pageview inicial y los de cada ruta se envían manualmente desde AnalyticsTracker.tsx
+    gtag('config', 'G-STSGCJ9R4Y', { send_page_view: false });
   </script>
 
   <!-- Structured Data (Schema.org) -->
@@ -20,36 +21,65 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "ProfessionalService",
+        "@type": ["ProfessionalService", "LocalBusiness"],
         "@id": "https://groovedesign.com.ar/#business",
         "name": "Groove",
+        "alternateName": "Groove · Estudio creativo",
         "url": "https://groovedesign.com.ar",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://groovedesign.com.ar/og-image.jpg",
-          "width": 1200,
-          "height": 630
+          "url": "https://groovedesign.com.ar/icon-512.png",
+          "width": 512,
+          "height": 512
         },
-        "description": "Diseño web premium y branding estratégico. Resultados de clase mundial en semanas, no meses. Trato directo con quien diseña y construye.",
-        "founder": {
-          "@type": "Person",
-          "name": "Matías Yennerich"
-        },
+        "image": "https://groovedesign.com.ar/og-image.jpg",
+        "description": "Estudio creativo de Argentina para el mundo. Diseñamos branding premium, webs y apps ultrarrápidas que hacen crecer tu negocio. Trato directo con quienes lo construyen.",
+        "slogan": "Marcas que no pasan desapercibidas.",
+        "founder": [
+          {
+            "@type": "Person",
+            "name": "Matt",
+            "jobTitle": "Desarrollo & Producto"
+          },
+          {
+            "@type": "Person",
+            "name": "Fide",
+            "jobTitle": "Branding & Dirección de Arte"
+          }
+        ],
         "sameAs": [
           "https://www.instagram.com/gdstudio.ar/",
           "https://www.linkedin.com/in/matias-yennerich-b37bb1206/",
           "https://www.behance.net/zozobracontenidos"
         ],
         "telephone": "+54-9-3436-98-7030",
+        "email": "hola@groovedesign.com.ar",
         "priceRange": "$$",
+        "currenciesAccepted": "ARS, USD",
         "address": {
           "@type": "PostalAddress",
+          "addressLocality": "Paraná",
+          "addressRegion": "Entre Ríos",
           "addressCountry": "AR"
         },
-        "areaServed": {
-          "@type": "GeoShape",
-          "name": "Global"
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -31.7333,
+          "longitude": -60.5297
         },
+        "areaServed": [
+          { "@type": "Country", "name": "Argentina" },
+          { "@type": "Place", "name": "Global" }
+        ],
+        "knowsLanguage": ["es", "en"],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Servicios",
@@ -58,24 +88,40 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Diseño Web High-Performance",
-                "description": "Webs ultra-rápidas que convierten visitantes en clientes. Tecnología de vanguardia, SEO técnico, 95+ PageSpeed."
+                "name": "Branding estratégico",
+                "description": "Identidad visual completa que justifica tu precio premium: estrategia, logo, sistema visual y manual de marca."
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Branding Estratégico",
-                "description": "Identidad visual completa que justifica tu precio premium. Estrategia, sistema visual y manual de marca."
+                "name": "Diseño y desarrollo web",
+                "description": "Webs ultrarrápidas, optimizadas para SEO y conversión. 95+ en PageSpeed, mobile-first y a medida."
               }
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Fotografía de Producto con IA",
-                "description": "Imágenes profesionales generadas con IA. Calidad 4K fotorrealista, entrega en 48hs, sin estudio ni logística."
+                "name": "Apps & SaaS a medida",
+                "description": "Productos digitales completos del front al backend: plataformas SaaS, paneles y sistemas internos."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Fotografía de productos sin estudio",
+                "description": "Fotos realistas de prendas y productos sin estudio fotográfico, con calidad profesional para e-commerce."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Edición de Reels",
+                "description": "Edición de reels para redes: cortes dinámicos, ritmo y subtítulos pensados para frenar el scroll."
               }
             }
           ]
@@ -85,11 +131,9 @@
         "@type": "WebSite",
         "@id": "https://groovedesign.com.ar/#website",
         "url": "https://groovedesign.com.ar",
-        "name": "Groove - Diseño Web Premium y Branding Estratégico",
-        "description": "Diseño web de alto rendimiento y branding que vende. Resultados en semanas, no meses.",
-        "publisher": {
-          "@id": "https://groovedesign.com.ar/#business"
-        },
+        "name": "Groove · Diseño Web y Branding Premium",
+        "description": "Estudio creativo de Argentina para el mundo. Branding premium, webs y apps que hacen crecer tu negocio.",
+        "publisher": { "@id": "https://groovedesign.com.ar/#business" },
         "inLanguage": ["es-AR", "en"]
       }
     ]
@@ -97,30 +141,50 @@
   </script>
 
   <!-- Primary Meta Tags -->
-  <title>Groove - Diseño Web Premium, Branding y Fotografía IA | Resultados en Semanas</title>
-  <meta name="title" content="Groove - Diseño Web Premium, Branding y Fotografía IA | Resultados en Semanas" />
+  <title>Groove · Diseño Web y Branding Premium | Paraná, Argentina</title>
+  <meta name="title" content="Groove · Diseño Web y Branding Premium | Paraná, Argentina" />
   <meta name="description"
-    content="Diseño web de alto rendimiento y branding estratégico. Resultados de clase mundial en semanas, no meses. Trato directo con quien diseña y construye." />
+    content="Estudio creativo de Argentina para el mundo. Diseñamos branding premium, webs y apps ultrarrápidas que hacen crecer tu negocio. Trato directo con quienes lo construyen." />
   <meta name="keywords"
-    content="diseño web premium, branding estratégico, fotografía IA, desarrollo web, diseño UX UI, web high performance, branding Argentina" />
-  <meta name="author" content="Matías Yennerich - Groove" />
-  <meta name="robots" content="index, follow" />
+    content="diseño web Paraná, branding Argentina, diseño web premium, desarrollo web a medida, apps y SaaS, diseño UX UI, estudio creativo, branding estratégico, agencia digital Paraná" />
+  <meta name="author" content="Groove · Matt & Fide" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://groovedesign.com.ar/" />
+
+  <!-- Google Search Console: pegá acá tu código de verificación (Settings → Ownership verification → HTML tag) -->
+  <!-- <meta name="google-site-verification" content="TU_CODIGO_DE_VERIFICACION" /> -->
+
+  <!-- Geo Tags (SEO local — Paraná, Entre Ríos) -->
+  <meta name="geo.region" content="AR-E" />
+  <meta name="geo.placename" content="Paraná, Entre Ríos, Argentina" />
+  <meta name="geo.position" content="-31.7333;-60.5297" />
+  <meta name="ICBM" content="-31.7333, -60.5297" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Groove" />
   <meta property="og:url" content="https://groovedesign.com.ar/" />
-  <meta property="og:title" content="Groove - Diseño Web Premium y Branding Estratégico" />
+  <meta property="og:title" content="Groove · Diseño Web y Branding Premium | Paraná, Argentina" />
   <meta property="og:description"
-    content="Resultados de clase mundial en semanas, no meses. Trato directo con quien diseña y construye." />
+    content="Estudio creativo de Argentina para el mundo. Branding premium, webs y apps ultrarrápidas que hacen crecer tu negocio." />
   <meta property="og:image" content="https://groovedesign.com.ar/og-image.jpg" />
+  <meta property="og:image:secure_url" content="https://groovedesign.com.ar/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Groove · Estudio de diseño web y branding" />
   <meta property="og:locale" content="es_AR" />
+  <meta property="og:locale:alternate" content="en_US" />
 
   <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://groovedesign.com.ar/" />
-  <meta property="twitter:title" content="Groove - Diseño Web Premium y Branding Estratégico" />
-  <meta property="twitter:description" content="Resultados de clase mundial en semanas, no meses. Trato directo con quien diseña y construye." />
-  <meta property="twitter:image" content="https://groovedesign.com.ar/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@gdstudio.ar" />
+  <meta name="twitter:creator" content="@gdstudio.ar" />
+  <meta name="twitter:url" content="https://groovedesign.com.ar/" />
+  <meta name="twitter:title" content="Groove · Diseño Web y Branding Premium | Paraná, Argentina" />
+  <meta name="twitter:description" content="Estudio creativo de Argentina para el mundo. Branding premium, webs y apps ultrarrápidas que hacen crecer tu negocio." />
+  <meta name="twitter:image" content="https://groovedesign.com.ar/og-image.jpg" />
+  <meta name="twitter:image:alt" content="Groove · Estudio de diseño web y branding" />
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
@@ -131,15 +195,19 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
   <!-- PWA Manifest -->
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <meta name="apple-mobile-web-app-title" content="Groove" />
+  <meta name="application-name" content="Groove" />
   <link rel="manifest" href="/manifest.json" />
 
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
 
   <!-- DNS Prefetch -->
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
 </head>
 
 <body>

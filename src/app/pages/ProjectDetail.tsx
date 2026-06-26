@@ -5,6 +5,8 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { RevealAnimation } from '../components/RevealAnimation';
+import { SEO } from '../hooks/useSEO';
+import { getProjectSEO } from '../utils/seo';
 import frescaHeroImage from 'figma:asset/68021ba4dab3c6623908bf92d4b19c8db32ff252.png';
 import frescaProcessImage from 'figma:asset/7fe1ccae157d99de15e5af12c3ee5efc3dd19a5b.png';
 import burgerRocketHeroImage from 'figma:asset/37e7504528f00bb6f9b7103eaba6ec713af07ccb.png';
@@ -136,9 +138,20 @@ export function ProjectDetail() {
 
   const title = es ? project.titleEs : project.titleEn;
   const services = es ? project.servicesEs : project.servicesEn;
+  const category = es ? project.categoryEs : project.categoryEn;
+  const description = es ? project.descEs : project.descEn;
+  const projectSEO = getProjectSEO({ slug: slug!, title, category, description, image: project.heroImage });
 
   return (
     <>
+      <SEO
+        title={projectSEO.title}
+        description={projectSEO.description}
+        keywords={projectSEO.keywords}
+        ogImage={projectSEO.ogImage}
+        ogType="article"
+        canonical={projectSEO.canonical}
+      />
       <Header />
       <div className="bg-[#0a0a0a]">
         {/* Hero - full width image (runs under the fixed transparent header) */}

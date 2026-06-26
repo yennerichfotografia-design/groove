@@ -2,12 +2,14 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { AboutHeroBanner } from '../components/AboutHeroBanner';
 import { RevealAnimation } from '../components/RevealAnimation';
+import { SEO } from '../hooks/useSEO';
 
 const profileImage = '/about-profile.webp';
 
 export function AboutExtended() {
   return (
     <>
+      <SEO />
       <AboutHeroBanner />
       <div className="relative z-10 min-h-screen bg-black text-white pt-24 pb-20 noise-bg">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

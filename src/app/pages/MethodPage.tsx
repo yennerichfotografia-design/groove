@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { AboutHeroBanner } from '../components/AboutHeroBanner';
 import { RevealAnimation } from '../components/RevealAnimation';
+import { SEO } from '../hooks/useSEO';
 
 export function MethodPage() {
     return (
         <>
+            <SEO />
             <AboutHeroBanner />
             <div className="relative z-10 min-h-screen bg-black text-white pt-24 pb-32 noise-bg">
                 <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16">

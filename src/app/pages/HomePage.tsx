@@ -12,10 +12,12 @@ import { Contact } from '../components/Contact';
 import { TrustedBy } from '../components/TrustedBy';
 import { Marquee } from '../components/Marquee';
 import { WebShowcase } from '../components/WebShowcase';
+import { SEO } from '../hooks/useSEO';
 
 export function HomePage() {
   return (
     <>
+      <SEO />
       <Intro />
       <Marquee />
       <Services />

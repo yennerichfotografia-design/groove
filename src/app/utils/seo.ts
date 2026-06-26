@@ -7,70 +7,83 @@ export interface PageSEO {
     ogType?: string;
 }
 
+/** Canonical site origin — single source of truth. */
+export const SITE_URL = 'https://groovedesign.com.ar';
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+export const SITE_NAME = 'Groove';
+export const TWITTER_HANDLE = '@gdstudio.ar';
+
 export const seoConfig: Record<string, PageSEO> = {
     home: {
-        title: 'Groove - Diseño Web Premium, Branding y Fotografía IA | Resultados en Semanas',
-        description: 'Diseño web de alto rendimiento y branding estratégico. Resultados de clase mundial en semanas, no meses. Trato directo con quien diseña y construye.',
-        keywords: 'diseño web premium, branding estratégico, fotografía IA, desarrollo web, diseño UX UI, web high performance, branding Argentina',
+        title: 'Groove · Diseño Web y Branding Premium | Paraná, Argentina',
+        description: 'Estudio creativo de Argentina para el mundo. Diseñamos branding premium, webs y apps ultrarrápidas que hacen crecer tu negocio. Trato directo con quienes lo construyen.',
+        keywords: 'diseño web Paraná, branding Argentina, diseño web premium, desarrollo web a medida, apps y SaaS, diseño UX UI, estudio creativo, branding estratégico, agencia digital Paraná',
         ogType: 'website',
-        ogImage: 'https://groovedesign.com.ar/og-image.jpg'
+        ogImage: DEFAULT_OG_IMAGE,
     },
     about: {
-        title: 'Sobre Matías Yennerich | Partner Tecnológico en Diseño Web y Branding',
-        description: 'Más de 50 proyectos entregados. Fusiono ingeniería de software con diseño de producto. Soluciones comerciales llave en mano que generan retorno desde el día 1.',
-        keywords: 'diseñador web, branding estratégico, partner tecnológico, Matías Yennerich, diseño web Argentina',
+        title: 'Sobre nosotros · Matt & Fide | Estudio Groove',
+        description: 'Somos Matt y Fide, los dos socios detrás de Groove. Branding, web y producto sin agencias ni intermediarios: hablás directo con quienes diseñan y construyen tu proyecto.',
+        keywords: 'sobre Groove, Matt y Fide, estudio de diseño Paraná, equipo de diseño web, branding y desarrollo',
         ogType: 'profile',
-        ogImage: 'https://groovedesign.com.ar/og-image.jpg'
+        ogImage: DEFAULT_OG_IMAGE,
     },
     method: {
-        title: 'Método de Trabajo | Diseño + Tecnología + Criterio | Groove',
-        description: 'Proceso claro: diseño en Figma, validación, desarrollo high-perf. IA como acelerador, criterio humano en cada decisión. Resultados en semanas.',
-        keywords: 'método de trabajo, proceso diseño web, Figma, desarrollo web IA, vibe coding',
+        title: 'Cómo trabajamos · El método de Groove',
+        description: 'Proceso claro y rápido: estrategia, diseño y desarrollo high-performance. Entregamos en 3 a 5 semanas, con criterio humano en cada decisión y trato directo.',
+        keywords: 'método de trabajo, proceso de diseño web, cómo trabajamos, desarrollo web rápido, branding proceso',
         ogType: 'website',
-        ogImage: 'https://groovedesign.com.ar/og-image.jpg'
+        ogImage: DEFAULT_OG_IMAGE,
     },
     faq: {
-        title: 'Preguntas Frecuentes | Proceso, Plazos y Precios | Groove',
-        description: 'Todo sobre el proceso de trabajo: plazos de 3-5 semanas, tecnología de Uber y Airbnb, trato directo sin intermediarios. Respuestas claras.',
-        keywords: 'preguntas frecuentes diseño web, plazos branding, costos diseño web, proceso de trabajo',
+        title: 'Preguntas frecuentes · Plazos, proceso y precios | Groove',
+        description: 'Todo sobre cómo trabajamos: plazos de 3 a 5 semanas, trato directo sin intermediarios, tecnología de primer nivel. Respuestas claras antes de empezar.',
+        keywords: 'preguntas frecuentes diseño web, plazos branding, precios diseño web, proceso de trabajo Groove',
         ogType: 'website',
-        ogImage: 'https://groovedesign.com.ar/og-image.jpg'
+        ogImage: DEFAULT_OG_IMAGE,
+    },
+    brief: {
+        title: 'Armá tu proyecto · Branding, Web, Apps, Foto y Reels | Groove',
+        description: 'Elegí los servicios que necesitás y armá tu proyecto a medida. Te respondemos con una propuesta personalizada. Sin precios ocultos: arrancamos con una charla.',
+        keywords: 'armar proyecto web, cotización diseño web, presupuesto branding, contratar diseño web Argentina',
+        ogType: 'website',
+        ogImage: DEFAULT_OG_IMAGE,
     },
     aiPhotography: {
-        title: 'Fotografía de Producto con IA | Calidad Estudio, Cero Logística | Groove',
-        description: 'Imágenes profesionales de producto generadas con IA. Calidad 4K fotorrealista, entrega en 48hs, sin estudio ni producción. Desde una foto de celular.',
-        keywords: 'fotografía IA, fotografía producto, imágenes IA, fotografía sin estudio, fotografía e-commerce',
+        title: 'Fotografía de productos sin estudio | Groove',
+        description: 'Fotos realistas de prendas y productos sin necesidad de estudio fotográfico. Calidad profesional para indumentaria y e-commerce, con entrega rápida.',
+        keywords: 'fotografía de producto, fotos sin estudio, fotografía e-commerce, fotos de indumentaria, fotografía realista',
         ogType: 'website',
-        ogImage: 'https://groovedesign.com.ar/og-image.jpg'
+        ogImage: DEFAULT_OG_IMAGE,
     },
     brandingForm: {
-        title: 'Empezá tu Proyecto de Branding | Groove',
-        description: 'Completá el brief y recibí una propuesta personalizada en menos de 24hs. Branding estratégico que diferencia y vende más.',
-        keywords: 'formulario branding, cotización branding, identidad de marca, diseño logo',
+        title: 'Empezá tu proyecto de Branding | Groove',
+        description: 'Contanos sobre tu marca y recibí una propuesta personalizada. Branding estratégico que te diferencia y te ayuda a vender más.',
+        keywords: 'formulario branding, cotización branding, identidad de marca, diseño de logo, manual de marca',
         ogType: 'website',
-        ogImage: 'https://groovedesign.com.ar/og-image.jpg'
+        ogImage: DEFAULT_OG_IMAGE,
     },
     webForm: {
-        title: 'Empezá tu Proyecto Web | Groove',
-        description: 'Completá el brief y recibí una cotización personalizada en menos de 24hs. Web high-performance que convierte visitantes en clientes.',
-        keywords: 'formulario diseño web, cotización sitio web, desarrollo web, web high performance',
+        title: 'Empezá tu proyecto Web | Groove',
+        description: 'Contanos sobre tu proyecto y recibí una propuesta personalizada. Webs high-performance que convierten visitantes en clientes.',
+        keywords: 'formulario diseño web, cotización sitio web, desarrollo web, web rápida, diseño web a medida',
         ogType: 'website',
-        ogImage: 'https://groovedesign.com.ar/og-image.jpg'
+        ogImage: DEFAULT_OG_IMAGE,
     },
     aiPhotographyForm: {
-        title: 'Solicitá Fotografía con IA | Groove',
-        description: 'Completá el formulario con los datos de tu producto. Imágenes profesionales generadas con IA, entrega en 48hs.',
-        keywords: 'formulario fotografía IA, cotización fotografía, imágenes producto IA',
+        title: 'Solicitá fotografía de productos | Groove',
+        description: 'Contanos sobre tus productos y recibí una propuesta. Imágenes profesionales sin estudio fotográfico, con entrega rápida.',
+        keywords: 'formulario fotografía producto, cotización fotografía, fotos de producto sin estudio',
         ogType: 'website',
-        ogImage: 'https://groovedesign.com.ar/og-image.jpg'
+        ogImage: DEFAULT_OG_IMAGE,
     },
     blog: {
-        title: 'Blog | Diseño Web, Branding y Tendencias Digitales | Groove',
-        description: 'Artículos sobre diseño web, branding, estrategia digital y tendencias. Consejos prácticos para hacer crecer tu negocio online.',
-        keywords: 'blog diseño web, branding tips, tendencias digitales, estrategia digital, SEO',
+        title: 'Blog · Diseño web, branding y tendencias | Groove',
+        description: 'Artículos sobre diseño web, branding, estrategia y tendencias digitales. Consejos prácticos para hacer crecer tu negocio online.',
+        keywords: 'blog diseño web, tips branding, tendencias digitales, estrategia digital, SEO para pymes',
         ogType: 'website',
-        ogImage: 'https://groovedesign.com.ar/og-image.jpg'
-    }
+        ogImage: DEFAULT_OG_IMAGE,
+    },
 };
 
 export function getSEOByRoute(pathname: string): PageSEO {
@@ -78,10 +91,36 @@ export function getSEOByRoute(pathname: string): PageSEO {
     if (pathname === '/sobre-mi') return seoConfig.about;
     if (pathname === '/metodo') return seoConfig.method;
     if (pathname === '/preguntas-frecuentes') return seoConfig.faq;
+    if (pathname === '/brief') return seoConfig.brief;
     if (pathname === '/fotografia-ia') return seoConfig.aiPhotography;
     if (pathname === '/formulario-branding') return seoConfig.brandingForm;
     if (pathname === '/formulario-web') return seoConfig.webForm;
     if (pathname === '/formulario-fotografia-ia') return seoConfig.aiPhotographyForm;
     if (pathname === '/blog' || pathname.startsWith('/blog')) return seoConfig.blog;
     return seoConfig.home;
+}
+
+/** Build SEO for a project detail page from its data. */
+export function getProjectSEO(opts: {
+    slug: string;
+    title: string;
+    category: string;
+    description?: string;
+    image?: string;
+}): PageSEO {
+    let ogImage = DEFAULT_OG_IMAGE;
+    if (opts.image) {
+        if (opts.image.startsWith('http')) ogImage = opts.image;
+        else if (opts.image.startsWith('/')) ogImage = `${SITE_URL}${opts.image}`;
+    }
+    return {
+        title: `${opts.title} · ${opts.category} | Proyectos Groove`,
+        description:
+            opts.description ||
+            `${opts.title}: proyecto de ${opts.category.toLowerCase()} de Groove. Branding y diseño premium con resultados reales.`,
+        keywords: `${opts.title}, ${opts.category}, portfolio Groove, proyecto de branding, caso de éxito diseño`,
+        ogType: 'article',
+        ogImage,
+        canonical: `${SITE_URL}/proyecto/${opts.slug}`,
+    };
 }

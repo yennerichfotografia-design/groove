@@ -1,9 +1,14 @@
+# Groove · groovedesign.com.ar
+# Permitimos a todos los buscadores indexar el sitio.
+
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://groovedesign.com.ar/sitemap.xml
+# Archivos internos de diseño (masters de redes) — no indexar
+Disallow: /social/
 
-# Disallow admin or private areas if any
-# User-agent: *
-# Disallow: /admin/
+# URLs con parámetros — evitar contenido duplicado
+Disallow: /*?plan=
+Disallow: /*?servicios=
+
+Sitemap: https://groovedesign.com.ar/sitemap.xml

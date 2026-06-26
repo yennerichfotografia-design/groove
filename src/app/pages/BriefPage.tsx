@@ -5,6 +5,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { RevealText } from '../components/redesign/effects/RevealText';
+import { SEO } from '../hooks/useSEO';
 
 const WHATSAPP = '5493436987030';
 
@@ -64,6 +65,7 @@ export function BriefPage() {
 
   return (
     <>
+      <SEO />
       <Header />
       <main className="rd-dark rd-noise relative min-h-dvh" style={{ paddingTop: 'clamp(7rem, 14vh, 10rem)', paddingBottom: 'var(--space-section-y)' }}>
         {/* Ambient glow */}

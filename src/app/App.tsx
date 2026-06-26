@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LanguageProvider } from './contexts/LanguageContext';
 import { ScrollToTop } from './components/ScrollToTop';
+import { AnalyticsTracker } from './components/AnalyticsTracker';
 
 // Eager loading for critical components
 import { Header } from './components/Header';
@@ -45,6 +46,7 @@ export default function App() {
       <LanguageProvider>
         <BrowserRouter>
           <ScrollToTop />
+          <AnalyticsTracker />
           <SmoothScroll />
           <CustomCursor />
           <div className="w-full">
