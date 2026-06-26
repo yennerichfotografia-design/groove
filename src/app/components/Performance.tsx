@@ -7,9 +7,9 @@ import { RevealText } from './redesign/effects/RevealText';
 type CaseData = { metric: string; labelEs: string; labelEn: string };
 
 const CASES: CaseData[] = [
-  { metric: '+340%', labelEs: 'Conversión',       labelEn: 'Conversion'   },
-  { metric: '×3',    labelEs: 'Usuarios activos', labelEn: 'Active users' },
-  { metric: '<3M',   labelEs: 'Posicionamiento',  labelEn: 'Positioning'  },
+  { metric: '<2s',  labelEs: 'Velocidad de carga', labelEn: 'Load time' },
+  { metric: '95+',  labelEs: 'Google PageSpeed',   labelEn: 'Google PageSpeed' },
+  { metric: '3–5',  labelEs: 'Semanas de entrega', labelEn: 'Weeks to launch' },
 ];
 
 /* ─── Spring physics: damping 26, stiffness 140 (within 24-30 / 120-160) ─── */
@@ -139,7 +139,7 @@ export function Performance() {
               {t('performance.title')}
             </RevealText>
           </h2>
-          <span className="rd-meta hidden sm:block">Case Studies — 03</span>
+          <span className="rd-meta hidden sm:block">{language === 'es' ? 'Estándares — 03' : 'Standards — 03'}</span>
         </div>
 
         {/* Case rows */}

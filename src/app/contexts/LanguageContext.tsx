@@ -130,19 +130,19 @@ const translations = {
       ],
     },
     performance: {
-      title: 'Casos Reales, Resultados Medibles',
+      title: 'Lo que entregamos en cada proyecto',
       projects: [
         {
-          title: 'E-commerce de Moda',
-          desc: 'Redise\u00f1o integral de tienda online. Resultado: +340% de conversi\u00f3n en 6 meses.',
+          title: 'Webs que vuelan',
+          desc: 'Construimos sitios que cargan casi instant\u00e1neo. Mejor experiencia para tus clientes y mejor posicionamiento en Google.',
         },
         {
-          title: 'SaaS de Log\u00edstica',
-          desc: 'UI/UX escalable y design system modular. La plataforma triplic\u00f3 sus usuarios activos.',
+          title: 'Optimizaci\u00f3n de verdad',
+          desc: 'Apuntamos a 95+ en Google PageSpeed. SEO t\u00e9cnico y performance desde la base, no como un agregado.',
         },
         {
-          title: 'Marca Personal Premium',
-          desc: 'Branding + web estrat\u00e9gica. Posicionamiento l\u00edder en su nicho en menos de 3 meses.',
+          title: 'R\u00e1pido y sin vueltas',
+          desc: 'Tu marca y tu web online en semanas, no en meses. Sprints intensivos y comunicaci\u00f3n directa con nosotros.',
         },
       ],
     },
@@ -374,19 +374,19 @@ const translations = {
       ],
     },
     performance: {
-      title: 'Real Cases, Measurable Results',
+      title: 'What we deliver on every project',
       projects: [
         {
-          title: 'Fashion E-commerce',
-          desc: 'Full store redesign. Result: +340% conversion in 6 months.',
+          title: 'Sites that fly',
+          desc: 'We build sites that load almost instantly. Better experience for your clients and better Google ranking.',
         },
         {
-          title: 'Logistics SaaS',
-          desc: 'Scalable UI/UX and modular design system. The platform tripled its active users.',
+          title: 'Real optimization',
+          desc: 'We aim for 95+ on Google PageSpeed. Technical SEO and performance from the ground up, not as an afterthought.',
         },
         {
-          title: 'Premium Personal Brand',
-          desc: 'Branding + strategic web. Leading position in its niche in under 3 months.',
+          title: 'Fast, no runaround',
+          desc: 'Your brand and website online in weeks, not months. Intensive sprints and direct communication with us.',
         },
       ],
     },
