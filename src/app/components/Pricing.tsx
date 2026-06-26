@@ -84,29 +84,6 @@ const PLANS: Plan[] = [
     badge_es: 'Más elegido',
     badge_en: 'Most picked',
   },
-  {
-    id: '03',
-    price: 'USD 800',
-    name_es: 'Fotografía IA',
-    name_en: 'AI Photography',
-    desc_es: 'Imágenes de producto nivel estudio, sin producción ni logística.',
-    desc_en: 'Studio-level product images, no production or logistics.',
-    features_es: [
-      'Generación Fotorrealista IA',
-      'Resolución 4K',
-      'Entrega en 48 horas',
-      'Sin estudio físico',
-    ],
-    features_en: [
-      'Photorealistic AI Generation',
-      '4K Resolution',
-      '48-hour Delivery',
-      'No Physical Studio',
-    ],
-    href: '/fotografia-ia',
-    cta_es: 'Ver Fotografía IA',
-    cta_en: 'See AI Photography',
-  },
 ];
 
 /* ─── Ticket stub (left accent card) ──────────────────────────── */

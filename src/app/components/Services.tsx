@@ -1,26 +1,14 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { Globe, Palette, Camera } from 'lucide-react';
+import { Globe, Palette, Code2 } from 'lucide-react';
 import { StickyNarrative } from './redesign/effects/StickyNarrative';
 import { RevealText } from './redesign/effects/RevealText';
 
 const SERVICES = [
   {
-    Icon: Globe,
-    num: '01',
-    labelEs: 'Web',
-    labelEn: 'Web',
-    titleEs: 'Web que vende',
-    titleEn: 'Website that sells',
-    descEs: 'Ultra-rápida, SEO optimizada, diseñada para convertir.',
-    descEn: 'Ultra-fast, SEO optimized, designed to convert.',
-    tagsEs: ['95+ PageSpeed', 'SEO', 'Conversión', 'Mobile-first'],
-    tagsEn: ['95+ PageSpeed', 'SEO', 'Conversion', 'Mobile-first'],
-  },
-  {
     Icon: Palette,
-    num: '02',
+    num: '01',
     labelEs: 'Branding',
     labelEn: 'Branding',
     titleEs: 'Marca que impacta',
@@ -31,16 +19,28 @@ const SERVICES = [
     tagsEn: ['Strategy', 'Logo', 'Brand manual', 'Social'],
   },
   {
-    Icon: Camera,
+    Icon: Globe,
+    num: '02',
+    labelEs: 'Diseño Web',
+    labelEn: 'Web Design',
+    titleEs: 'Web que vende',
+    titleEn: 'Website that sells',
+    descEs: 'Ultra-rápida, SEO optimizada, diseñada para convertir.',
+    descEn: 'Ultra-fast, SEO optimized, designed to convert.',
+    tagsEs: ['95+ PageSpeed', 'SEO', 'Conversión', 'Mobile-first'],
+    tagsEn: ['95+ PageSpeed', 'SEO', 'Conversion', 'Mobile-first'],
+  },
+  {
+    Icon: Code2,
     num: '03',
-    labelEs: 'Fotografía IA',
-    labelEn: 'AI Photography',
-    titleEs: 'Fotos sin estudio',
-    titleEn: 'Photos without a studio',
-    descEs: 'Fotografía de producto con IA. Calidad de estudio, cero logística.',
-    descEn: 'AI product photography. Studio quality, zero logistics.',
-    tagsEs: ['IA 4K', 'Sin producción', '48hs entrega', 'Fotorrealista'],
-    tagsEn: ['AI 4K', 'No production', '48hrs delivery', 'Photorealistic'],
+    labelEs: 'Apps & SaaS',
+    labelEn: 'Apps & SaaS',
+    titleEs: 'Aplicaciones a medida',
+    titleEn: 'Custom applications',
+    descEs: 'Construimos productos digitales completos a medida, del front al backend. Plataformas SaaS, paneles, sistemas internos: lo que tu negocio necesite, con código limpio y veloz.',
+    descEn: 'We build complete custom digital products, front to back. SaaS platforms, dashboards, internal systems: whatever your business needs, with clean and fast code.',
+    tagsEs: ['Front + Backend', 'SaaS a medida', 'Paneles & sistemas', 'Código limpio'],
+    tagsEn: ['Front + Backend', 'Custom SaaS', 'Dashboards & systems', 'Clean code'],
   },
 ];
 
