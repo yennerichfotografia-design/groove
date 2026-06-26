@@ -9,7 +9,7 @@ export interface PageSEO {
 
 /** Canonical site origin — single source of truth. */
 export const SITE_URL = 'https://groovedesign.com.ar';
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/og-cover.jpg`;
 export const SITE_NAME = 'Groove';
 export const TWITTER_HANDLE = '@gdstudio.ar';
 
