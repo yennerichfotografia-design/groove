@@ -196,28 +196,28 @@ const translations = {
       title: 'Dudas Frecuentes',
       items: [
         {
-          q: '\u00bfDise\u00f1o o C\u00f3digo?',
-          a: 'Ambos. Soy un perfil h\u00edbrido (Desarrollador + Dise\u00f1ador). Eso significa que el dise\u00f1o que aprob\u00e1s en Figma es exactamente lo que vas a ver en tu web final. Pixel perfect.',
+          q: '\u00bfDise\u00f1o o desarrollo?',
+          a: 'Las dos cosas. Somos dos: Fide se encarga de la marca y Matt del desarrollo. Trabajamos juntos para que lo que ves en el dise\u00f1o sea exactamente lo que recib\u00eds en tu web. Sin sorpresas.',
         },
         {
-          q: '\u00bfCu\u00e1nto tarda un proyecto?',
-          a: 'Branding: 2-3 semanas. Web: 3-5 semanas. Trabajo con sprints intensivos para que puedas empezar a vender antes, no despu\u00e9s.',
+          q: '\u00bfCu\u00e1nto tardan?',
+          a: 'Branding: 2 a 3 semanas. Web: 3 a 5 semanas. Vamos en sprints intensivos para que empieces a vender antes, no dentro de seis meses.',
         },
         {
-          q: '\u00bfPor qu\u00e9 no usar una agencia tradicional?',
-          a: 'En una agencia tu proyecto pasa por 5 personas, se dilata meses y pag\u00e1s por toda esa estructura. Conmigo habl\u00e1s directo con quien dise\u00f1a y programa. M\u00e1s r\u00e1pido, m\u00e1s transparente, mejor resultado.',
+          q: '\u00bfPor qu\u00e9 ustedes y no una agencia?',
+          a: 'Porque en una agencia tu proyecto pasa por cinco manos, se dilata y pag\u00e1s toda esa estructura. Ac\u00e1 habl\u00e1s directo con nosotros dos, los que dise\u00f1amos y programamos. M\u00e1s r\u00e1pido, m\u00e1s claro y m\u00e1s cercano.',
         },
         {
-          q: '\u00bfUs\u00e1s plantillas de WordPress/Wix?',
-          a: 'Jam\u00e1s. Uso la misma tecnolog\u00eda que empresas como Uber o Airbnb. Eso significa que tu web carga en menos de 2 segundos, posiciona mejor en Google y no tiene los l\u00edmites de un builder gen\u00e9rico.',
+          q: '\u00bfUsan plantillas de WordPress o Wix?',
+          a: 'No. Programamos a medida con la misma tecnolog\u00eda que usan empresas como Uber o Airbnb. Por eso tu web carga en menos de 2 segundos, le gusta a Google y no tiene los l\u00edmites de un builder.',
         },
         {
-          q: '\u00bfQu\u00e9 necesito para empezar?',
-          a: 'Una videollamada de 15 min para ver si hacemos fit. Si todo cuadra, reservamos fecha con el 50% y arrancamos la misma semana.',
+          q: '\u00bfC\u00f3mo arrancamos?',
+          a: 'Con una charla de 15 minutos para conocernos y ver si hacemos buena dupla. Si hay onda, coordinamos fecha y arrancamos esa misma semana.',
         },
         {
-          q: '\u00bfFormas de pago?',
-          a: 'Transferencia bancaria, Crypto (USDT) o PayPal/Stripe para clientes internacionales. Flexible y sin complicaciones.',
+          q: '\u00bfC\u00f3mo se paga?',
+          a: 'Como te quede c\u00f3modo: transferencia, crypto (USDT) o PayPal/Stripe si est\u00e1s afuera. Flexible y sin vueltas.',
         },
       ],
       seeAll: 'Ver todas las preguntas',
@@ -440,28 +440,28 @@ const translations = {
       title: 'Frequently Asked Questions',
       items: [
         {
-          q: 'Do you deliver code or design?',
-          a: 'Both. I\'m a hybrid profile (Developer + Designer). That means the design you approve in Figma is exactly what you\'ll see on your final website. Pixel perfect.',
+          q: 'Design or development?',
+          a: 'Both. There are two of us: Fide handles the brand and Matt handles development. We work together so what you see in the design is exactly what you get in your site. No surprises.',
         },
         {
-          q: 'How long does a project take?',
-          a: 'Branding: 2-3 weeks. Web: 3-5 weeks. I work in intensive sprints so you can start selling sooner, not later.',
+          q: 'How long does it take?',
+          a: 'Branding: 2 to 3 weeks. Web: 3 to 5 weeks. We work in intensive sprints so you start selling sooner, not six months from now.',
         },
         {
-          q: 'Why not use a traditional agency?',
-          a: 'At an agency, your project goes through 5 people, drags on for months, and you pay for all that overhead. With me, you talk directly to the one who designs and codes. Faster, more transparent, better result.',
+          q: 'Why you and not an agency?',
+          a: 'Because at an agency your project passes through five hands, drags on, and you pay for all that overhead. Here you talk straight to the two of us, the ones who design and code. Faster, clearer and closer.',
         },
         {
-          q: 'Do you use WordPress/Wix templates?',
-          a: 'Never. I use the same technology as companies like Uber or Airbnb. That means your site loads in under 2 seconds, ranks better on Google, and doesn\'t have the limits of a generic builder.',
+          q: 'Do you use WordPress or Wix templates?',
+          a: 'No. We build custom with the same technology companies like Uber or Airbnb use. That\'s why your site loads in under 2 seconds, Google loves it, and it has none of the limits of a builder.',
         },
         {
-          q: 'What do I need to get started?',
-          a: 'A 15-minute video call to see if we\'re a good fit. If everything checks out, we reserve your spot with 50% and start the same week.',
+          q: 'How do we start?',
+          a: 'With a 15-minute chat to get to know each other and see if we\'re a good match. If it clicks, we lock a date and start that same week.',
         },
         {
-          q: 'Payment methods?',
-          a: 'Bank transfer, Crypto (USDT), or PayPal/Stripe for international clients. Flexible and hassle-free.',
+          q: 'How does payment work?',
+          a: 'Whatever\'s easiest for you: bank transfer, crypto (USDT), or PayPal/Stripe if you\'re abroad. Flexible, no fuss.',
         },
       ],
       seeAll: 'See all questions',
