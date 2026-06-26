@@ -8,7 +8,7 @@ export function HeroBanner() {
   const es = language === 'es';
 
   return (
-    <section className="rd-dark rd-noise relative w-full overflow-hidden" style={{ minHeight: '100svh' }}>
+    <section className="rd-dark rd-noise sticky top-0 z-0 w-full overflow-hidden" style={{ height: '100svh' }}>
 
       {/* Video background — ParallaxScale: zoom-out + vertical drift on scroll */}
       <ParallaxScale className="absolute inset-0 w-full h-full" fromScale={1.12} drift={10}>

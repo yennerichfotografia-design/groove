@@ -78,7 +78,7 @@ export function Services() {
     language === 'es' ? s.labelEs : s.labelEn;
 
   return (
-    <section id="services" className="rd-dark rd-grid-fine rd-noise relative overflow-hidden">
+    <section id="services" className="rd-dark rd-grid-fine rd-noise relative z-10 overflow-hidden">
 
       {/* ── Header ──────────────────────────────────────────────────── */}
       <div
