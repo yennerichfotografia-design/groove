@@ -26,7 +26,7 @@ const translations = {
       line1: 'Tu marca merece',
       line2: 'ir m\u00e1s r\u00e1pido',
       subtitle: 'Dise\u00f1o web premium y branding estrat\u00e9gico. Resultados de clase mundial en semanas, no meses. Sin agencia, sin intermediarios.',
-      cta: 'Agendar auditor\u00eda estrat\u00e9gica',
+      cta: 'Agend\u00e1 una charla',
       scroll: 'Ver por qu\u00e9 funcionamos',
     },
     intro: {
@@ -270,7 +270,7 @@ const translations = {
       line1: 'Your brand deserves to',
       line2: 'move faster',
       subtitle: 'Premium web design & strategic branding. World-class results in weeks, not months. No agency, no middlemen.',
-      cta: 'Book a strategic audit',
+      cta: 'Let\'s talk',
       scroll: 'Discover more',
     },
     intro: {

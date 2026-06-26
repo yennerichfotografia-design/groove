@@ -215,7 +215,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 1, ease: EASE }}
           >
             <Magnetic
-              onClick={scrollToNext}
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="group inline-flex items-center gap-3 bg-[var(--rd-accent)] text-black rounded-full pl-7 pr-2 py-2 font-medium"
             >
               <span style={{ fontSize: 'var(--text-body)' }}>{t('hero.cta')}</span>
@@ -231,7 +231,7 @@ export function Hero() {
       <motion.button
         onClick={scrollToNext}
         aria-label="scroll"
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-[var(--rd-fg-dim)]"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2 text-[var(--rd-fg-dim)]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4, duration: 0.8 }}
