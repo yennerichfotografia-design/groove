@@ -105,7 +105,7 @@ export function Hero() {
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: spotlight ? 'grayscale(1) brightness(0.1)' : 'saturate(1.08)' }}
+          style={{ filter: spotlight ? 'grayscale(1) brightness(0.1)' : 'saturate(1.05) brightness(0.6)' }}
         />
         {spotlight && (
           <motion.img
