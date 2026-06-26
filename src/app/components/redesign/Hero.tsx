@@ -1,5 +1,5 @@
 import { useRef, type ReactNode, type MouseEvent as ReactMouseEvent } from 'react';
-import { motion, useScroll, useTransform, useMotionValue, useSpring } from 'motion/react';
+import { motion, useScroll, useTransform, useMotionValue, useSpring, useMotionTemplate } from 'motion/react';
 import { ArrowDownRight } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 
@@ -60,10 +60,28 @@ export function Hero() {
     target: sectionRef,
     offset: ['start start', 'end start'],
   });
-  const videoY = useTransform(scrollYProgress, [0, 1], ['0%', '18%']);
-  const videoScale = useTransform(scrollYProgress, [0, 1], [1.05, 1.18]);
   const contentY = useTransform(scrollYProgress, [0, 1], ['0%', '40%']);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+
+  // Cursor spotlight: grayscale base, full-color reveal under the cursor.
+  const SPOTLIGHT_R = 260;
+  const spotlight =
+    typeof window !== 'undefined' &&
+    window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+    !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const mx = useMotionValue(-1000);
+  const my = useMotionValue(-1000);
+  const sx = useSpring(mx, { damping: 30, stiffness: 200, mass: 0.5 });
+  const sy = useSpring(my, { damping: 30, stiffness: 200, mass: 0.5 });
+  const revealMask = useMotionTemplate`radial-gradient(circle ${SPOTLIGHT_R}px at ${sx}px ${sy}px, #000 0%, #000 38%, rgba(0,0,0,0.45) 62%, rgba(0,0,0,0) 78%)`;
+
+  const handleSpotlight = (e: ReactMouseEvent) => {
+    if (!spotlight) return;
+    const r = sectionRef.current?.getBoundingClientRect();
+    if (!r) return;
+    mx.set(e.clientX - r.left);
+    my.set(e.clientY - r.top);
+  };
 
   const scrollToNext = () => {
     const el = document.getElementById('intro') || document.getElementById('pricing');
@@ -77,17 +95,34 @@ export function Hero() {
   return (
     <section
       ref={sectionRef}
+      onMouseMove={handleSpotlight}
       className="rd-dark rd-noise relative z-0 isolate min-h-dvh w-full overflow-hidden flex flex-col landscape-safe"
     >
-      {/* Background photo with parallax */}
-      <motion.div className="absolute inset-0 -z-20 pointer-events-none" style={{ y: videoY, scale: videoScale }}>
+      {/* Background — grayscale base + full-color reveal under the cursor spotlight */}
+      <div className="absolute inset-0 -z-20 pointer-events-none">
         <img
           src="/hero-image.webp"
           alt=""
           aria-hidden="true"
-          className="w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ filter: spotlight ? 'grayscale(1) brightness(0.72)' : 'saturate(1.05)' }}
         />
-      </motion.div>
+        {spotlight && (
+          <motion.img
+            src="/hero-image.webp"
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{
+              filter: 'saturate(1.12)',
+              WebkitMaskImage: revealMask,
+              maskImage: revealMask,
+              WebkitMaskRepeat: 'no-repeat',
+              maskRepeat: 'no-repeat',
+            }}
+          />
+        )}
+      </div>
 
       {/* Dark wash + grid overlay — keeps white/green text readable over the photo */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/55 via-black/35 to-black/85 pointer-events-none" />
