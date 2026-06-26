@@ -281,7 +281,7 @@ export function Pricing() {
   return (
     <section
       id="pricing"
-      className="relative z-10 rd-dark rd-noise -mt-[50vh]"
+      className="relative z-10 rd-dark rd-noise"
       style={{ padding: 'var(--space-section-y) 0' }}
     >
       <div className="max-w-[1440px] mx-auto" style={{ padding: '0 var(--space-section-x)' }}>

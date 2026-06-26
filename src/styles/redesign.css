@@ -19,20 +19,12 @@
   color: var(--rd-fg);
 }
 
-/* --- Technical "blueprint" grid overlay --- */
-.rd-grid {
-  background-image:
-    linear-gradient(to right, var(--rd-line-soft) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--rd-line-soft) 1px, transparent 1px);
-  background-size: 5vw 5vw;
-}
-
-/* Fine cross-hatch variant for hero foreground */
+/* --- Grid overlay disabled (removed per design preference) --- */
+/* .rd-grid / .rd-grid-fine kept as no-op so existing markup stays valid
+   without rendering any blueprint grid across the site. */
+.rd-grid,
 .rd-grid-fine {
-  background-image:
-    linear-gradient(to right, var(--rd-line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--rd-line) 1px, transparent 1px);
-  background-size: 64px 64px;
+  background-image: none;
 }
 
 /* --- Film grain / noise overlay --- */

@@ -35,14 +35,14 @@ function CaseRow({
   return (
     <div
       ref={ref}
-      className="grid grid-cols-1 md:grid-cols-[220px_1fr_48px] gap-8 md:gap-16 py-12 md:py-20 items-start"
+      className="grid grid-cols-1 md:grid-cols-[clamp(180px,22vw,320px)_1fr_48px] gap-8 md:gap-16 py-12 md:py-20 items-start"
       style={{ borderTop: '1px solid var(--rd-line)' }}
     >
       {/* Giant metric in accent green */}
       <div>
         <motion.span
-          className="font-display block leading-none"
-          style={{ fontSize: 'var(--text-hero-lg)', color: 'var(--rd-accent)' }}
+          className="font-display block leading-none whitespace-nowrap"
+          style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', color: 'var(--rd-accent)', letterSpacing: '-0.03em' }}
           initial={{ y: 64, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : {}}
           transition={{ ...spring, delay: 0.04 }}

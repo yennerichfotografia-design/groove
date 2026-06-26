@@ -159,7 +159,7 @@ export function WhyChoose() {
   return (
     <section
       id="why"
-      className="rd-dark rd-noise relative z-10 lg:-mt-[50vh] overflow-hidden"
+      className="rd-dark rd-noise relative z-10 overflow-hidden"
       style={{ padding: 'var(--space-section-y, 6rem) 0' }}
     >
       {/* Blueprint grid */}
