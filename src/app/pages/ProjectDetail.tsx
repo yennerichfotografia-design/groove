@@ -135,7 +135,7 @@ export function ProjectDetail() {
                   <span className="w-1 h-1 rounded-full bg-white/30" />
                   <span className="text-sm text-white/40">{project.year}</span>
                 </div>
-                <h1 className="text-5xl sm:text-6xl lg:text-8xl tracking-tight text-white font-medium">
+                <h1 className="font-display text-5xl sm:text-6xl lg:text-8xl tracking-tight text-white font-semibold">
                   {title}
                 </h1>
               </RevealAnimation>
@@ -175,7 +175,7 @@ export function ProjectDetail() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 mb-20">
                 <div className="lg:col-span-4">
                   <p className="form-section-num">01</p>
-                  <h2 className="text-2xl sm:text-3xl font-medium mt-2">
+                  <h2 className="font-display text-2xl sm:text-3xl font-semibold mt-2">
                     {es ? 'El desafío' : 'The challenge'}
                   </h2>
                 </div>
@@ -205,7 +205,7 @@ export function ProjectDetail() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
                 <div className="lg:col-span-4">
                   <p className="form-section-num">02</p>
-                  <h2 className="text-2xl sm:text-3xl font-medium mt-2">
+                  <h2 className="font-display text-2xl sm:text-3xl font-semibold mt-2">
                     {es ? 'La solución' : 'The solution'}
                   </h2>
                 </div>
@@ -260,7 +260,7 @@ export function ProjectDetail() {
         <section className="py-20 lg:py-28 relative overflow-hidden bg-black noise-bg">
           <div className="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-20 text-center relative z-10">
             <RevealAnimation>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-white mb-6">
+              <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white mb-6">
                 {es ? '¿Tenés un proyecto similar?' : 'Have a similar project?'}
               </h2>
               <p className="text-lg text-white/50 mb-10">
