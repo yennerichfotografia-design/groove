@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'motion/react';
 
 /**
- * Custom cursor: a precise accent dot + a lagging ring that grows over
- * interactive elements. Desktop / fine-pointer only (CSS hides it on touch).
+ * Custom cursor: the brand asterisk (✱) follows the pointer with a soft spring.
+ * Scales up and spins over interactive elements. Desktop / fine-pointer only.
  */
 export function CustomCursor() {
   const x = useMotionValue(-100);
@@ -11,8 +11,8 @@ export function CustomCursor() {
   const [hovering, setHovering] = useState(false);
   const [enabled, setEnabled] = useState(false);
 
-  const ringX = useSpring(x, { stiffness: 350, damping: 30, mass: 0.6 });
-  const ringY = useSpring(y, { stiffness: 350, damping: 30, mass: 0.6 });
+  const sx = useSpring(x, { stiffness: 600, damping: 40, mass: 0.3 });
+  const sy = useSpring(y, { stiffness: 600, damping: 40, mass: 0.3 });
 
   useEffect(() => {
     const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -37,19 +37,26 @@ export function CustomCursor() {
   if (!enabled) return null;
 
   return (
-    <>
-      <motion.div
-        className="rd-cursor-dot"
-        style={{ x, y, translateX: '-50%', translateY: '-50%' }}
-        animate={{ scale: hovering ? 0 : 1 }}
-        transition={{ duration: 0.2 }}
-      />
-      <motion.div
-        className="rd-cursor-ring"
-        style={{ x: ringX, y: ringY, translateX: '-50%', translateY: '-50%' }}
-        animate={{ scale: hovering ? 1.8 : 1, opacity: hovering ? 1 : 0.6 }}
-        transition={{ duration: 0.2 }}
-      />
-    </>
+    <motion.div
+      aria-hidden="true"
+      className="font-display"
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        x: sx,
+        y: sy,
+        translateX: '-50%',
+        translateY: '-50%',
+        zIndex: 9999,
+        pointerEvents: 'none',
+        color: 'var(--rd-accent)',
+        lineHeight: 1,
+      }}
+      animate={{ scale: hovering ? 1.7 : 1, rotate: hovering ? 90 : 0 }}
+      transition={{ type: 'spring', damping: 18, stiffness: 220 }}
+    >
+      <span style={{ fontSize: '24px', display: 'block' }}>✱</span>
+    </motion.div>
   );
 }
