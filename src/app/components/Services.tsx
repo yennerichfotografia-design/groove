@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { Globe, Palette, Code2, Camera } from 'lucide-react';
+import { Globe, Palette, Code2, Camera, Film } from 'lucide-react';
 import { StickyNarrative } from './redesign/effects/StickyNarrative';
 import { RevealText } from './redesign/effects/RevealText';
 
@@ -53,6 +53,18 @@ const SERVICES = [
     descEn: 'Realistic photos of clothing and products with no photo studio required. For apparel or any kind of product, with professional quality.',
     tagsEs: ['Indumentaria', 'Productos', 'Sin estudio', 'Realista'],
     tagsEn: ['Apparel', 'Products', 'No studio', 'Realistic'],
+  },
+  {
+    Icon: Film,
+    num: '05',
+    labelEs: 'Reels',
+    labelEn: 'Reels',
+    titleEs: 'Reels que enganchan',
+    titleEn: 'Reels that hook',
+    descEs: 'Edición de reels para redes sociales: cortes dinámicos, ritmo y subtítulos pensados para frenar el scroll y hacer crecer tu cuenta.',
+    descEn: 'Reel editing for social media: dynamic cuts, rhythm and captions designed to stop the scroll and grow your account.',
+    tagsEs: ['Edición', 'Redes sociales', 'Vertical 9:16', 'Subtítulos'],
+    tagsEn: ['Editing', 'Social media', 'Vertical 9:16', 'Captions'],
   },
 ];
 
