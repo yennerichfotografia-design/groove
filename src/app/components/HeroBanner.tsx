@@ -20,7 +20,7 @@ export function HeroBanner() {
           preload="auto"
           className="w-full h-full object-cover"
         >
-          <source src="/hero-banner-video.mp4" type="video/mp4" />
+          <source src="/hero-bubble-video.mp4" type="video/mp4" />
         </video>
       </ParallaxScale>
 
