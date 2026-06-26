@@ -204,7 +204,7 @@ export function Header() {
           transition: 'background 0.45s ease, backdrop-filter 0.45s ease, border-color 0.45s ease',
         }}
       >
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-10">
+        <div style={{ paddingLeft: 'var(--space-section-x)', paddingRight: 'var(--space-section-x)' }}>
           <div className="flex items-center justify-between h-16">
 
             {/* Logo */}
