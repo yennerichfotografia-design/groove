@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
+import logoImage from 'figma:asset/2a1be87d495193914ab22c7cd47e0a19e7433208.png';
 
 // Nav link style shared between desktop items
 const NAV_LINK_STYLE: React.CSSProperties = {
@@ -95,12 +96,8 @@ export function Header() {
               className="flex items-center justify-between h-14 px-5 sticky top-0"
               style={{ background: 'var(--rd-bg)', borderBottom: '1px solid var(--rd-line)' }}
             >
-              <button
-                onClick={handleLogoClick}
-                className="font-display font-semibold uppercase"
-                style={{ color: 'var(--rd-fg)', fontSize: '0.875rem', letterSpacing: '0.2em' }}
-              >
-                GROOVE<span style={{ color: 'var(--rd-accent)' }}>✱</span>
+              <button onClick={handleLogoClick} aria-label="Groove">
+                <img src={logoImage} alt="Groove" className="h-6 w-auto" style={{ filter: 'brightness(0) invert(1)' }} />
               </button>
               <button
                 onClick={() => setIsMenuOpen(false)}
@@ -213,10 +210,10 @@ export function Header() {
             {/* Logo */}
             <button
               onClick={handleLogoClick}
-              className="font-display font-semibold uppercase transition-colors duration-200 hover:opacity-80"
-              style={{ color: 'var(--rd-fg)', fontSize: '0.875rem', letterSpacing: '0.2em' }}
+              className="transition-opacity duration-200 hover:opacity-80"
+              aria-label="Groove"
             >
-              GROOVE<span style={{ color: 'var(--rd-accent)' }}>✱</span>
+              <img src={logoImage} alt="Groove" className="h-7 w-auto" style={{ filter: 'brightness(0) invert(1)' }} />
             </button>
 
             {/* Desktop nav */}
